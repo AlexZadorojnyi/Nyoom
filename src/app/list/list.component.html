@@ -1,0 +1,10 @@
+<div class="car" *ngFor="let car of carList">
+  <div class="car__info">
+    <div class="car__info--brand-logo"><img src="../assets/images/brand-logos/{{ car.make }}.png" alt="{{ car.make }}"></div>
+    <div class="car__info--image"><img src="../assets/images/cars/{{ car.make }} {{ car.baseModel }} {{ car.year }}.jpg" alt=""></div>
+    <span class="car__info--model-year">{{ car.year }} </span>
+    <span class="car__info--model-name">{{ car.make }} {{ car.baseModel }}</span>
+  </div>
+  <div class="car__game-a"><img src="{{ car.isInGameA ? '../assets/images/icons/tick.png' : '../assets/images/icons/x.png' }}" alt=""></div>
+  <div class="car__game-b"><img src="{{ car.isInGameB ? '../assets/images/icons/tick.png' : '../assets/images/icons/x.png' }}" alt=""></div>
+</div>

@@ -1,1 +1,151 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.header {
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  background-color: red;
+}
+
+.header > div {
+    max-width: 75rem;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto 15rem 6rem 15rem;
+}
+
+.header__title {
+    border-right: 1px solid #850000;
+    text-align: center;
+    line-height: 4.5rem;
+    color: black;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 2.5rem;
+}
+
+.header__button {
+    line-height: 10px;
+    position: relative;
+    display: inline-block;
+    height: 4.5rem;
+}
+
+.header__button:hover {
+    background-color: #850000;
+}
+
+.header__button img {
+    max-height: 100%;
+    max-width: 100%;
+    margin: auto;
+}
+
+.game-a:hover .game-a_dropdown,
+.game-b:hover .game-b_dropdown,
+.set-relation:hover .set-relation_dropdown {
+    display: block;
+}
+
+.game-a_dropdown,
+.game-b_dropdown,
+.set-relation_dropdown {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    height: 31.5rem;
+    width: 100%;
+    overflow: auto;
+    box-shadow: 0px 0px 5px #888888;
+}
+
+.game-a_dropdown div,
+.game-b_dropdown div,
+.set-relation_dropdown div {
+    height: 4.5rem;
+}
+
+.game-a_dropdown div:hover,
+.game-b_dropdown div:hover,
+.set-relation_dropdown div:hover {
+    background-color: red;
+}
+
+.game-a_dropdown div img,
+.game-b_dropdown div img,
+.set-relation_dropdown div img {
+    height: 100%;
+}
+
+.set-relation {
+    text-align: center;
+    border-left: 1px solid #850000;
+    border-right: 1px solid #850000;
+    position: relative;
+    display: inline-block;
+}
+
+.set-relation > img {
+    filter: opacity(75%);
+}
+
+.car {
+    max-width: 75rem;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto 18rem 18rem;
+    /*grid-gap: 2rem;*/
+    margin-top: 1rem;
+}
+
+.car__info {
+    height: 100px;
+    /*border: 1px solid black;*/
+    overflow: hidden;
+    text-align: center;
+    line-height: 100px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.5rem;
+    background-color: white;
+    box-shadow: 0px 0px 5px #888888;
+}
+
+.car__info--image {
+    height: 100px;
+    float: left;
+}
+
+.car__info--image img {
+    height: 100%;
+}
+
+.car__info--brand-logo {
+    height: 100%;
+    float: left;
+}
+
+.car__info--brand-logo img {
+    height: 100%;
+    margin: 0 10px;
+}
+
+.car__game-a,
+.car__game-b {
+    height: 100px;
+    /*border: 1px solid black;*/
+    text-align: center;
+    padding: 25px;
+}
+
+.car__game-a img,
+.car__game-b img {
+    height: 100%;
+}
