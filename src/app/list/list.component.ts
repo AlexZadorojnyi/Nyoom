@@ -19,7 +19,6 @@ export class ListComponent implements OnInit {
     this.carsService.carListChanged.subscribe(
       () => {
         this.carList = this.carsService.carList;
-        console.log(this.carList);
       }
     );
   }

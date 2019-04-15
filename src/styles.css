@@ -1,11 +1,13 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
+  margin: 0;
+  overflow-x: hidden;
 }
 
+/** HEADER **/
 .header {
   position: sticky;
   top: 0px;
@@ -14,138 +16,256 @@ body {
 }
 
 .header > div {
-    max-width: 75rem;
-    margin: auto;
-    display: grid;
-    grid-template-columns: auto 15rem 6rem 15rem;
+  display: grid;
+  grid-template-columns: 13fr 5fr 2fr 5fr;
+  /* grid-template-columns: auto 15rem 6rem 15rem; */
+  grid-template-areas: "title game-a set-relation game-b";
+  max-width: 75rem;
+  margin: auto;
 }
 
 .header__title {
-    border-right: 1px solid #850000;
-    text-align: center;
-    line-height: 4.5rem;
-    color: black;
-    font-family: 'Barlow', sans-serif;
-    font-weight: 800;
-    font-style: italic;
-    font-size: 2.5rem;
+  grid-area: title;
+  border-right: 1px solid #850000;
+  text-align: center;
+  /*line-height: 4.5rem;*/
+  line-height: 6vw;
+  color: black;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  font-size: calc(3.5vw + 0.125rem);
 }
 
 .header__button {
-    line-height: 10px;
-    position: relative;
-    display: inline-block;
-    height: 4.5rem;
+  display: inline-block;
+  position: relative;
+  height: 6vw;
+  /*height: 4.5rem;*/
+  max-height: 4.5rem;
+  line-height: 10px;
 }
 
 .header__button:hover {
-    background-color: #850000;
+  background-color: #850000;
 }
 
 .header__button img {
-    max-height: 100%;
-    max-width: 100%;
-    margin: auto;
+  max-height: 100%;
+  max-width: 100%;
+  margin: auto;
 }
 
+.game-a {
+  grid-area: game-a;
+}
+
+.game-b {
+  grid-area: game-b;
+}
+
+/** Header buttons dropdown show **/
 .game-a:hover .game-a_dropdown,
 .game-b:hover .game-b_dropdown,
 .set-relation:hover .set-relation_dropdown {
-    display: block;
+  display: block;
 }
 
+/** Header buttons dropdown hide **/
 .game-a_dropdown,
 .game-b_dropdown,
 .set-relation_dropdown {
-    display: none;
-    position: absolute;
-    z-index: 1;
-    background-color: white;
-    height: 31.5rem;
-    width: 100%;
-    overflow: auto;
-    box-shadow: 0px 0px 5px #888888;
+  display: none;
+  position: absolute;
+  z-index: 1;
+  overflow: auto;
+  height: 42vw;
+  max-height: 31.5rem;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 0px 5px #888888;
 }
 
+/** Header buttons dropdown options **/
 .game-a_dropdown div,
 .game-b_dropdown div,
 .set-relation_dropdown div {
-    height: 4.5rem;
+  height: 6vw;
+  max-height: 4.5rem;
 }
 
+/** Header buttons dropdown options hover effects **/
 .game-a_dropdown div:hover,
 .game-b_dropdown div:hover,
 .set-relation_dropdown div:hover {
-    background-color: red;
+  background-color: red;
 }
 
-.game-a_dropdown div img,
+/** Header buttons dropdown options images **/
+/** Not sure if necessary, distorts the image to keep it centered **/
+/**.game-a_dropdown div img,
 .game-b_dropdown div img,
 .set-relation_dropdown div img {
-    height: 100%;
-}
+  height: 100%;
+}**/
 
 .set-relation {
-    text-align: center;
-    border-left: 1px solid #850000;
-    border-right: 1px solid #850000;
-    position: relative;
-    display: inline-block;
+  grid-area: set-relation;
+  display: inline-block;
+  position: relative;
+  border-left: 1px solid #850000;
+  border-right: 1px solid #850000;
+  text-align: center;
 }
 
 .set-relation > img {
-    filter: opacity(75%);
+  filter: opacity(75%);
 }
 
+/** LIST **/
 .car {
-    max-width: 75rem;
-    margin: auto;
-    display: grid;
-    grid-template-columns: auto 18rem 18rem;
-    /*grid-gap: 2rem;*/
-    margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 13fr 6fr 6fr;
+  /*grid-template-columns: auto 18rem 18rem;*/
+  max-width: 75rem;
+  margin: auto;
+  margin-top: 1rem;
+  height: calc(9.5vw - 0.8749rem);
+  max-height: 6.25rem;
 }
 
 .car__info {
-    height: 100px;
-    /*border: 1px solid black;*/
-    overflow: hidden;
-    text-align: center;
-    line-height: 100px;
-    font-family: 'Barlow', sans-serif;
-    font-size: 1.5rem;
-    background-color: white;
-    box-shadow: 0px 0px 5px #888888;
+  overflow: hidden;
+  height: calc(9.5vw - 0.8749rem);
+  max-height: 6.25rem;
+  background-color: white;
+  text-align: center;
+  font-family: 'Barlow', sans-serif;
+  /*font-size: 1.5rem;*/
+  font-size: calc(0.5vw + 1rem);
+  box-shadow: 0px 0px 5px #888888;
 }
 
 .car__info--image {
-    height: 100px;
-    float: left;
+  height: 100%;
+  float: left;
 }
 
 .car__info--image img {
-    height: 100%;
+  height: 100%;
 }
 
 .car__info--brand-logo {
-    height: 100%;
-    float: left;
+  height: 100%;
+  float: left;
 }
 
 .car__info--brand-logo img {
-    height: 100%;
-    margin: 0 10px;
+  height: 100%;
+  margin: 0 10px;
+}
+
+.car__info--model-info {
+  overflow: hidden;
+  height: 100%;
+}
+
+.car__info--model-info > span {
+  text-align: center;
+  line-height: 8.25vw;
+  /*line-height: 100px;*/
 }
 
 .car__game-a,
 .car__game-b {
-    height: 100px;
-    /*border: 1px solid black;*/
-    text-align: center;
-    padding: 25px;
+  height: calc(9.5vw - 0.8749rem);
+  padding: 1.75vw;
+  text-align: center;
 }
 
 .car__game-a img,
 .car__game-b img {
-    height: 100%;
+  height: 100%;
 }
+
+.car__game-a .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.car__game-a:hover .tooltiptext {
+  visibility: visible;
+}
+
+@media only screen and (min-width: 75rem) {
+  .header__title {
+    line-height: 4.5rem;
+    font-size: 2.75rem;
+  }
+
+  .car__info--model-info > span {
+    font-size: 1.5rem;
+    line-height: 6.25rem;
+  }
+
+  .car__game-a,
+  .car__game-b {
+    max-height: 6.25rem;
+    padding: 1.3125rem;
+  }
+}
+
+/*@media only screen and (max-width: 1000px) {
+  .header > div {
+    grid-template-columns: auto 5rem 2rem 5rem;
+    max-width: 25rem;
+  }
+
+  .header__title {
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-weight: 250;
+    font-size: 0.8rem;
+    overflow: hidden;
+  }
+
+  .header__button {
+    height: 1.5rem;
+  }
+
+  .car {
+    grid-template-columns: auto 6rem 6rem;
+    max-width: 25rem;
+  }
+
+  .car__info {
+    height: 20px;
+    font-size: 0.5rem;
+  }
+
+  .car__info--image {
+    height: 20px;
+    float: left;
+  }
+
+  .car__info--brand-logo img {
+    margin: 0 1px;
+  }
+
+  .car__info--model-info > span {
+    line-height: 20px;
+  }
+
+  .car__game-a,
+  .car__game-b {
+    height: 20px;
+    padding: 2px;
+  }
+}*/

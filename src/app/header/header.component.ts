@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterContentInit } from '@angular/core';
 import { CarsService } from '../cars.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { CarsService } from '../cars.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, AfterContentInit {
   carsService: CarsService;
   games: { id: string; title: string; }[];
   gameA: { id: string, title: string; };
@@ -33,12 +33,14 @@ export class HeaderComponent implements OnInit {
     while (this.gameA === this.gameB) {
       this.gameB = this.carsService.getRandomGame();
     }
+  }
+
+  ngAfterContentInit () {
     this.updateCarList();
   }
 
   updateCarList() {
     this.carsService.updateCarList(this.gameA.id, this.gameB.id, this.setRelation.id);
-    console.log('hello');
   }
 
 }
