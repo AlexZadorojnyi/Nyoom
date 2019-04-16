@@ -18,7 +18,6 @@ body {
 .header > div {
   display: grid;
   grid-template-columns: 13fr 5fr 2fr 5fr;
-  /* grid-template-columns: auto 15rem 6rem 15rem; */
   grid-template-areas: "title game-a set-relation game-b";
   max-width: 75rem;
   margin: auto;
@@ -28,8 +27,7 @@ body {
   grid-area: title;
   border-right: 1px solid #850000;
   text-align: center;
-  /*line-height: 4.5rem;*/
-  line-height: 6vw;
+  line-height: 3rem;
   color: black;
   font-family: 'Barlow', sans-serif;
   font-weight: 800;
@@ -41,8 +39,8 @@ body {
   display: inline-block;
   position: relative;
   height: 6vw;
-  /*height: 4.5rem;*/
   max-height: 4.5rem;
+  min-height: 3rem;
   line-height: 10px;
 }
 
@@ -50,10 +48,17 @@ body {
   background-color: #850000;
 }
 
+.header__button > span {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
 .header__button img {
   max-height: 100%;
   max-width: 100%;
   margin: auto;
+  vertical-align: middle;
 }
 
 .game-a {
@@ -81,6 +86,7 @@ body {
   overflow: auto;
   height: 42vw;
   max-height: 31.5rem;
+  min-height: 21rem;
   width: 100%;
   background-color: white;
   box-shadow: 0px 0px 5px #888888;
@@ -92,6 +98,7 @@ body {
 .set-relation_dropdown div {
   height: 6vw;
   max-height: 4.5rem;
+  min-height: 3rem;
 }
 
 /** Header buttons dropdown options hover effects **/
@@ -101,13 +108,13 @@ body {
   background-color: red;
 }
 
-/** Header buttons dropdown options images **/
-/** Not sure if necessary, distorts the image to keep it centered **/
-/**.game-a_dropdown div img,
-.game-b_dropdown div img,
-.set-relation_dropdown div img {
+.game-a_dropdown span,
+.game-b_dropdown span,
+.set-relation_dropdown span {
+  display: inline-block;
   height: 100%;
-}**/
+  vertical-align: middle;
+}
 
 .set-relation {
   grid-area: set-relation;
@@ -118,44 +125,30 @@ body {
   text-align: center;
 }
 
-.set-relation > img {
-  filter: opacity(75%);
-}
-
 /** LIST **/
 .car {
   display: grid;
   grid-template-columns: 13fr 6fr 6fr;
-  /*grid-template-columns: auto 18rem 18rem;*/
   max-width: 75rem;
   margin: auto;
-  margin-top: 1rem;
-  height: calc(9.5vw - 0.8749rem);
-  max-height: 6.25rem;
+  margin-top: 1vw;
 }
 
 .car__info {
+  display: grid;
+  grid-template-columns: 8vw 12vw auto;
+  grid-template-rows: 8vw;
+  grid-template-areas: "brand image info";
   overflow: hidden;
-  height: calc(9.5vw - 0.8749rem);
-  max-height: 6.25rem;
   background-color: white;
   text-align: center;
   font-family: 'Barlow', sans-serif;
-  /*font-size: 1.5rem;*/
   font-size: 2vw;
   box-shadow: 0px 0px 5px #888888;
 }
 
-.car__info--image {
-  height: 100%;
-  float: left;
-}
-
-.car__info--image img {
-  height: 100%;
-}
-
 .car__info--brand-logo {
+  grid-area: brand;
   height: 100%;
   float: left;
 }
@@ -165,43 +158,81 @@ body {
   padding: 0.75vw;
 }
 
+.car__info--image {
+  grid-area: image;
+  height: 100%;
+  float: left;
+}
+
+.car__info--image img {
+  height: 100%;
+}
+
 .car__info--model-info {
+  grid-area: info;
   overflow: hidden;
   height: 100%;
 }
 
 .car__info--model-info > span {
   text-align: center;
-  line-height: calc(9.5vw - 0.8749rem);
-  /*line-height: 100px;*/
+  line-height: 8vw;
 }
 
 .car__game-a,
 .car__game-b {
-  height: calc(9.5vw - 0.8749rem);
+  height: 8vw;
   padding: 1.75vw;
   text-align: center;
+}
+
+.car__game-a > span {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
 }
 
 .car__game-a img,
 .car__game-b img {
   height: 100%;
+  vertical-align: middle;
 }
 
 .car__game-a .tooltiptext {
+  position: absolute;
+  z-index: 1;
   visibility: hidden;
   width: 120px;
   background-color: black;
   color: #fff;
-  text-align: center;
   padding: 5px 0;
   border-radius: 6px;
-  position: absolute;
-  z-index: 1;
+  text-align: center;
 }
 
 .car__game-a:hover .tooltiptext {
   visibility: visible;
+}
+
+@media only screen and (max-width: 45rem) {
+  .car__info {
+    grid-template-columns: 12vw auto;
+    grid-template-rows: 12vw 8vw;
+    grid-template-areas:
+      "brand info"
+      "image info";
+    font-size: 3.5vw;
+  }
+
+  .car__info--model-info > span {
+    line-height: 20vw;
+  }
+
+  .car__game-a,
+  .car__game-b {
+    height: 20vw;
+    padding: 5vw;
+  }
 }
 
 @media only screen and (min-width: 75rem) {
@@ -210,62 +241,23 @@ body {
     font-size: 2.75rem;
   }
 
-  .car__info--model-info > span {
-    font-size: 1.5rem;
-    line-height: 6.25rem;
-  }
-
-  .car__game-a,
-  .car__game-b {
-    max-height: 6.25rem;
-    padding: 1.3125rem;
-  }
-}
-
-/*@media only screen and (max-width: 1000px) {
-  .header > div {
-    grid-template-columns: auto 5rem 2rem 5rem;
-    max-width: 25rem;
-  }
-
-  .header__title {
-    height: 1.5rem;
-    line-height: 1.5rem;
-    font-weight: 250;
-    font-size: 0.8rem;
-    overflow: hidden;
-  }
-
-  .header__button {
-    height: 1.5rem;
-  }
-
   .car {
-    grid-template-columns: auto 6rem 6rem;
-    max-width: 25rem;
+    margin-top: 0.75rem;
   }
 
   .car__info {
-    height: 20px;
-    font-size: 0.5rem;
-  }
-
-  .car__info--image {
-    height: 20px;
-    float: left;
-  }
-
-  .car__info--brand-logo img {
-    margin: 0 1px;
+    grid-template-columns: 6rem 9rem auto;
+    grid-template-rows: 6rem;
   }
 
   .car__info--model-info > span {
-    line-height: 20px;
+    font-size: 1.5rem;
+    line-height: 6rem;
   }
 
   .car__game-a,
   .car__game-b {
-    height: 20px;
-    padding: 2px;
+    max-height: 6rem;
+    padding: 1.3125rem;
   }
-}*/
+}

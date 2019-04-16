@@ -8,12 +8,14 @@
     </div>
   </div>
   <div class="car__game-a">
+    <span></span>
     <img src="{{ car.isInGameA ? 'assets/images/icons/tick.png' : 'assets/images/icons/x.png' }}" alt="">
     <span class="tooltiptext" *ngIf="car.gameANote">{{ car.gameANote }}</span>
     <!-- <p>{{ car.gameAModel }}</p>
     <p>{{ car.gameANote }}</p> -->
   </div>
   <div class="car__game-b">
+    <span></span>
     <img src="{{ car.isInGameB ? 'assets/images/icons/tick.png' : 'assets/images/icons/x.png' }}" alt="">
     <!-- <p>{{ car.gameBModel }}</p>
     <p>{{ car.gameBNote }}</p> -->
