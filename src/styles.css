@@ -143,8 +143,12 @@ body {
 }
 
 .car__info--brand-logo img {
-  max-height: 100%;
-  max-width: 100%;
+  /*
+  using "height" and "width" causes stretching in Firefox when an image is missing
+  using "max-height" and "max-width" causes incorrect scaling in smaller browser windows in Chrome
+  */
+  height: 100%;
+  width: 100%;
   padding: 0.75vw;
 }
 
@@ -155,8 +159,12 @@ body {
 }
 
 .car__info--image img {
-  max-height: 100%;
-  max-width: 100%;
+  /*
+  using "height" and "width" causes stretching in Firefox when an image is missing
+  using "max-height" and "max-width" causes incorrect scaling in smaller browser windows in Chrome
+  */
+  height: 100%;
+  width: 100%;
 }
 
 .car__info--model-info {
