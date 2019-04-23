@@ -1,0 +1,101 @@
+[
+    {
+        "make": "Lexus",
+        "baseModel": "IS",
+        "year": 1999,
+        "model": "IS 300",
+        "note": "5-Speed and 5-Speed SE versions are included"
+    },
+    {
+        "make": "Mazda",
+        "baseModel": "RX-7",
+        "year": 1992,
+        "note": "R1, Type-R Baturst, Spirit-R Type-A, and Spirit-R Type-B versions are included"
+    },
+    {
+        "make": "Mazda",
+        "baseModel": "RX-8",
+        "year": 2003,
+        "note": "Standard and Mazdaspeed versions are included"
+    },
+    {
+        "make": "Mitsubishi",
+        "baseModel": "Eclipse",
+        "year": 1995,
+        "model": "Eclipse GS-T"
+    },
+    {
+        "make": "Mitsubishi",
+        "baseModel": "Eclipse",
+        "year": 2000,
+        "note": "GT, GT-S, GS, and RS versions are included"
+    },
+    {
+        "make": "Mitsubishi",
+        "baseModel": "Lancer",
+        "year": 2002,
+        "model": "Lancer Evolution VII GSR"
+    },
+    {
+        "make": "Mitsubishi",
+        "baseModel": "Lancer",
+        "year": 2002,
+        "model": "Lancer Evolution VIII"
+    },
+    {
+        "make": "Nissan",
+        "baseModel": "350Z",
+        "year": 2003,
+        "note": "Standard, Enthusiast, Performance, Touring, and Track versions are included"
+    },
+    {
+        "make": "Nissan",
+        "baseModel": "Skyline",
+        "year": 1998,
+        "model": "Skyline GT-R",
+        "note": "Standard, V-spec, V-spec II, V-spec II Nur, M-Spec, and M-Spec Nur versions are included"
+    },
+    {
+        "make": "Subaru",
+        "baseModel": "Impreza",
+        "year": 2000,
+        "note": "2.5 RS, S202 STi, STi, and WRX versions are included."
+    },
+    {
+        "make": "Toyota",
+        "baseModel": "Celica",
+        "year": 1999,
+        "note": "GT, GT-S, and GT Action Package versions are included"
+    },
+    {
+        "make": "Toyota",
+        "baseModel": "Corolla",
+        "year": 1984,
+        "model": "Sprinter Trueno GT-Apex Twin Cam"
+    },
+    {
+        "make": "Toyota",
+        "baseModel": "MR2",
+        "year": 1999,
+        "model": "MR2 Spyder"
+    },
+    {
+        "make": "Toyota",
+        "baseModel": "Supra",
+        "year": 1993,
+        "note": "AE, SR Targa AE, Twin Turbo AE, SZ-R, and RZ versions are included"
+    },
+    {
+        "make": "Volkswagen",
+        "baseModel": "Golf",
+        "year": 1997,
+        "model": "Golf GTI",
+        "note": "Standard and VR6 versions are included"
+    },
+    {
+        "make": "Volkswagen",
+        "baseModel": "Jetta",
+        "year": 1999,
+        "note": "GLI and GLS versions are included"
+    }
+]
