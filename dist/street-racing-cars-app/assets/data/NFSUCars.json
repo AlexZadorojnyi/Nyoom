@@ -1,0 +1,115 @@
+[
+    {
+        "make": "Acura",
+        "baseModel": "Integra",
+        "year": 1994,
+        "model": "Integra Type R"
+    },
+    {
+        "make": "Acura",
+        "baseModel": "RSX",
+        "year": 2002
+    },
+    {
+        "make": "Dodge",
+        "baseModel": "Neon",
+        "year": 1995
+    },
+    {
+        "make": "Ford",
+        "baseModel": "Focus",
+        "year": 1998,
+        "model": "Focus ZX3"
+    },
+    {
+        "make": "Honda",
+        "baseModel": "Civic",
+        "year": 1996,
+        "model": "Civic Si",
+        "note": "Coupe"
+    },
+    {
+        "make": "Honda",
+        "baseModel": "S2000",
+        "year": 1999
+    },
+    {
+        "make": "Hyundai",
+        "baseModel": "Tiburon",
+        "year": 2002,
+        "model": "Tiburon GT"
+    },
+    {
+        "make": "Mazda",
+        "baseModel": "MX-5",
+        "year": 1998
+    },
+    {
+        "make": "Mazda",
+        "baseModel": "RX-7",
+        "year": 1992
+    },
+    {
+        "make": "Mitsubishi",
+        "baseModel": "Eclipse",
+        "year": 1995,
+        "model": "Eclipse GSX"
+    },
+    {
+        "make": "Mitsubishi",
+        "baseModel": "Lancer",
+        "year": 2002,
+        "model": "Lancer ES"
+    },
+    {
+        "make": "Nissan",
+        "baseModel": "240SX",
+        "year": 1989
+    },
+    {
+        "make": "Nissan",
+        "baseModel": "350Z",
+        "year": 2003
+    },
+    {
+        "make": "Nissan",
+        "baseModel": "Sentra",
+        "year": 2000,
+        "model": "Sentra SE-R Spec V"
+    },
+    {
+        "make": "Nissan",
+        "baseModel": "Skyline",
+        "year": 1998,
+        "model": "Skyline GT-R"
+    },
+    {
+        "make": "Peugeot",
+        "baseModel": "206",
+        "year": 1998,
+        "model": "206 GTi"
+    },
+    {
+        "make": "Subaru",
+        "baseModel": "Impreza",
+        "year": 2000,
+        "model": "Impreza 2.5 RS"
+    },
+    {
+        "make": "Toyota",
+        "baseModel": "Celica",
+        "year": 1999,
+        "model": "Celica GT-S"
+    },
+    {
+        "make": "Toyota",
+        "baseModel": "Supra",
+        "year": 1993
+    },
+    {
+        "make": "Volkswagen",
+        "baseModel": "Golf",
+        "year": 1997,
+        "model": "Golf GTi"
+    }
+]

@@ -1,0 +1,398 @@
+[
+  {
+    "make": "Cadillac",
+    "baseModel": "Cien",
+    "year": 2002,
+    "model": "Cien (2002 Concept)"
+  },
+  {
+    "make": "Cadillac",
+    "baseModel": "Coupe DeVille",
+    "year": 1965
+  },
+  {
+    "make": "Cadillac",
+    "baseModel": "CTS",
+    "year": 2003,
+    "model": "CTS-V"
+  },
+  {
+    "make": "Cadillac",
+    "baseModel": "Eldorado",
+    "year": 1967
+  },
+  {
+    "make": "Cadillac",
+    "baseModel": "Escalade",
+    "year": 2002,
+    "note": "Standard and EXT versions are included"
+  },
+  {
+    "make": "Cadillac",
+    "baseModel": "Sixteen",
+    "year": 2003,
+    "model": "Sixteen (2003 Concept)"
+  },
+  {
+    "make": "Cadillac",
+    "baseModel": "XLR",
+    "year": 2004
+  },
+  {
+    "make": "Chevrolet",
+    "baseModel": "Bel Air",
+    "year": 1955
+  },
+  {
+    "make": "Chevrolet",
+    "baseModel": "Camaro",
+    "year": 1967,
+    "model": "Camaro Z/28"
+  },
+  {
+    "make": "Chevrolet",
+    "baseModel": "Camaro",
+    "year": 1970,
+    "model": "Camaro Z28"
+  },
+  {
+    "make": "Chevrolet",
+    "baseModel": "Chevelle",
+    "year": 1968,
+    "model": "Chevelle SS"
+  },
+  {
+    "make": "Chevrolet",
+    "baseModel": "Cobalt",
+    "year": 2005,
+    "model": "Cobalt SS"
+  },
+  {
+    "make": "Chevrolet",
+    "baseModel": "Corvette",
+    "year": 1963,
+    "model": "Corvette C2"
+  },
+  {
+    "make": "Chevrolet",
+    "baseModel": "Corvette",
+    "year": 1968,
+    "model": "Corvette C3"
+  },
+  {
+    "make": "Chevrolet",
+    "baseModel": "Corvette",
+    "year": 1997,
+    "model": "Corvette C5 Z06"
+  },
+  {
+    "make": "Chevrolet",
+    "baseModel": "El Camino",
+    "year": 1968
+  },
+  {
+    "make": "Chevrolet",
+    "baseModel": "Fleetline",
+    "year": 1949
+  },
+  {
+    "make": "Chevrolet",
+    "baseModel": "Impala",
+    "year": 1961
+  },
+  {
+    "make": "Chevrolet",
+    "baseModel": "Impala",
+    "year": 1994,
+    "model": "Impala SS"
+  },
+  {
+    "make": "Chevrolet",
+    "baseModel": "Monte Carlo",
+    "year": 1978
+  },
+  {
+    "make": "Chevrolet",
+    "baseModel": "Silverado",
+    "year": 1999,
+    "model": "Silverado SST Concept"
+  },
+  {
+    "make": "Chevrolet",
+    "baseModel": "SSR",
+    "year": 2003
+  },
+  {
+    "make": "Chrysler",
+    "baseModel": "300C",
+    "year": 2005,
+    "model": "300C"
+  },
+  {
+    "make": "Chrysler",
+    "baseModel": "ME Four-Twelve",
+    "year": 2004,
+    "model": "ME Four-Twelve (2004 Concept)"
+  },
+  {
+    "make": "Dodge",
+    "baseModel": "Charger",
+    "year": 1968,
+    "model": "Charger R/T"
+  },
+  {
+    "make": "Dodge",
+    "baseModel": "Charger",
+    "year": 1999,
+    "model": "Charger R/T (1999 Concept)"
+  },
+  {
+    "make": "Dodge",
+    "baseModel": "Charger",
+    "year": 2006,
+    "model": "Charger SRT-8"
+  },
+  {
+    "make": "Dodge",
+    "baseModel": "Magnum",
+    "year": 2005
+  },
+  {
+    "make": "Dodge",
+    "baseModel": "Neon",
+    "year": 1995,
+    "model": "Neon SRT-4"
+  },
+  {
+    "make": "Dodge",
+    "baseModel": "Ram",
+    "year": 2002,
+    "model": "Ram SRT-10"
+  },
+  {
+    "make": "Dodge",
+    "baseModel": "Super 8 Hemi",
+    "year": 2001
+  },
+  {
+    "make": "Dodge",
+    "baseModel": "Viper",
+    "year": 2003,
+    "model": "Viper GTS-R Concept (2000)"
+  },
+  {
+    "make": "Ferrari",
+    "baseModel": "F355",
+    "year": 1995,
+    "model": "Gemballa F355"
+  },
+  {
+    "make": "GMC",
+    "baseModel": "Yukon",
+    "year": 2000,
+    "model": "Yukon Denali"
+  },
+  {
+    "make": "Hummer",
+    "baseModel": "H1",
+    "year": 1992
+  },
+  {
+    "make": "Hummer",
+    "baseModel": "H2",
+    "year": 2003
+  },
+  {
+    "make": "Hummer",
+    "baseModel": "H3",
+    "year": 2006,
+    "model": "H3T"
+  },
+  {
+    "make": "Infiniti",
+    "baseModel": "FX45",
+    "year": 2003
+  },
+  {
+    "make": "Infiniti",
+    "baseModel": "G35",
+    "year": 2003
+  },
+  {
+    "make": "Lamborghini",
+    "baseModel": "Diablo",
+    "year": 1990,
+    "model": "Diablo VT"
+  },
+  {
+    "make": "Lamborghini",
+    "baseModel": "Gallardo",
+    "year": 2004
+  },
+  {
+    "make": "Lamborghini",
+    "baseModel": "Murciélago",
+    "year": 2001
+  },
+  {
+    "make": "Lexus",
+    "baseModel": "GS",
+    "year": 1998,
+    "model": "GS 430"
+  },
+  {
+    "make": "Lexus",
+    "baseModel": "IS",
+    "year": 1999,
+    "model": "IS 300"
+  },
+  {
+    "make": "Lexus",
+    "baseModel": "SC",
+    "year": 2001,
+    "model": "SC 430"
+  },
+  {
+    "make": "Lotus",
+    "baseModel": "Elise",
+    "year": 2001
+  },
+  {
+    "make": "Lotus",
+    "baseModel": "Esprit",
+    "year": 1993,
+    "model": "Esprit V8"
+  },
+  {
+    "make": "McLaren",
+    "baseModel": "F1",
+    "year": 1993,
+    "model": "F1 LM"
+  },
+  {
+    "make": "Mercedes-Benz",
+    "baseModel": "CL-Class",
+    "year": 2000,
+    "note": "CL 500 and CL 55 AMG versions are included"
+  },
+  {
+    "make": "Mercedes-Benz",
+    "baseModel": "CLK-GTR",
+    "year": 1998
+  },
+  {
+    "make": "Mercedes-Benz",
+    "baseModel": "CLS-Class",
+    "year": 2004,
+    "model": "CLS 55 AMG"
+  },
+  {
+    "make": "Mercedes-Benz",
+    "baseModel": "G-Class",
+    "year": 1990,
+    "note": "G 500 and G 55 AMG versions are included"
+  },
+  {
+    "make": "Mercedes-Benz",
+    "baseModel": "SL-Class",
+    "year": 2002,
+    "note": "SL 500 and SL 55 AMG versions are included"
+  },
+  {
+    "make": "Mercedes-Benz",
+    "baseModel": "SLR McLaren",
+    "year": 2003
+  },
+  {
+    "make": "Mitsubishi",
+    "baseModel": "Eclipse",
+    "year": 2000
+  },
+  {
+    "make": "Mitsubishi",
+    "baseModel": "Lancer",
+    "year": 2002,
+    "model": "Lancer Evolution VIII"
+  },
+  {
+    "make": "Nissan",
+    "baseModel": "350Z",
+    "year": 2003
+  },
+  {
+    "make": "Nissan",
+    "baseModel": "Skyline",
+    "year": 1998,
+    "model": "Skyline GT-R V-spec"
+  },
+  {
+    "make": "Nissan",
+    "baseModel": "Sport Concept",
+    "year": 2005
+  },
+  {
+    "make": "Pagani",
+    "baseModel": "Zonda",
+    "year": 1999,
+    "model": "Zonda C12 S"
+  },
+  {
+    "make": "Pontiac",
+    "baseModel": "GTO",
+    "year": 1968,
+    "model": "GTO \"The Judge\""
+  },
+  {
+    "make": "Pontiac",
+    "baseModel": "LeMans",
+    "year": 1968
+  },
+  {
+    "make": "Porsche",
+    "baseModel": "Cayenne",
+    "year": 2003,
+    "model": "Gemballa GT 750"
+  },
+  {
+    "make": "Porsche",
+    "baseModel": "911",
+    "year": 1998,
+    "model": "Gemballa Sport Coupe"
+  },
+  {
+    "make": "Saleen",
+    "baseModel": "S7",
+    "year": 2000
+  },
+  {
+    "make": "Saleen",
+    "baseModel": "SR",
+    "year": 1994
+  },
+  {
+    "make": "Scion",
+    "baseModel": "tC",
+    "year": 2005
+  },
+  {
+    "make": "Toyota",
+    "baseModel": "Supra",
+    "year": 1993
+  },
+  {
+    "make": "Volkswagen",
+    "baseModel": "Golf",
+    "year": 2003,
+    "model": "Golf R32"
+  },
+  {
+    "make": "Volkswagen",
+    "baseModel": "Jetta",
+    "year": 1999
+  },
+  {
+    "make": "Volkswagen",
+    "baseModel": "Phaeton",
+    "year": 2003
+  }
+]
