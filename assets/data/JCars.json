@@ -4,20 +4,20 @@
         "baseModel": "Integra",
         "year": 1994,
         "model": "Integra Type R",
-        "note": "Also appears as a Honda Integra Type R"
+        "note": "Acura Integra Type R\nHonda Integra Type R"
     },
     {
         "make": "Acura",
         "baseModel": "NSX",
         "year": 1990,
-        "note": "Also appears as a Honda NSX"
+        "note": "Acura NSX\nHonda NSX"
     },
     {
         "make": "Acura",
         "baseModel": "RSX",
         "year": 2002,
         "model": "RSX Type S",
-        "note": "Also appears as a 2002 Honda Integra Type R"
+        "note": "Acura Integra Type R\nHonda Integra Type R"
     },
     {
         "make": "Chevrolet",
@@ -52,7 +52,7 @@
         "make": "Dodge",
         "baseModel": "Neon",
         "year": 1995,
-        "note": "Neon R/T and Neon SRT-4 versions are included"
+        "note": "Neon R/T\nNeon SRT-4"
     },
     {
         "make": "Dodge",
@@ -76,7 +76,7 @@
         "make": "Ford",
         "baseModel": "Focus",
         "year": 1998,
-        "note": "Focus ZTS and Focus SVT versions are included"
+        "note": "Focus ZTS\nFocus SVT"
     },
     {
         "make": "Ford",
@@ -194,7 +194,7 @@
         "make": "Pontiac",
         "baseModel": "GTO",
         "year": 2004,
-        "note": "Appears as a Holden Monaro CV8"
+        "note": "Pontiac GTO\nHolden Monaro CV8"
     },
     {
         "make": "Renault",
@@ -205,14 +205,14 @@
     {
         "make": "Subaru",
         "baseModel": "Impreza",
-        "year": 2000,
-        "model": "WRX STI"
+        "year": 1992,
+        "model": "Impreza 22B-STi"
     },
     {
         "make": "Subaru",
         "baseModel": "Impreza",
-        "year": 1992,
-        "model": "Impreza 22B-STi"
+        "year": 2000,
+        "model": "WRX STI"
     },
     {
         "make": "Toyota",

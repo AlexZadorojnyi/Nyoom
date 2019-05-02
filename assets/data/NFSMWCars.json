@@ -27,7 +27,7 @@
         "baseModel": "3 Series",
         "year": 1998,
         "model": "M3 GTR",
-        "note": "Stock model is a Black Edition exclusive"
+        "note": "M3 GTR\nM3 GTR (stock) (Black Edition)"
     },
     {
         "make": "Cadillac",
@@ -39,7 +39,7 @@
         "baseModel": "Camaro",
         "year": 1967,
         "model": "Camaro SS/RS",
-        "note": "Black Edition only"
+        "note": "Black Edition"
     },
     {
         "make": "Chevrolet",
@@ -52,7 +52,7 @@
         "baseModel": "Corvette",
         "year": 2005,
         "model": "Corvette C6",
-        "note": "C6R version included in Black Edition only"
+        "note": "Corvette C6\nCorvette C6R (Black Edition)"
     },
     {
         "make": "Dodge",
@@ -117,7 +117,7 @@
         "make": "Mercedes-Benz",
         "baseModel": "SL-Class",
         "year": 2002,
-        "note": "SL 500 and SL 65 AMG versions are included"
+        "note": "SL 500\nSL 65 AMG"
     },
     {
         "make": "Mercedes-Benz",
@@ -140,13 +140,13 @@
         "make": "Pontiac",
         "baseModel": "GTO",
         "year": 2004,
-        "note": "Also appears as Holden Monaro VXR"
+        "note": "Pontiac GTO\nHolden Monaro VXR"
     },
     {
         "make": "Porsche",
         "baseModel": "911",
         "year": 1998,
-        "note": "911 Turbo S version is included in the base game and the 911 GT2 version is included in the Black Edition"
+        "note": "911 Turbo S\n911 GT2 (Black Edition)"
     },
     {
         "make": "Porsche",

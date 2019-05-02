@@ -1,0 +1,282 @@
+[
+    {
+        "make": "Acura",
+        "baseModel": "Integra",
+        "year": 1994,
+        "model": "Integra Type R"
+    },
+    {
+        "make": "Acura",
+        "baseModel": "Integra",
+        "year": 1995,
+        "model": "Integra Type R",
+        "note": "Honda Integra Type R"
+    },
+    {
+        "make": "Acura",
+        "baseModel": "NSX",
+        "year": 1990
+    },
+    {
+        "make": "Acura",
+        "baseModel": "NSX",
+        "year": 2002,
+        "note": "Honda NSX-R\nHonda NSX-R GT"
+    },
+    {
+        "make": "Acura",
+        "baseModel": "RSX",
+        "year": 2002,
+        "model": "Type R",
+        "note": "Honda Integra Type R"
+    },
+    {
+        "make": "Chevrolet",
+        "baseModel": "Chevelle",
+        "year": 1968,
+        "model": "Chevelle SS"
+    },
+    {
+        "make": "Chevrolet",
+        "baseModel": "Corvette",
+        "year": 2005,
+        "note": "Corvette C6\nCorvette C6R\nCorvette Z06"
+    },
+    {
+        "make": "Dodge",
+        "baseModel": "Charger",
+        "year": 1968,
+        "note": "Charger R/T 440 Magnum\nCharger R/T HEMI"
+    },
+    {
+        "make": "Dodge",
+        "baseModel": "Charger",
+        "year": 2006,
+        "note": "Charger Daytona R/T\nCharger SRT-8"
+    },
+    {
+        "make": "Dodge",
+        "baseModel": "Neon",
+        "year": 1995,
+        "model": "Neon SRT-4"
+    },
+    {
+        "make": "Dodge",
+        "baseModel": "Viper",
+        "year": 2003,
+        "model": "Viper SRT-10"
+    },
+    {
+        "make": "Ford",
+        "baseModel": "Focus",
+        "year": 1998,
+        "note": "Focus SVT\nS121 N20 Focus"
+    },
+    {
+        "make": "Ford",
+        "baseModel": "Mustang",
+        "year": 1965,
+        "note": "Ford Mustang Fastback\nShelby GT500"
+    },
+    {
+        "make": "Ford",
+        "baseModel": "Mustang",
+        "year": 2005,
+        "note": "Mustang  GT\nMustang  GTR Concept\nShelby GT500 Concept\nSaleen S281"
+    },
+    {
+        "make": "Honda",
+        "baseModel": "Civic",
+        "year": 2001,
+        "model": "Civic Type R",
+        "note": "Hatchback"
+    },
+    {
+        "make": "Honda",
+        "baseModel": "Civic",
+        "year": 2006,
+        "note": "Civic Si\nCivic EX 1.8 i-VTEC Hatchback"
+    },
+    {
+        "make": "Honda",
+        "baseModel": "S2000",
+        "year": 2004
+    },
+    {
+        "make": "Infiniti",
+        "baseModel": "G35",
+        "year": 2003,
+        "model": "Nissan Skyline Coupe 350GT"
+    },
+    {
+        "make": "Lexus",
+        "baseModel": "IS",
+        "year": 1999,
+        "note": "Lexus IS 300\nLexus IS 300 Sport Design\nToyota Altezza RS200 Z Edition"
+    },
+    {
+        "make": "Lexus",
+        "baseModel": "LFA",
+        "year": 2011,
+        "model": "LF-A Concept"
+    },
+    {
+        "make": "Lexus",
+        "baseModel": "LF-C Concept",
+        "year": 2004
+    },
+    {
+        "make": "Mazda",
+        "baseModel": "6",
+        "year": 2002,
+        "model": "6 Mazdaspeed"
+    },
+    {
+        "make": "Mazda",
+        "baseModel": "MX-5",
+        "year": 2005
+    },
+    {
+        "make": "Mazda",
+        "baseModel": "RX-7",
+        "year": 1985,
+        "model": "RX-7 Infini IV"
+    },
+    {
+        "make": "Mazda",
+        "baseModel": "RX-7",
+        "year": 1992,
+        "note": "RX-7 R1\nRX-7 Type RS-R\nRX-7 Type R Bathrust\nRX-7 Spirit Type A\nRX-7 Veilside Fortune"
+    },
+    {
+        "make": "Mazda",
+        "baseModel": "RX-8",
+        "year": 2003,
+        "note": "RX-8 Type-S\nRX-8 Sport Prestige Limited\nRX-8 Mazdaspeed 2"
+    },
+    {
+        "make": "Mitsubishi",
+        "baseModel": "3000GT",
+        "year": 1990,
+        "model": "GTO Twin Turbo MR"
+    },
+    {
+        "make": "Mitsubishi",
+        "baseModel": "Eclipse",
+        "year": 1995,
+        "model": "Eclipse GSX"
+    },
+    {
+        "make": "Mitsubishi",
+        "baseModel": "Eclipse",
+        "year": 2000,
+        "model": "Eclipse GT"
+    },
+    {
+        "make": "Mitsubishi",
+        "baseModel": "Eclipse",
+        "year": 2006,
+        "model": "Eclipse GT"
+    },
+    {
+        "make": "Mitsubishi",
+        "baseModel": "Lancer",
+        "year": 2002,
+        "note": "Lancer Evolution VII GSR\nLancer Evolution VIII GSR\nLancer Evolution VIII RS\nLancer Evolution VIII MR\nLancer Evolution MR FQ-400\nLancer Evolution IX GSR\nLancer Evolution IX MR\nLancer Evolution IX RS\nLancer Evolution IX Ralliart"
+    },
+    {
+        "make": "Mitsubishi",
+        "baseModel": "Lancer",
+        "year": 2008,
+        "note": "Concept-X\nConcept-Sportback"
+    },
+    {
+        "make": "Nissan",
+        "baseModel": "240SX",
+        "year": 1989,
+        "model": "180SX Type X"
+    },
+    {
+        "make": "Nissan",
+        "baseModel": "240SX",
+        "year": 1995,
+        "note": "Nissan Silvia K\"s Aero\nNissan Silvia Q\"s Aero\nNismo 270R"
+    },
+    {
+        "make": "Nissan",
+        "baseModel": "240SX",
+        "year": 1997,
+        "note": "Silvia Q\"s Aero\nSilvia K\"s Aero"
+    },
+    {
+        "make": "Nissan",
+        "baseModel": "300ZX",
+        "year": 1989,
+        "model": "Fairlady Z TT\nFairlady Z Version R TT"
+    },
+    {
+        "make": "Nissan",
+        "baseModel": "350Z",
+        "year": 2003,
+        "note": "Nissan 350Z 35th Anniversary Edition\nNissan Fairlady Z Version ST\nNissan Fairlady Z Type E\nNismo Fairlady Z S-Tune\nNismo Fairlady Z S-Tune GT"
+    },
+    {
+        "make": "Nissan",
+        "baseModel": "Silvia",
+        "year": 1990,
+        "note": "Silvia K\"s\nSilvia D1GP K\"s"
+    },
+    {
+        "make": "Nissan",
+        "baseModel": "Silvia",
+        "year": 1999,
+        "note": "Silvia Spec-R\nSilvia Spec-R Aero\nSilvia Spec-S Aero"
+    },
+    {
+        "make": "Nissan",
+        "baseModel": "Skyline",
+        "year": 1998,
+        "note": "Nissan Skyline 25GT-t\nNissan Skyline GT-R\nNissan Skyline GT-R V-Spec II N1\nNissan Skyline GT-R V-Spec II\nNissan Skyline GT-R V-Spec II Nür\nNismo Skyline GT-R S-Tune\nNismo Skyline Z-Tune GT-R"
+    },
+    {
+        "make": "Pontiac",
+        "baseModel": "GTO",
+        "year": 2004,
+        "note": "Silvia Spec-R\nSilvia Spec-R Aero\nSilvia Spec-S Aero"
+    },
+    {
+        "make": "Scion",
+        "baseModel": "tC",
+        "year": 2005
+    },
+    {
+        "make": "Subaru",
+        "baseModel": "Impreza",
+        "year": 2002,
+        "note": "Impreza WRX STi Spec C\nImpreza WRX STi V-Limited\nImpreza S203 STi\nImpreza WRX STi\nImpreza S204 STI"
+    },
+    {
+        "make": "Toyota",
+        "baseModel": "Chaser",
+        "year": 1996,
+        "note": "Chaser Avante G\nChaser Tourer V"
+    },
+    {
+        "make": "Toyota",
+        "baseModel": "Corolla",
+        "year": 1984,
+        "note": "Sprinter Trueno\nCorolla Levin GT-Apex"
+    },
+    {
+        "make": "Toyota",
+        "baseModel": "MR2",
+        "year": 1999,
+        "note": "MR-S S-Edition\nMR-S VM180 TRD\nMR-S V-Edition"
+    },
+    {
+        "make": "Toyota",
+        "baseModel": "Supra",
+        "year": 1993,
+        "note": "Supra RZ\nSupra Twin Turbo"
+    }
+]

@@ -1,6 +1,12 @@
 [
     {
         "make": "Acura",
+        "baseModel": "NSX",
+        "year": 1990,
+        "model": "NSX-R"
+    },
+    {
+        "make": "Acura",
         "baseModel": "RSX",
         "year": 2002,
         "model": "RSX Type S"
@@ -80,7 +86,7 @@
         "make": "Ford",
         "baseModel": "Mustang",
         "year": 1965,
-        "note": "Standard version and 1969 Mustang Boss versions are included"
+        "note": "Mustang\nMustang Boss"
     },
     {
         "make": "Ford",
@@ -100,12 +106,6 @@
         "year": 1996,
         "model": "Civic Type R",
         "note": "Hatchback"
-    },
-    {
-        "make": "Acura",
-        "baseModel": "NSX",
-        "year": 1990,
-        "model": "NSX-R"
     },
     {
         "make": "Honda",
@@ -178,7 +178,7 @@
         "baseModel": "240SX",
         "year": 1989,
         "model": "240SX Type X",
-        "note": "Appears as 180SX"
+        "note": "180SX"
     },
     {
         "make": "Nissan",
@@ -190,7 +190,7 @@
         "make": "Nissan",
         "baseModel": "GT-R",
         "year": 2007,
-        "note": "2015 and 2017 versions are included"
+        "note": "GT-R (2015)\nGT-R (2017)"
     },
     {
         "make": "Nissan",
@@ -226,7 +226,7 @@
         "make": "Porsche",
         "baseModel": "911",
         "year": 2011,
-        "note": "911 Carrera S and GT3 RS versions are included"
+        "note": "911 Carrera S\n911 GT3 RS"
     },
     {
         "make": "Porsche",
