@@ -14,9 +14,9 @@ import { GameListSelectComponent } from './select/game-list/game-list-select.com
 import { SortPctPipe } from './sort-pct.pipe';
 
 const routes = [
-  { path: '', component: CompareComponent },
-  { path: 'street-racing-cars-app/compare', component: CompareComponent },
-  { path: 'street-racing-cars-app/select', component: SelectComponent },
+  { path: '', redirectTo: 'compare', pathMatch: 'full' },
+  { path: 'compare', component: CompareComponent },
+  { path: 'select', component: SelectComponent },
 ];
 
 @NgModule({
