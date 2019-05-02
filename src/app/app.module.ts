@@ -16,7 +16,9 @@ import { SortPctPipe } from './sort-pct.pipe';
 const routes = [
   { path: '', component: CompareComponent },
   { path: 'compare', component: CompareComponent },
-  { path: 'select', component: SelectComponent }
+  { path: '../compare', component: CompareComponent },
+  { path: 'select', component: SelectComponent },
+  { path: '../select', component: SelectComponent }
 ];
 
 @NgModule({
