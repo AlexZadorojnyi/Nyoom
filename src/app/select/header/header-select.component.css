@@ -1,0 +1,14 @@
+.header > div {
+  grid-template-columns: 2fr 8fr 12fr;
+  grid-template-areas: "mode title";
+}
+
+.header__title {
+  border: none
+}
+
+@media only screen and (min-width: 45rem) {
+  .header > div {
+    grid-template-columns: 2fr 11fr 12fr;
+  }
+}

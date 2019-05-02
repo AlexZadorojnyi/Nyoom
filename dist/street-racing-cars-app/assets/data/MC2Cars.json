@@ -42,7 +42,7 @@
         "make": "Honda",
         "baseModel": "Civic",
         "year": 1996,
-        "note": "Coupe and Si versions are included"
+        "note": "Civic Coupe\nCivic Si"
     },
     {
         "make": "Honda",
@@ -113,7 +113,7 @@
         "make": "Toyota",
         "baseModel": "Supra",
         "year": 1993,
-        "note": "Standard and AB Flug bodykit versions are included"
+        "note": "Supra\nAB Flug bodykit"
     },
     {
         "make": "Volkswagen",

@@ -23,11 +23,15 @@ body {
 
 .header > div {
   display: grid;
-  grid-template-columns: 10fr 5fr 2fr 5fr;
-  /*grid-template-columns: 13fr 5fr 2fr 5fr;*/
-  grid-template-areas: "title game-a set-relation game-b";
   max-width: 75rem;
   margin: auto;
+}
+
+.mode {
+  grid-area: mode;
+  display: inline-block;
+  position: relative;
+  text-align: center;
 }
 
 .header__title {
@@ -39,7 +43,8 @@ body {
   font-family: 'Barlow', sans-serif;
   font-weight: 800;
   font-style: italic;
-  font-size: calc(3.5vw + 0.125rem);
+  font-size: calc(3vw + 0.125rem);
+  overflow: hidden;
 }
 
 .header__button {
@@ -62,15 +67,8 @@ body {
   vertical-align: middle;
 }
 
-.game-a {
-  grid-area: game-a;
-}
-
-.game-b {
-  grid-area: game-b;
-}
-
 /** Header buttons dropdown show **/
+.mode:hover .mode_dropdown,
 .game-a:hover .game-a_dropdown,
 .game-b:hover .game-b_dropdown,
 .set-relation:hover .set-relation_dropdown {
@@ -78,6 +76,25 @@ body {
 }
 
 /** Header buttons dropdown hide **/
+.mode_dropdown {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  overflow: auto;
+  height: 12vw;
+  max-height: 9rem;
+  min-height: 6rem;
+  width: 300%;
+  background-color: white;
+  box-shadow: 0px 0px 5px #888888;
+}
+
+.mode_dropdown div {
+  font-family: 'Barlow', sans-serif;
+  font-size: 3.75vw;
+  line-height: 6vw;
+}
+
 .game-a_dropdown,
 .game-b_dropdown,
 .set-relation_dropdown {
@@ -94,6 +111,7 @@ body {
 }
 
 /** Header buttons dropdown options **/
+.mode_dropdown div,
 .game-a_dropdown div,
 .game-b_dropdown div,
 .set-relation_dropdown div {
@@ -103,31 +121,14 @@ body {
 }
 
 /** Header buttons dropdown options hover effects **/
+.mode_dropdown div:hover,
 .game-a_dropdown div:hover,
 .game-b_dropdown div:hover,
 .set-relation_dropdown div:hover {
   background-color: red;
 }
 
-.set-relation {
-  grid-area: set-relation;
-  display: inline-block;
-  position: relative;
-  border-left: 1px solid #850000;
-  border-right: 1px solid #850000;
-  text-align: center;
-}
-
 /** LIST **/
-.car {
-  display: grid;
-  grid-template-columns: 10fr 6fr 6fr;
-  max-width: 75rem;
-  margin: auto;
-  margin-top: 1vw;
-  margin-bottom: 1vw;
-}
-
 .car__info {
   display: grid;
   grid-template-columns: 40% 60%;
@@ -159,10 +160,6 @@ body {
 }
 
 .car__info--image img {
-  /*
-  using "height" and "width" causes stretching in Firefox when an image is missing
-  using "max-height" and "max-width" causes incorrect scaling in smaller browser windows in Chrome
-  */
   height: 100%;
   width: 100%;
 }
@@ -182,19 +179,6 @@ body {
   font-weight: bold;
 }
 
-.car__game-a,
-.car__game-b {
-  height: 20vw;
-  padding: 5vw;
-  text-align: center;
-}
-
-.car__game-a img,
-.car__game-b img {
-  height: 100%;
-  vertical-align: middle;
-}
-
 .car__game-a .tooltiptext {
   position: absolute;
   z-index: 1;
@@ -212,12 +196,9 @@ body {
 }
 
 @media only screen and (min-width: 45rem) {
-  .header > div {
-    grid-template-columns: 13fr 5fr 2fr 5fr;
-  }
-
-  .car {
-    grid-template-columns: 13fr 6fr 6fr;
+  .mode_dropdown div {
+    font-size: 2vw;
+    line-height: 2vw;
   }
 
   .car__info {
@@ -230,23 +211,17 @@ body {
     font-size: 2vw;
     line-height: 8vw;
   }
-
-  .car__game-a,
-  .car__game-b {
-    height: 8vw;
-    padding: 1.75vw;
-  }
 }
 
 @media only screen and (min-width: 75rem) {
+  .mode_dropdown div {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+
   .header__title {
     line-height: 4.5rem;
     font-size: 2.75rem;
-  }
-
-  .car {
-    margin-top: 0.75rem;
-    margin-bottom: 0.75rem;
   }
 
   .car__info {
@@ -257,11 +232,5 @@ body {
   .car__info--model-info > span {
     font-size: 1.5rem;
     line-height: 6rem;
-  }
-
-  .car__game-a,
-  .car__game-b {
-    max-height: 6rem;
-    padding: 1.3125rem;
   }
 }

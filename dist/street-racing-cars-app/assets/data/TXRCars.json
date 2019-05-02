@@ -1,0 +1,157 @@
+[
+    {
+        "make": "Acura",
+        "baseModel": "Integra",
+        "year": 1994,
+        "model": "Integra Type R",
+        "note": "Honda Type R"
+    },
+    {
+        "make": "Acura",
+        "baseModel": "NSX",
+        "year": 1990,
+        "note": "Honda NSX"
+    },
+    {
+        "make": "Honda",
+        "baseModel": "Civic",
+        "year": 1996,
+        "model": "Civic Type R"
+    },
+    {
+        "make": "Honda",
+        "baseModel": "S2000",
+        "year": 1999
+    },
+    {
+        "make": "Lexus",
+        "baseModel": "IS",
+        "year": 1999,
+        "model": "IS 300",
+        "note": "Toyota Altezza"
+    },
+    {
+        "make": "Mazda",
+        "baseModel": "RX-7",
+        "year": 1985
+    },
+    {
+        "make": "Mazda",
+        "baseModel": "RX-7",
+        "year": 1992
+    },
+    {
+        "make": "Mitsubishi",
+        "baseModel": "Eclipse",
+        "year": 1995,
+        "model": "Eclipse GSX"
+    },
+    {
+        "make": "Mitsubishi",
+        "baseModel": "Eclipse",
+        "year": 2000,
+        "model": "Eclipse GT"
+    },
+    {
+        "make": "Mitsubishi",
+        "baseModel": "Lancer",
+        "year": 1995,
+        "note": "Lancer Evolution III\nLancer Evolution V"
+    },
+    {
+        "make": "Nissan",
+        "baseModel": "240SX",
+        "year": 1989,
+        "note": "Nissan 180SX"
+    },
+    {
+        "make": "Nissan",
+        "baseModel": "240SX",
+        "year": 1997
+    },
+    {
+        "make": "Nissan",
+        "baseModel": "240Z",
+        "year": 1969,
+        "note": "Fairlady Z"
+    },
+    {
+        "make": "Nissan",
+        "baseModel": "300ZX",
+        "year": 1989,
+        "model": "300ZX Z32"
+    },
+    {
+        "make": "Nissan",
+        "baseModel": "Cedric",
+        "year": 1995
+    },
+    {
+        "make": "Nissan",
+        "baseModel": "Gloria",
+        "year": 1995
+    },
+    {
+        "make": "Nissan",
+        "baseModel": "Silvia",
+        "year": 1990,
+        "note": "S13"
+    },
+    {
+        "make": "Nissan",
+        "baseModel": "Silvia",
+        "year": 1999,
+        "note": "S15"
+    },
+    {
+        "make": "Nissan",
+        "baseModel": "Skyline",
+        "year": 1989,
+        "model": "Skyline GT-R"
+    },
+    {
+        "make": "Nissan",
+        "baseModel": "Skyline",
+        "year": 1993,
+        "model": "Skyline GT-R"
+    },
+    {
+        "make": "Nissan",
+        "baseModel": "Skyline",
+        "year": 1998,
+        "model": "Skyline GT-R"
+    },
+    {
+        "make": "Porsche",
+        "baseModel": "911",
+        "year": 1975,
+        "model": "930 Turbo"
+    },
+    {
+        "make": "Subaru",
+        "baseModel": "Impreza",
+        "year": 1992,
+        "model": "WRX STI"
+    },
+    {
+        "make": "Toyota",
+        "baseModel": "Chaser",
+        "year": 1996
+    },
+    {
+        "make": "Toyota",
+        "baseModel": "Corolla",
+        "year": 1984,
+        "note": "Sprinter Trueno\nCorolla Levin"
+    },
+    {
+        "make": "Toyota",
+        "baseModel": "MR2",
+        "year": 1989
+    },
+    {
+        "make": "Toyota",
+        "baseModel": "Supra",
+        "year": 1993
+    }
+]

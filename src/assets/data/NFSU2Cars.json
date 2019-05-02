@@ -4,7 +4,7 @@
     "baseModel": "RSX",
     "year": 2002,
     "model": "RSX Type S",
-    "note": "North American version only"
+    "note": "North America exclusive"
   },
   {
     "make": "Audi",
@@ -38,7 +38,7 @@
     "baseModel": "Civic",
     "year": 1996,
     "model": "Civic Si",
-    "note": "North American version only"
+    "note": "North America exclusive"
   },
   {
     "make": "Hummer",
@@ -126,7 +126,7 @@
     "baseModel": "106",
     "year": 1996,
     "model": "106 GTi",
-    "note": "European and Asian version only"
+    "note": "Europea and Asia exclusive"
   },
   {
     "make": "Peugeot",
@@ -167,7 +167,7 @@
     "baseModel": "Corsa",
     "year": 2000,
     "model": "Corsa 1.8 SRi",
-    "note": "European and Asian version only"
+    "note": "Europea and Asia exclusive"
   },
   {
     "make": "Volkswagen",

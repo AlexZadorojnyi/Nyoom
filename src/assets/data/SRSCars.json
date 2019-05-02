@@ -4,19 +4,19 @@
     "baseModel": "IS",
     "year": 1999,
     "model": "IS 300",
-    "note": "5-Speed and 5-Speed SE versions are included"
+    "note": "IS 300 5-Speed\nIS 300 5-Speed SE"
   },
   {
     "make": "Mazda",
     "baseModel": "RX-7",
     "year": 1992,
-    "note": "R1, Type-R Baturst, Spirit-R Type-A, and Spirit-R Type-B versions are included"
+    "note": "RX-7 R1\nRX-7 Type-R Bathurst\nRX-7 Spirit-R Type-A\nRX-7 Spirit-R Type-B"
   },
   {
     "make": "Mazda",
     "baseModel": "RX-8",
     "year": 2003,
-    "note": "Standard and Mazdaspeed versions are included"
+    "note": "RX-8\nRX-8 Mazdaspeed"
   },
   {
     "make": "Mitsubishi",
@@ -28,50 +28,44 @@
     "make": "Mitsubishi",
     "baseModel": "Eclipse",
     "year": 2000,
-    "note": "GT, GT-S, GS, and RS versions are included"
+    "note": "Eclipse GT\nEclipse GT-S\nEclipse GS\nEclipse RS"
   },
   {
     "make": "Mitsubishi",
     "baseModel": "Lancer",
     "year": 2002,
-    "model": "Lancer Evolution VII GSR"
-  },
-  {
-    "make": "Mitsubishi",
-    "baseModel": "Lancer",
-    "year": 2002,
-    "model": "Lancer Evolution VIII"
+	"note": "Lancer Evolution VII GSR\nLancer Evolution VIII"
   },
   {
     "make": "Nissan",
     "baseModel": "350Z",
     "year": 2003,
-    "note": "Standard, Enthusiast, Performance, Touring, and Track versions are included"
+    "note": "350Z\n350Z Enthusiast\n350Z Performance\n350Z Touring\n350Z Track"
   },
   {
     "make": "Nissan",
     "baseModel": "Skyline",
     "year": 1998,
     "model": "Skyline GT-R",
-    "note": "Standard, V-spec, V-spec II, V-spec II Nur, M-Spec, and M-Spec Nur versions are included"
+    "note": "Skyline GT-R\nSkyline GT-R V-spec\nSkyline GT-R V-spec II\nSkyline GT-R V-spec II Nur\nSkyline GT-R M-Spec\nSkyline GT-R M-Spec Nur"
   },
   {
     "make": "Subaru",
     "baseModel": "Impreza",
     "year": 2000,
-    "note": "2.5 RS, S202 STi, STi, and WRX versions are included."
+    "note": "Impreza 2.5 RS\nImpreza S202 STi\nImpreza STi\nImpreza WRX"
   },
   {
     "make": "Toyota",
     "baseModel": "Celica",
     "year": 1999,
-    "note": "GT, GT-S, and GT Action Package versions are included"
+    "note": "Celica GT\nCelica GT-S\nCelica GT Action Package"
   },
   {
     "make": "Toyota",
     "baseModel": "Corolla",
     "year": 1984,
-    "model": "Sprinter Trueno GT-Apex Twin Cam"
+    "model": "Sprinter Trueno\nCorolla GT-Apex Twin Cam"
   },
   {
     "make": "Toyota",
@@ -83,19 +77,19 @@
     "make": "Toyota",
     "baseModel": "Supra",
     "year": 1993,
-    "note": "AE, SR Targa AE, Twin Turbo AE, SZ-R, and RZ versions are included"
+    "note": "Supra AE\nSupra SR Targa AE\nSupra Twin Turbo AE\nSupra SZ-R\nSupra RZ"
   },
   {
     "make": "Volkswagen",
     "baseModel": "Golf",
     "year": 1997,
     "model": "Golf GTI",
-    "note": "Standard and VR6 versions are included"
+    "note": "Golf GTI\nGolf GTI VR6"
   },
   {
     "make": "Volkswagen",
     "baseModel": "Jetta",
     "year": 1999,
-    "note": "GLI and GLS versions are included"
+    "note": "Jetta GLI\nJetta GLS"
   }
 ]

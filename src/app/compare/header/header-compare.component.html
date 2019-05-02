@@ -1,0 +1,42 @@
+<header class="header">
+  <div>
+    <div class="header__button mode">
+      <span class="imageCenterHelper"></span>
+      <img src="assets/images/Hamburger.png" alt="Hamburger">
+        <div class="mode_dropdown">
+          <div><a href="/compare">Compare</a></div>
+          <div><a href="/select">Select</a></div>
+        </div>
+    </div>
+    <div class="header__title"><!--STREET RACING CARS--></div>
+    <div class="header__button game-a">
+      <span class="imageCenterHelper"></span>
+      <img src="assets/images/game-logos/{{ gameA.id }}.png" alt="{{ gameA.title }}">
+      <div class="game-a_dropdown">
+        <div *ngFor="let game of games" (click)="gameA = { id: game.id, title: game.title }; this.updateCarList();">
+          <span class="imageCenterHelper"></span>
+          <img src="assets/images/game-logos/{{ game.id }}.png" alt="{{ game.title }}">
+        </div>
+      </div>
+    </div>
+    <div class="header__button set-relation">
+      <span class="imageCenterHelper"></span>
+      <img src="assets/images/venn-diagrams/{{ setRelation.id }}.png" alt="{{ setRelation.title }}">
+      <div class="set-relation_dropdown">
+        <div *ngFor="let sr of setRelations" (click)="setRelation = { id: sr.id, title: sr.title }; this.updateCarList();">
+          <span class="imageCenterHelper"></span>
+          <img src="assets/images/venn-diagrams/{{ sr.id }}.png" alt="{{ sr.title }}">
+        </div>
+      </div>
+    </div>
+    <div class="header__button game-b">
+      <span class="imageCenterHelper"></span>
+      <img src="assets/images/game-logos/{{ gameB.id }}.png" alt="{{ gameB.title }}">
+      <div class="game-b_dropdown">
+        <div *ngFor="let game of games" (click)="gameB = { id: game.id, title: game.title }; this.updateCarList();">
+          <span class="imageCenterHelper"></span>
+          <img src="assets/images/game-logos/{{ game.id }}.png" alt="{{ game.title }}"></div>
+      </div>
+    </div>
+  </div>
+</header>

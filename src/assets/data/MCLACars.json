@@ -175,7 +175,7 @@
     "make": "Land-Rover",
     "baseModel": "Range Rover",
     "year": 2002,
-    "note": "Supercharged and Sport Supercharged versions are included in the South Central Premium Upgrade Vehicles pack"
+    "note": "Range Rover Supercharged (South Central Premium Upgrade Vehicles pack)\nRange Rover Sport Supercharged (South Central Premium Upgrade Vehicles pack)"
   },
   {
     "make": "Mazda",
@@ -249,15 +249,14 @@
   {
     "make": "Nissan",
     "baseModel": "240SX",
-    "year": 1995,
-    "note": "\"Kouki\" facelift"
+    "year": 1997
   },
   {
     "make": "Nissan",
     "baseModel": "240Z",
     "year": 1969,
     "model": "280Z",
-    "note": "Appears as Datsun 280Z"
+    "note": "Datsun 280Z"
   },
   {
     "make": "Nissan",

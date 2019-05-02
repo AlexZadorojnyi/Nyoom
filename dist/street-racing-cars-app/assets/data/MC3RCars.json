@@ -25,7 +25,7 @@
         "make": "Cadillac",
         "baseModel": "Escalade",
         "year": 2002,
-        "note": "Standard and EXT versions are included"
+        "note": "Escalade\nEscalade EXT"
     },
     {
         "make": "Cadillac",
@@ -273,7 +273,7 @@
         "make": "Mercedes-Benz",
         "baseModel": "CL-Class",
         "year": 2000,
-        "note": "CL 500 and CL 55 AMG versions are included"
+        "note": "CL 500\nCL 55 AMG"
     },
     {
         "make": "Mercedes-Benz",
@@ -290,13 +290,13 @@
         "make": "Mercedes-Benz",
         "baseModel": "G-Class",
         "year": 1990,
-        "note": "G 500 and G 55 AMG versions are included"
+        "note": "G 500\nG 55 AMG"
     },
     {
         "make": "Mercedes-Benz",
         "baseModel": "SL-Class",
         "year": 2002,
-        "note": "SL 500 and SL 55 AMG versions are included"
+        "note": "SL 500\nSL 55 AMG"
     },
     {
         "make": "Mercedes-Benz",
@@ -349,15 +349,15 @@
     },
     {
         "make": "Porsche",
-        "baseModel": "Cayenne",
-        "year": 2003,
-        "model": "Gemballa GT 750"
-    },
-    {
-        "make": "Porsche",
         "baseModel": "911",
         "year": 1998,
         "model": "Gemballa Sport Coupe"
+    },
+    {
+        "make": "Porsche",
+        "baseModel": "Cayenne",
+        "year": 2003,
+        "model": "Gemballa GT 750"
     },
     {
         "make": "Saleen",

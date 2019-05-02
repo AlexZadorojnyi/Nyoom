@@ -1,6 +1,4 @@
-import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
-import { analyzeAndValidateNgModules } from '@angular/compiler';
 import JCars from '../assets/data/JCars.json';
 import LARCars from '../assets/data/LARCars.json';
 import MCSRCars from '../assets/data/MCSRCars.json';
@@ -14,15 +12,48 @@ import NFSMWCars from '../assets/data/NFSMWCars.json';
 import NFSCCars from '../assets/data/NFSCCars.json';
 import NFSCars from '../assets/data/NFSCars.json';
 import SRSCars from '../assets/data/SRSCars.json';
+import TFATFCars from '../assets/data/TFATFCars.json';
+import TFATF2006Cars from '../assets/data/TFATF2006Cars.json';
+import TFTFCars from '../assets/data/TFTFCars.json';
+import TD2002Cars from '../assets/data/TD2002Cars.json';
+import TXRCars from '../assets/data/TXRCars.json';
+import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable({ providedIn: 'root' })
 export class CarsService {
 
   cars: any = {};
   carList = new Array();
   carListChanged = new Subject<void>();
+  gameListChanged = new Subject<void>();
+  selectedCars = new Array();
+  gamePercentages: any = {};
+
+  games = [
+    { id: 'J',          title: 'Juiced', pct: 0 },
+    { id: 'LAR',        title: 'LA Rush', pct: 0 },
+    { id: 'MCSR',       title: 'Midnight Club: Street Racing', pct: 0 },
+    { id: 'MC2',        title: 'Midnight Club 2', pct: 0 },
+    { id: 'MC3',        title: 'Midnight Club 3: Dub Edition', pct: 0 },
+    { id: 'MC3R',       title: 'Midnight Club 3: Dub Edition Remix', pct: 0 },
+    { id: 'MCLA',       title: 'Midnight Club: Los Angeles', pct: 0 },
+    { id: 'NFSU',       title: 'Need for Speed: Underground', pct: 0 },
+    { id: 'NFSU2',      title: 'Need for Speed: Underground 2', pct: 0 },
+    { id: 'NFSMW',      title: 'Need for Speed: Most Wanted', pct: 0 },
+    { id: 'NFSC',       title: 'Need for Speed: Carbon', pct: 0 },
+    { id: 'NFS',        title: 'Need for Speed', pct: 0 },
+    { id: 'SRS',        title: 'Street Racing Syndicate', pct: 0 },
+    { id: 'TD2002',     title: 'Test Drive (2002)', pct: 0 },
+    { id: 'TXR',        title: 'Tokyo Xtreme Racer', pct: 0 },
+    { id: 'TFATF',      title: 'The Fast and the Furious', pct: 0 },
+    { id: '2F2F',       title: '2 Fast 2 Furious', pct: 0 },
+    { id: 'TFATF2006',  title: 'The Fast and the Furious (2006)', pct: 0 },
+    /*{ id: 'TXR2',       title: 'Tokyo Xtreme Racer 2' },
+    { id: 'TXRZ',       title: 'Tokyo Xtreme Racer Zero' },
+    { id: 'TXR3',       title: 'Tokyo Xtreme Racer 3' },
+    { id: 'ITC',        title: 'Import Tuner Challenge' },*/
+    // { id: 'All',        title: 'All' }, // Debug only
+  ];
 
   constructor() {
     this.cars['J'] = JCars;
@@ -38,140 +69,11 @@ export class CarsService {
     this.cars['NFSC'] = NFSCCars;
     this.cars['NFS'] = NFSCars;
     this.cars['SRS'] = SRSCars;
-    this.cars['TFATF'] = [
-      { make: 'Acura',      baseModel: 'Integra',       year: 1995,   model: 'Integra GS-R' },
-      { make: 'Acura',      baseModel: 'Integra',       year: 1994,   model: 'Integra GS-R' },
-      { make: 'Chevrolet',  baseModel: 'Chevelle',      year: 1968,   model: 'Chevelle SS' },
-      { make: 'Dodge',      baseModel: 'Charger',       year: 1968 },
-      { make: 'Ferrari',    baseModel: 'F355',          year: 1995,   model: 'F355 Spider' },
-      { make: 'Ford',       baseModel: 'F-150',         year: 1997,   model: 'F-150 SVT Lightning' },
-      /* 3 honda civics */
-      { make: 'Honda',      baseModel: 'S2000',         year: 1999 },
-      { make: 'Mazda',      baseModel: 'RX-7',          year: 1992 },
-      { make: 'Mitsubishi', baseModel: 'Eclipse',       year: 1995,   model: 'Eclipse RS' },
-      { make: 'Nissan',     baseModel: '240SX',         year: 1995,   note: '"Kouki" facelift' },
-      { make: 'Nissan',     baseModel: 'Skyline',       year: 1998,   model: 'Skyline GT-R' },
-      { make: 'Toyota',     baseModel: 'Supra',         year: 1993 },
-      { make: 'Volkswagen', baseModel: 'Jetta',         year: 1992 }
-    ];
-    this.cars['2F2F'] = [
-      /* BMW kinda */
-      { make: 'Chevrolet',  baseModel: 'Camaro',        year: 1967,   model: 'Camaro Yenko S/C Replica' },
-      { make: 'Dodge',      baseModel: 'Challenger',    year: 1970,   model: 'Challenger R/T' },
-      { make: 'Honda',      baseModel: 'S2000',         year: 1999 },
-      { make: 'Mazda',      baseModel: 'RX-7',          year: 1992 },
-      { make: 'Mitsubishi', baseModel: 'Eclipse',       year: 2000,   model: 'Eclipse Spyder GTS' },
-      { make: 'Mitsubishi', baseModel: 'Lancer',        year: 2002,   model: 'Lancer Evolution VII' },
-      { make: 'Nissan',     baseModel: 'Skyline',       year: 1998,   model: 'Skyline GT-R' },
-      { make: 'Toyota',     baseModel: 'Supra',         year: 1993 }
-    ];
-    this.cars['TFATF2006'] = [
-      { make: 'Acura',      baseModel: 'Integra',       year: 1994,   model: 'Integra Type R' },
-      { make: 'Acura',      baseModel: 'NSX',           year: 1990 },
-      { make: 'Chevrolet',  baseModel: 'Chevelle',      year: 1968,   model: 'Chevelle SS' },
-      { make: 'Chevrolet',  baseModel: 'Corvette',      year: 2005,   model: 'Corvette C6' },
-      { make: 'Chevrolet',  baseModel: 'Corvette',      year: 2005,   model: 'Corvette C6R' },
-      { make: 'Chevrolet',  baseModel: 'Corvette',      year: 2005,   model: 'Corvette Z06' },
-      { make: 'Dodge',      baseModel: 'Neon',          year: 1995,   model: 'Neon SRT-4' },
-      { make: 'Dodge',      baseModel: 'Viper',         year: 2003,   model: 'Viper SRT-10' },
-      { make: 'Dodge',      baseModel: 'Charger',       year: 1968,   model: 'Charger R/T 440 Magnum' },
-      { make: 'Dodge',      baseModel: 'Charger',       year: 1968,   model: 'Charger R/T HEMI' },
-      { make: 'Dodge',      baseModel: 'Charger',       year: 2006,   model: 'Charger Daytona R/T' },
-      { make: 'Dodge',      baseModel: 'Charger',       year: 2006,   model: 'Charger SRT-8' },
-      { make: 'Ford',       baseModel: 'Mustang',       year: 1965,   model: 'Mustang Fastback' },
-      { make: 'Shelby',     baseModel: 'GT500',         year: 1967 },
-      { make: 'Ford',       baseModel: 'Mustang',       year: 2005,   model: 'Mustang  GT' },
-      { make: 'Ford',       baseModel: 'Mustang',       year: 2005,   model: 'Mustang  GTR Concept' },
-      { make: 'Shelby',     baseModel: 'GT500',         year: 2005,   model: 'GT500 Concept' },
-      { make: 'Saleen',     baseModel: 'S281',          year: 2005,   model: 'S281E' },
-      { make: 'Ford',       baseModel: 'Focus',         year: 1998,   model: 'Focus SVT' },
-      { make: 'Saleen',     baseModel: 'S121',          year: 2004,   model: 'S121 N20 Focus' },
-      { make: 'Honda',      baseModel: 'Civic',         year: 2006,   model: 'Civic Si' },
-      { make: 'Lexus',      baseModel: 'IS',            year: 1999,   model: 'IS 300' },
-      { make: 'Lexus',      baseModel: 'IS',            year: 1999,   model: 'IS 300 Sport Design' },
-      { make: 'Mazda',      baseModel: 'Mazda6',        year: 2002 },
-      { make: 'Mazda',      baseModel: 'RX-7',          year: 1992 },
-      { make: 'Mitsubishi', baseModel: 'Eclipse',       year: 1995,   model: 'Eclipse GSX' },
-      { make: 'Mitsubishi', baseModel: 'Eclipse',       year: 2000,   model: 'Eclipse GT' },
-      { make: 'Mitsubishi', baseModel: 'Eclipse',       year: 2006,   model: 'Eclipse GT' },
-      { make: 'Mitsubishi', baseModel: 'Lancer',        year: 2002,   model: 'Lancer Evolution VIII RS' },
-      { make: 'Nissan',     baseModel: '350Z',          year: 2003,   model: '350Z 35th Anniversary Edition' },
-      { make: 'Scion',      baseModel: 'tC',            year: 2005 },
-      { make: 'Toyota',     baseModel: 'Supra',         year: 1993,   model: 'Supra Twin Turbo' },
-      { make: 'Lexus',      baseModel: 'LF-C Concept',  year: 2004 },
-      { make: 'Mitsubishi', baseModel: '3000GT',        year: 1990,   model: 'GTO Twin Turbo MR' },
-      { make: 'Mitsubishi', baseModel: 'Lancer',        year: 2002,   model: 'Lancer Evolution VII GSR' },
-      { make: 'Mitsubishi', baseModel: 'Lancer',        year: 2002,   model: 'Lancer Evolution VIII GSR' },
-      { make: 'Mitsubishi', baseModel: 'Lancer',        year: 2002,   model: 'Lancer Evolution VIII MR' },
-      { make: 'Mitsubishi', baseModel: 'Lancer',        year: 2002,   model: 'Lancer Evolution VIII FQ-400' },
-      { make: 'Mitsubishi', baseModel: 'Lancer',        year: 2002,   model: 'Lancer Evolution IX GSR' },
-      { make: 'Mitsubishi', baseModel: 'Lancer',        year: 2002,   model: 'Lancer Evolution IX RS' },
-      { make: 'Mitsubishi', baseModel: 'Lancer',        year: 2002,   model: 'Lancer Evolution IX MR' },
-      { make: 'Mitsubishi', baseModel: 'Lancer',        year: 2002,   model: 'Lancer Evolution IX Ralliart' },
-      { make: 'Mitsubishi', baseModel: 'Lancer',        year: 2008,   model: 'Concept-X (2005)' },
-      { make: 'Mitsubishi', baseModel: 'Lancer',        year: 2008,   model: 'Concept-Sportback (2005)' },
-      { make: 'Acura',      baseModel: 'NSX',           year: 1990,   model: 'NSX-R' },
-      { make: 'Acura',      baseModel: 'NSX',           year: 1990,   model: 'NSX-R GT' },
-      { make: 'Honda',      baseModel: 'S2000',         year: 1999 },
-      { make: 'Acura',      baseModel: 'Integra',       year: 1994,   model: 'Integra Type R (DC2)' },
-      { make: 'Acura',      baseModel: 'RSX',           year: 2002,   model: 'Integra Type R' }
-      /* INCOMPLETE */
-    ];
-    this.cars['TD2002'] = [
-      { make: 'Aston Martin', baseModel: 'DB7',       year: 1997,   model: 'DB7 Vantage'},
-      { make: 'Chevrolet',    baseModel: 'Camaro',    year: 1967,   model: 'Camaro Z28' },
-      { make: 'Chevrolet',    baseModel: 'Chevelle',  year: 1968,   model: 'Chevelle SS' },
-      { make: 'Chevrolet',    baseModel: 'Corvette',  year: 1968,   model: 'Corvette C3' },
-      { make: 'Chevrolet',    baseModel: 'Corvette',  year: 1997,   model: 'Corvette C5 Z06' },
-      { make: 'Dodge',        baseModel: 'Charger',   year: 1968,   model: 'Charger R/T' },
-      { make: 'Dodge',        baseModel: 'Viper',     year: 1996,   note: 'GTS and GTS-R versions are included' },
-      { make: 'Ford',         baseModel: 'GT40',      year: 1968,   model: 'GT40 Mk I' },
-      { make: 'Ford',         baseModel: 'Mustang',   year: 1965,   model: 'Mustang Mach 1' },
-      { make: 'Ford',         baseModel: 'Mustang',   year: 1994,   model: 'Mustang SVT Cobra R' },
-      { make: 'Jaguar',       baseModel: 'XJ220',     year: 1992 },
-      { make: 'Jaguar',       baseModel: 'XK',        year: 1997,   model: 'XKR' },
-      { make: 'Lotus',        baseModel: 'Elise',     year: 1996,   model: 'Elise 111S' },
-      { make: 'Lotus',        baseModel: 'Esprit',    year: 1993,   model: 'Esprit GT1' },
-      { make: 'Nissan',       baseModel: 'Skyline',   year: 1998,   model: 'Skyline GT-R' },
-      { make: 'Plymouth',     baseModel: 'Barracuda', year: 1970,   model: '\'Cuda' },
-      { make: 'Pontiac',      baseModel: 'GTO',       year: 1964 },
-      { make: 'Shelby',       baseModel: 'Cobra',     year: 1967,   model: 'Cobra 427' },
-      { make: 'Shelby',       baseModel: 'Series 1',  year: 1998 },
-      { make: 'Subaru',       baseModel: 'Impreza',   year: 1992,   model: 'Impreza 22B-STi' },
-      { make: 'Toyota',       baseModel: 'Supra',     year: 1993 },
-      { make: 'TVR',          baseModel: 'Cerbera',   year: 1996,   model: 'Cerbera Speed 12' }
-    ];
-    this.cars['TXR'] = [
-      { make: 'Acura',      baseModel: 'Integra',   year: 1994,     model: 'Integra Type R',  note: 'Appears as a Honda Type R' },
-      { make: 'Acura',      baseModel: 'NSX',       year: 1990,     note: 'Appears as a Honda NSX' },
-      { make: 'Honda',      baseModel: 'Civic',     year: 1996,     model: 'Civic Type R' },
-      { make: 'Honda',      baseModel: 'S2000',     year: 1999 },
-      { make: 'Lexus',      baseModel: 'IS',        year: 1999,     model: 'IS 300',  note: 'Appears as Toyota Altezza' },
-      { make: 'Mazda',      baseModel: 'RX-7',      year: 1985 },
-      { make: 'Mazda',      baseModel: 'RX-7',      year: 1992 },
-      { make: 'Mitsubishi', baseModel: 'Eclipse',   year: 1995,     model: 'Eclipse GSX' },
-      { make: 'Mitsubishi', baseModel: 'Eclipse',   year: 2000,     model: 'Eclipse GT' },
-      { make: 'Mitsubishi', baseModel: 'Lancer',    year: 1995,     model: 'Lancer Evolution III' },
-      { make: 'Mitsubishi', baseModel: 'Lancer',    year: 1995,     model: 'Lancer Evolution V' },
-      { make: 'Nissan',     baseModel: '240SX',     year: 1989,     note: 'Appears as a Nissan 180SX' },
-      { make: 'Nissan',     baseModel: 'Cedric',    year: 1995 },
-      { make: 'Nissan',     baseModel: '240Z',      year: 1969,     note: 'Appears as Fairlady Z' },
-      { make: 'Nissan',     baseModel: '300ZX',     year: 1989,     model: '300ZX Z32' },
-      { make: 'Nissan',     baseModel: 'Gloria',    year: 1995 },
-      { make: 'Nissan',     baseModel: 'S13',       year: 1990 },
-      { make: 'Nissan',     baseModel: 'S14',       year: 1994 },
-      { make: 'Nissan',     baseModel: 'S15',       year: 1999 },
-      { make: 'Nissan',     baseModel: 'Skyline',   year: 1989,     model: 'Skyline GT-R' },
-      { make: 'Nissan',     baseModel: 'Skyline',   year: 1993,     model: 'Skyline GT-R' },
-      { make: 'Nissan',     baseModel: 'Skyline',   year: 1998,     model: 'Skyline GT-R' },
-      { make: 'Porsche',    baseModel: '911',       year: 1975,     model: '930 Turbo' },
-      { make: 'Subaru',     baseModel: 'Impreza',   year: 1992,     model: 'WRX STI' },
-      { make: 'Toyota',     baseModel: 'Chaser',    year: 1996 },
-      { make: 'Toyota',     baseModel: 'Corolla',   year: 1984,     model: 'Corolla GT-S',
-        note: 'Sprinter Trueno and Corolla Levin versions are included' },
-      { make: 'Toyota',     baseModel: 'Supra',     year: 1993 },
-      { make: 'Toyota',     baseModel: 'MR2',       year: 1989 }
-    ];
+    this.cars['TFATF'] = TFATFCars;
+    this.cars['2F2F'] = TFTFCars;
+    this.cars['TFATF2006'] = TFATF2006Cars;
+    this.cars['TD2002'] = TD2002Cars;
+    this.cars['TXR'] = TXRCars;
     this.cars['TXR2'] = [
       { make: 'Suzuki',     baseModel: 'Autozam AZ-1',  year: 1992 },
       { make: 'BMW',        baseModel: 'M3',            year: 1992 },
@@ -184,30 +86,37 @@ export class CarsService {
       { make: 'Honda',      baseModel: 'Civic',         year: 1996,   note: '2-door hatchback and 2-door coupe versions are included' },
       { make: 'Honda',      baseModel: 'CR-X',          year: 1988 },
     ];
+    this.cars['All'] = [];
+    this.cars['All'] = this.getAllCars();
   }
 
-  games = [
-    { id: 'J',      title: 'Juiced' },
-    { id: 'LAR',    title: 'LA Rush' },
-    { id: 'MCSR',   title: 'Midnight Club: Street Racing' },
-    { id: 'MC2',    title: 'Midnight Club 2' },
-    { id: 'MC3',    title: 'Midnight Club 3: Dub Edition' },
-    { id: 'MC3R',   title: 'Midnight Club 3: Dub Edition Remix' },
-    { id: 'MCLA',   title: 'Midnight Club: Los Angeles' },
-    { id: 'NFSU',   title: 'Need for Speed: Underground' },
-    { id: 'NFSU2',  title: 'Need for Speed: Underground 2' },
-    { id: 'NFSMW',  title: 'Need for Speed: Most Wanted' },
-    { id: 'NFSC',   title: 'Need for Speed: Carbon' },
-    { id: 'NFS',    title: 'Need for Speed' },
-    { id: 'SRS',    title: 'Street Racing Syndicate' },
-    { id: 'TD2002', title: 'Test Drive (2002)' },
-    /*{ id: 'TFATF2006',  title: 'The Fast and the Furious (2006)' },
-    { id: 'TXR',    title: 'Tokyo Xtreme Racer' },
-    { id: 'TXR2',   title: 'Tokyo Xtreme Racer 2' },
-    { id: 'TXRZ',   title: 'Tokyo Xtreme Racer Zero' },
-    { id: 'TXR3',   title: 'Tokyo Xtreme Racer 3' },
-    { id: 'ITC',    title: 'Import Tuner Challenge' },*/
-  ];
+  compareCars = function(car1, car2) {
+    if (car1.make.toLowerCase() < car2.make.toLowerCase()) {
+      return -1;
+    } else if (car1.make.toLowerCase() > car2.make.toLowerCase()) {
+      return 1;
+    } else {
+      if (car1.baseModel.toLowerCase() < car2.baseModel.toLowerCase()) {
+        return -1;
+      } else if (car1.baseModel.toLowerCase() > car2.baseModel.toLowerCase()) {
+        return 1;
+      } else {
+        return car1.year - car2.year;
+      }
+    }
+  };
+
+  indexOfCar = function(car, arr) {
+    let i;
+    for (i = 0; i < arr.length; i++) {
+      if (arr[i].make.toLowerCase() === car.make.toLowerCase() &&
+          arr[i].baseModel.toLowerCase() === car.baseModel.toLowerCase() &&
+          arr[i].year === car.year) {
+        return i;
+      }
+    }
+    return -1;
+  };
 
   getRandomGame = function () {
     return this.games[Math.floor(Math.random() * (this.games.length - 1))];
@@ -250,24 +159,24 @@ export class CarsService {
     let j = 0;
     while (typeof arr1[i] !== 'undefined' && typeof arr2[j] !== 'undefined') {
       // make of car 1 comes first
-      if (arr1[i].make < arr2[j].make) {
+      if (arr1[i].make.toLowerCase() < arr2[j].make.toLowerCase()) {
         // add car 1
         this.carList.push(this.formatEntry(arr1[i], null));
         i++;
       // make of car 2 comes first
-      } else if (arr1[i].make > arr2[j].make) {
+      } else if (arr1[i].make.toLowerCase() > arr2[j].make.toLowerCase()) {
         // add car 2
         this.carList.push(this.formatEntry(null, arr2[j]));
         j++;
       // make of car 1 and 2 is the same
       } else if (arr1[i].make === arr2[j].make) {
         // base model of car 1 comes first
-        if (arr1[i].baseModel < arr2[j].baseModel) {
+        if (arr1[i].baseModel.toLowerCase() < arr2[j].baseModel.toLowerCase()) {
           // add car 1
           this.carList.push(this.formatEntry(arr1[i], null));
           i++;
         // base model of car 2 comes first
-        } else if (arr1[i].baseModel > arr2[j].baseModel) {
+        } else if (arr1[i].baseModel.toLowerCase() > arr2[j].baseModel.toLowerCase()) {
           // add car 2
           this.carList.push(this.formatEntry(null, arr2[j]));
           j++;
@@ -356,23 +265,23 @@ export class CarsService {
     let j = 0;
     while (typeof arr1[i] !== 'undefined' && typeof arr2[j] !== 'undefined') {
       // make of car 1 comes first
-      if (arr1[i].make < arr2[j].make) {
+      if (arr1[i].make.toLowerCase() < arr2[j].make.toLowerCase()) {
         // add car 1
         this.carList.push(this.formatEntry(arr1[i], null));
         i++;
       // make of car 2 comes first
-      } else if (arr1[i].make > arr2[j].make) {
+      } else if (arr1[i].make.toLowerCase() > arr2[j].make.toLowerCase()) {
         // skip car 2
         j++;
       // make of car 1 and 2 is the same
       } else if (arr1[i].make === arr2[j].make) {
         // base model of car 1 comes first
-        if (arr1[i].baseModel < arr2[j].baseModel) {
+        if (arr1[i].baseModel.toLowerCase() < arr2[j].baseModel.toLowerCase()) {
           // add car 1
           this.carList.push(this.formatEntry(arr1[i], null));
           i++;
         // base model of car 2 comes first
-        } else if (arr1[i].baseModel > arr2[j].baseModel) {
+        } else if (arr1[i].baseModel.toLowerCase() > arr2[j].baseModel.toLowerCase()) {
           // skip car 2
           j++;
         // base model of car 1 and 2 is the same
@@ -409,21 +318,21 @@ export class CarsService {
     let j = 0;
     while (typeof arr1[i] !== 'undefined' && typeof arr2[j] !== 'undefined') {
       // make of car 1 comes first
-      if (arr1[i].make < arr2[j].make) {
+      if (arr1[i].make.toLowerCase() < arr2[j].make.toLowerCase()) {
         // skip car 1
         i++;
       // make of car 2 comes first
-      } else if (arr1[i].make > arr2[j].make) {
+      } else if (arr1[i].make.toLowerCase() > arr2[j].make.toLowerCase()) {
         // add car 2
         this.carList.push(this.formatEntry(null, arr2[j]));
         j++;
         // base model of car 1 comes first
       } else if (arr1[i].make === arr2[j].make) {
-        if (arr1[i].baseModel < arr2[j].baseModel) {
+        if (arr1[i].baseModel.toLowerCase() < arr2[j].baseModel.toLowerCase()) {
           // skip car 1
           i++;
         // base model of car 2 comes first
-        } else if (arr1[i].baseModel > arr2[j].baseModel) {
+        } else if (arr1[i].baseModel.toLowerCase() > arr2[j].baseModel.toLowerCase()) {
           // add car 2
           this.carList.push(this.formatEntry(null, arr2[j]));
           j++;
@@ -462,24 +371,24 @@ export class CarsService {
     let j = 0;
     while (typeof arr1[i] !== 'undefined' && typeof arr2[j] !== 'undefined') {
       // make of car 1 comes first
-      if (arr1[i].make < arr2[j].make) {
+      if (arr1[i].make.toLowerCase() < arr2[j].make.toLowerCase()) {
         // add car 1
         this.carList.push(this.formatEntry(arr1[i], null));
         i++;
       // make of car 2 comes first
-      } else if (arr1[i].make > arr2[j].make) {
+      } else if (arr1[i].make.toLowerCase() > arr2[j].make.toLowerCase()) {
         // add car 2
         this.carList.push(this.formatEntry(null, arr2[j]));
         j++;
       // make of car 1 and 2 is the same
       } else if (arr1[i].make === arr2[j].make) {
         // base model of car 1 comes first
-        if (arr1[i].baseModel < arr2[j].baseModel) {
+        if (arr1[i].baseModel.toLowerCase() < arr2[j].baseModel.toLowerCase()) {
           // add car 1
           this.carList.push(this.formatEntry(arr1[i], null));
           i++;
         // base model of car 2 comes first
-        } else if (arr1[i].baseModel > arr2[j].baseModel) {
+        } else if (arr1[i].baseModel.toLowerCase() > arr2[j].baseModel.toLowerCase()) {
           // add car 2
           this.carList.push(this.formatEntry(null, arr2[j]));
           j++;
@@ -577,5 +486,118 @@ export class CarsService {
       }
     }
     return car;
+  };
+
+  getAllCars = function () {
+    let temp = [];
+    let allCars = [];
+    this.games.forEach(game => {
+      // temp is empty
+      if (temp.length < 1) {
+        // set temp to car list of first game
+        temp = this.cars[game.id];
+      } else {
+        temp = allCars;
+        allCars = [];
+      }
+      let i = 0;
+      let j = 0;
+      while (typeof temp[i] !== 'undefined' && typeof this.cars[game.id][j] !== 'undefined') {
+        // make of car 1 comes first
+        if (temp[i].make.toLowerCase() < this.cars[game.id][j].make.toLowerCase()) {
+          // add car 1
+          allCars.push(this.formatEntry(temp[i], null));
+          i++;
+        // make of car 2 comes first
+        } else if (temp[i].make.toLowerCase() > this.cars[game.id][j].make.toLowerCase()) {
+          // add car 2
+          allCars.push(this.formatEntry(null, this.cars[game.id][j]));
+          j++;
+        // make of car 1 and 2 is the same
+        } else if (temp[i].make === this.cars[game.id][j].make) {
+          // base model of car 1 comes first
+          if (temp[i].baseModel.toLowerCase() < this.cars[game.id][j].baseModel.toLowerCase()) {
+            // add car 1
+            allCars.push(this.formatEntry(temp[i], null));
+            i++;
+          // base model of car 2 comes first
+          } else if (temp[i].baseModel.toLowerCase() > this.cars[game.id][j].baseModel.toLowerCase()) {
+            // add car 2
+            allCars.push(this.formatEntry(null, this.cars[game.id][j]));
+            j++;
+          // base model of car 1 and 2 is the same
+          } else if (temp[i].baseModel === this.cars[game.id][j].baseModel) {
+            // year of car 1 comes first
+            if (temp[i].year < this.cars[game.id][j].year) {
+              // add car 1
+              allCars.push(this.formatEntry(temp[i], null));
+              i++;
+            // year of car 2 comes first
+            } else if (temp[i].year > this.cars[game.id][j].year) {
+              // add car 2
+              allCars.push(this.formatEntry(null, this.cars[game.id][j]));
+              j++;
+            // year of car 1 and 2 is the same
+            } else if (temp[i].year === this.cars[game.id][j].year) {
+              // add both cars
+              allCars.push(this.formatEntry(temp[i], this.cars[game.id][j]));
+              i++;
+              j++;
+            }
+          }
+        }
+      }
+      // only car 1 remaining
+      while (typeof temp[i] !== 'undefined') {
+        // add car 1
+        allCars.push(this.formatEntry(temp[i], null));
+        i++;
+      }
+      // only car 2 remaining
+      while (typeof this.cars[game.id][j] !== 'undefined') {
+        // add car 2
+        allCars.push(this.formatEntry(null, this.cars[game.id][j]));
+        j++;
+      }
+    });
+    return allCars;
+  };
+
+  selectCar = function(make: string, baseModel: string, year: number) {
+    if (this.indexOfCar({make, baseModel, year}, this.selectedCars) !== -1) {
+      this.selectedCars.splice(this.indexOfCar({make, baseModel, year}, this.selectedCars), 1);
+    } else {
+      this.selectedCars.push({ make, baseModel, year });
+    }
+    if (this.selectedCars.length > 1) {
+      this.selectedCars.sort(this.compareCars);
+    }
+    this.updateGamePercentages();
+    // console.log(this.selectedCars);
+  };
+
+  isSelected = function(make: string, baseModel: string, year: number) {
+    if (this.indexOfCar({make, baseModel, year}, this.selectedCars) !== -1) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  updateGamePercentages = function() {
+    let i;
+    for (i = 0; i < this.games.length; i++) {
+      let j;
+      let temp = 0;
+      for (j = 0; j < this.selectedCars.length; j++) {
+        if (this.indexOfCar(this.selectedCars[j], this.cars[this.games[i].id]) !== -1) {
+          temp++;
+        }
+      }
+      this.games[i].pct = temp / this.selectedCars.length;
+      // this.games[i].pct = ((temp / this.selectedCars.length) * 100).toFixed(0);
+      // console.log(this.games);
+      this.gameListChanged.next();
+    }
   };
 }

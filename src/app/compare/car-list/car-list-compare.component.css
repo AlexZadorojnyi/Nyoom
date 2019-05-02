@@ -1,0 +1,46 @@
+.car {
+  display: grid;
+  grid-template-columns: 10fr 6fr 6fr;
+  max-width: 75rem;
+  margin: auto;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+}
+
+.car__game-a,
+.car__game-b {
+  height: 20vw;
+  padding: 5vw;
+  text-align: center;
+}
+
+.car__game-a img,
+.car__game-b img {
+  height: 100%;
+  vertical-align: middle;
+}
+
+@media only screen and (min-width: 45rem) {
+  .car {
+    grid-template-columns: 13fr 6fr 6fr;
+  }
+
+  .car__game-a,
+  .car__game-b {
+    height: 8vw;
+    padding: 1.75vw;
+  }
+}
+
+@media only screen and (min-width: 75rem) {
+  .car {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .car__game-a,
+  .car__game-b {
+    max-height: 6rem;
+    padding: 1.3125rem;
+  }
+}

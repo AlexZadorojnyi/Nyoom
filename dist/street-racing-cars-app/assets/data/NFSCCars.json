@@ -123,7 +123,7 @@
         "make": "Lamborghini",
         "baseModel": "Murciélago",
         "year": 2001,
-        "note": "Standard and LP 640 versions are included"
+        "note": "Murciélago\nMurciélago LP 640"
     },
     {
         "make": "Lexus",
@@ -229,13 +229,13 @@
         "make": "Pontiac",
         "baseModel": "GTO",
         "year": 2004,
-        "note": "Also appears as Holden Monaro VXR"
+        "note": "Pontiac GTO\nHolden Monaro VXR"
     },
     {
         "make": "Porsche",
         "baseModel": "911",
         "year": 2005,
-        "note": "GT3 RS and Turbo versions are included"
+        "note": "911 GT3 RS\n911 Turbo"
     },
     {
         "make": "Porsche",
