@@ -157,7 +157,10 @@
     "make": "Ford",
     "baseModel": "Mustang",
     "year": 2005,
-    "model": "Mustang GT Convertible"
+	"models": [
+		{ "model" : "Mustang GT Convertible" },
+		{ "model" : "Saleen S302 Extreme" }
+	]
   },
   {
     "make": "Lamborghini",
@@ -217,7 +220,7 @@
   {
     "make": "Mitsubishi",
     "baseModel": "3000GT",
-    "year": 1990,
+    "year": 1994,
     "model": "3000GT VR-4"
   },
   {
@@ -285,13 +288,6 @@
     "make": "Pontiac",
     "baseModel": "Solstice",
     "year": 2006
-  },
-  {
-    "make": "Saleen",
-    "baseModel": "S302",
-    "year": 2007,
-    "model": "S302 Extreme",
-    "note": "Should be a Ford model"
   },
   {
     "make": "Saleen",

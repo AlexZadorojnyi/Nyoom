@@ -1,0 +1,191 @@
+[
+  {
+    "make": "Aston Martin",
+    "baseModel": "DB9",
+    "year": 2004
+  },
+  {
+    "make": "Audi",
+    "baseModel": "A3",
+    "year": 2003,
+    "model": "A3 3.2 quattro"
+  },
+  {
+    "make": "Audi",
+    "baseModel": "A4",
+    "year": 2004,
+    "model": "A3 3.2 FSI quattro"
+  },
+  {
+    "make": "Audi",
+    "baseModel": "TT",
+    "year": 1998,
+    "model": "TT 3.2 quattro"
+  },
+  {
+    "make": "BMW",
+    "baseModel": "3 Series",
+    "year": 1998,
+    "model": "M3 GTR",
+    "note": "M3 GTR\nM3 GTR (stock) (Black Edition)"
+  },
+  {
+    "make": "Cadillac",
+    "baseModel": "CTS",
+    "year": 2003
+  },
+  {
+    "make": "Chevrolet",
+    "baseModel": "Camaro",
+    "year": 1967,
+    "model": "Camaro SS/RS",
+    "note": "Black Edition"
+  },
+  {
+    "make": "Chevrolet",
+    "baseModel": "Cobalt",
+    "year": 2005,
+    "model": "Cobalt SS"
+  },
+  {
+    "make": "Chevrolet",
+    "baseModel": "Corvette",
+    "year": 2005,
+    "model": "Corvette C6",
+    "note": "Corvette C6\nCorvette C6R (Black Edition)"
+  },
+  {
+    "make": "Dodge",
+    "baseModel": "Viper",
+    "year": 2003,
+    "model": "Viper SRT-10"
+  },
+  {
+    "make": "Fiat",
+    "baseModel": "Grande Punto",
+    "year": 2005
+  },
+  {
+    "make": "Ford",
+    "baseModel": "GT",
+    "year": 2005
+  },
+  {
+    "make": "Ford",
+    "baseModel": "Mustang",
+    "year": 2005,
+    "model": "Mustang  GT"
+  },
+  {
+    "make": "Lamborghini",
+    "baseModel": "Gallardo",
+    "year": 2004
+  },
+  {
+    "make": "Lamborghini",
+    "baseModel": "Murciélago",
+    "year": 2001
+  },
+  {
+    "make": "Lexus",
+    "baseModel": "IS",
+    "year": 1999,
+    "model": "IS 300"
+  },
+  {
+    "make": "Lotus",
+    "baseModel": "Elise",
+    "year": 2001
+  },
+  {
+    "make": "Mazda",
+    "baseModel": "RX-7",
+    "year": 1992
+  },
+  {
+    "make": "Mazda",
+    "baseModel": "RX-8",
+    "year": 2003
+  },
+  {
+    "make": "Mercedes-Benz",
+    "baseModel": "CLK-Class",
+    "year": 2002,
+    "model": "CLK 500"
+  },
+  {
+    "make": "Mercedes-Benz",
+    "baseModel": "SL-Class",
+    "year": 2002,
+    "note": "SL 500\nSL 65 AMG"
+  },
+  {
+    "make": "Mercedes-Benz",
+    "baseModel": "SLR McLaren",
+    "year": 2003
+  },
+  {
+    "make": "Mitsubishi",
+    "baseModel": "Eclipse",
+    "year": 2006,
+    "model": "Eclipse"
+  },
+  {
+    "make": "Mitsubishi",
+    "baseModel": "Lancer",
+    "year": 2002,
+    "model": "Lancer Evolution VIII"
+  },
+  {
+    "make": "Pontiac",
+    "baseModel": "GTO",
+    "year": 2004,
+    "note": "Pontiac GTO\nHolden Monaro VXR"
+  },
+  {
+    "make": "Porsche",
+    "baseModel": "911",
+    "year": 1998,
+    "note": "911 Turbo S\n911 GT2 (Black Edition)"
+  },
+  {
+    "make": "Porsche",
+    "baseModel": "911",
+    "year": 2005,
+    "model": "911 Carrera S"
+  },
+  {
+    "make": "Porsche",
+    "baseModel": "Carrera GT",
+    "year": 2004
+  },
+  {
+    "make": "Porsche",
+    "baseModel": "Cayman",
+    "year": 2005,
+    "model": "Cayman S"
+  },
+  {
+    "make": "Renault",
+    "baseModel": "Clio",
+    "year": 2001,
+    "model": "Clio V6 2"
+  },
+  {
+    "make": "Subaru",
+    "baseModel": "Impreza",
+    "year": 2002,
+    "model": "Impreza WRX STi"
+  },
+  {
+    "make": "Toyota",
+    "baseModel": "Supra",
+    "year": 1993
+  },
+  {
+    "make": "Volkswagen",
+    "baseModel": "Golf",
+    "year": 2003,
+    "model": "Golf GTI"
+  }
+]

@@ -2,19 +2,23 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "car-list game-list";
-  grid-gap: 1rem;
+  /* grid-gap: 1rem; */
   max-width: 75rem;
   margin: auto;
 }
 
 app-car-list-select {
   grid-area: car-list;
-  height: calc(100vh - 5vw);
-  overflow-y: scroll;
+  height: calc(100vh - 6vw);
+  max-height: calc(100vh - 3rem);
+  min-height: calc(100vh - 4.5rem);
+  overflow-y: auto;
 }
 
 app-game-list-select {
   grid-area: game-list;
-  height: calc(100vh - 5vw);
-  overflow-y: scroll;
+  height: calc(100vh - 6vw);
+  max-height: calc(100vh - 3rem);
+  min-height: calc(100vh - 4.5rem);
+  overflow-y: auto;
 }

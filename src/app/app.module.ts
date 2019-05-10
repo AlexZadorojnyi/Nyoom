@@ -11,7 +11,8 @@ import { SelectComponent } from './select/select.component';
 import { HeaderSelectComponent } from './select/header/header-select.component';
 import { CarListSelectComponent } from './select/car-list/car-list-select.component';
 import { GameListSelectComponent } from './select/game-list/game-list-select.component';
-import { SortPctPipe } from './sort-pct.pipe';
+import { SortGamesPipe } from './sort-games.pipe';
+import { SortCarsPipe } from './sort-cars.pipe';
 
 const routes = [
   { path: '', redirectTo: 'compare', pathMatch: 'full' },
@@ -29,7 +30,8 @@ const routes = [
     HeaderSelectComponent,
     CompareComponent,
     SelectComponent,
-    SortPctPipe
+    SortGamesPipe,
+    SortCarsPipe
   ],
   imports: [
     BrowserModule,

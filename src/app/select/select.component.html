@@ -1,4 +1,42 @@
 <app-header-select></app-header-select>
+<!-- Debug filters -->
+<span><b>Cars</b></span><br>
+<span>Make </span>
+<select>
+  <option (click)="filters.carsFilter.make = ''; carsService.updateFilters(filters);">All</option>
+  <option *ngFor="let carMake of carMakes" (click)="filters.carsFilter.make = carMake; carsService.updateFilters(filters);">{{ carMake }}</option>
+</select><br>
+<span>Decade </span>
+<select>
+  <option (click)="filters.carsFilter.decade = -1; carsService.updateFilters(filters);">All</option>
+  <option (click)="filters.carsFilter.decade = 1940; carsService.updateFilters(filters);">1940s</option>
+  <option (click)="filters.carsFilter.decade = 1950; carsService.updateFilters(filters);">1950s</option>
+  <option (click)="filters.carsFilter.decade = 1960; carsService.updateFilters(filters);">1960s</option>
+  <option (click)="filters.carsFilter.decade = 1970; carsService.updateFilters(filters);">1970s</option>
+  <option (click)="filters.carsFilter.decade = 1980; carsService.updateFilters(filters);">1980s</option>
+  <option (click)="filters.carsFilter.decade = 1990; carsService.updateFilters(filters);">1990s</option>
+  <option (click)="filters.carsFilter.decade = 2000; carsService.updateFilters(filters);">2000s</option>
+  <option (click)="filters.carsFilter.decade = 2010; carsService.updateFilters(filters);">2010s</option>
+</select><br>
+<span>Sort by </span>
+<select>
+  <option (click)="filters.carsSort = 'make'; carsService.updateFilters(filters);">Make</option>
+  <option (click)="filters.carsSort = 'year'; carsService.updateFilters(filters);">Year</option>
+</select><br>
+<span><b>Media</b></span><br>
+<span>Type </span>
+<select>
+  <option (click)="filters.gamesFilter.type = ''; carsService.updateFilters(filters);">All</option>
+  <option (click)="filters.gamesFilter.type = 'game'; carsService.updateFilters(filters);">Games</option>
+  <option (click)="filters.gamesFilter.type = 'movie'; carsService.updateFilters(filters);">Movies</option>
+</select><br>
+<span>Sort by </span>
+<select>
+  <option (click)="filters.gamesSort = 'order'; carsService.updateFilters(filters);">Title</option>
+  <option (click)="filters.gamesSort = 'releaseDate'; carsService.updateFilters(filters);">Release Date</option>
+  <option (click)="filters.gamesSort = 'pct'; carsService.updateFilters(filters);">Percentage</option>
+</select><br>
+<span (click)="carsService.clearSelectedCars()"><b>Clear</b></span>
 <div class="grid-container">
   <app-car-list-select></app-car-list-select>
   <app-game-list-select></app-game-list-select>

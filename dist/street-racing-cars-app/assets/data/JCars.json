@@ -3,86 +3,156 @@
         "make": "Acura",
         "baseModel": "Integra",
         "year": 1994,
-        "model": "Integra Type R",
-        "note": "Acura Integra Type R\nHonda Integra Type R"
+        "models": [
+            {
+                "model": "Acura Integra Type R"
+            },
+            {
+                "model": "Honda Integra Type R"
+            }
+        ]
     },
     {
         "make": "Acura",
         "baseModel": "NSX",
         "year": 1990,
-        "note": "Acura NSX\nHonda NSX"
+        "models": [
+            {
+                "model": "Acura NSX"
+            },
+            {
+                "model": "Honda NSX"
+            }
+        ]
     },
     {
         "make": "Acura",
         "baseModel": "RSX",
         "year": 2002,
-        "model": "RSX Type S",
-        "note": "Acura Integra Type R\nHonda Integra Type R"
+        "models": [
+            {
+                "model": "Acura RSX Type S"
+            },
+            {
+                "model": "Honda Integra Type R"
+            }
+        ]
     },
     {
         "make": "Chevrolet",
         "baseModel": "Camaro",
         "year": 1967,
-        "model": "Camaro Z28"
+        "models": [
+            {
+                "model": "Chevrolet Camaro Z28"
+            }
+        ]
     },
     {
         "make": "Chevrolet",
         "baseModel": "Camaro",
-        "year": 1993
+        "year": 1993,
+        "models": [
+            {
+                "model": "Chevrolet Comaro"
+            }
+        ]
     },
     {
         "make": "Chevrolet",
         "baseModel": "Corvette",
         "year": 1968,
-        "model": "Corvette C3"
+        "models": [
+            {
+                "model": "Chevrolet Corvette C3"
+            }
+        ]
     },
     {
         "make": "Chevrolet",
         "baseModel": "Corvette",
         "year": 1997,
-        "model": "Corvette C5 Z06"
+        "models": [
+            {
+                "model": "Chevrolet Corvette C5 Z06"
+            }
+        ]
     },
     {
         "make": "Dodge",
         "baseModel": "Charger",
         "year": 1968,
-        "model": "Charger R/T"
+        "models": [
+            {
+                "model": "Dodge Charger R/T"
+            }
+        ]
     },
     {
         "make": "Dodge",
         "baseModel": "Neon",
         "year": 1995,
-        "note": "Neon R/T\nNeon SRT-4"
+        "models": [
+            {
+                "model": "Dodge Neon R/T"
+            },
+            {
+                "model": "Dodge Neon SRT-4"
+            }
+        ]
     },
     {
         "make": "Dodge",
         "baseModel": "Viper",
         "year": 1996,
-        "model": "Viper GTS"
+        "models": [
+            {
+                "model": "Dodge Viper GTS"
+            }
+        ]
     },
     {
         "make": "Fiat",
         "baseModel": "Punto",
         "year": 1999,
-        "model": "Punto 1.8 HGT"
+        "models": [
+            {
+                "model": "Fiat Punto 1.8 HGT"
+            }
+        ]
     },
     {
         "make": "Ford",
         "baseModel": "Falcon",
         "year": 2002,
-        "model": "Falcon XR6"
+        "models": [
+            {
+                "model": "Ford Falcon XR6"
+            }
+        ]
     },
     {
         "make": "Ford",
         "baseModel": "Focus",
         "year": 1998,
-        "note": "Focus ZTS\nFocus SVT"
+        "models": [
+            {
+                "model": "Ford Focus ZTS"
+            },
+            {
+                "model": "Ford Focus SVT"
+            }
+        ]
     },
     {
         "make": "Ford",
         "baseModel": "Mustang",
         "year": 1965,
-        "model": "Mustang Mach 1"
+        "models": [
+            {
+                "model": "Ford Mustang Mach 1"
+            }
+        ]
     },
     {
         "make": "Ford",
@@ -93,25 +163,41 @@
         "make": "Honda",
         "baseModel": "Civic",
         "year": 1996,
-        "model": "Civic DX"
+        "models": [
+            {
+                "model": "Honda Civic DX"
+            }
+        ]
     },
     {
         "make": "Honda",
         "baseModel": "Civic",
         "year": 2001,
-        "model": "Type R"
+        "models": [
+            {
+                "model": "Honda Civic Type R"
+            }
+        ]
     },
     {
         "make": "Honda",
         "baseModel": "CR-X",
         "year": 1988,
-        "model": "CR-X SiR"
+        "models": [
+            {
+                "model": "Honda CR-X SiR"
+            }
+        ]
     },
     {
         "make": "Honda",
         "baseModel": "Prelude",
         "year": 1991,
-        "model": "Prelude VTEC"
+        "models": [
+            {
+                "model": "Honda Prelude VTEC"
+            }
+        ]
     },
     {
         "make": "Honda",
@@ -142,31 +228,51 @@
         "make": "Mitsubishi",
         "baseModel": "Eclipse",
         "year": 1995,
-        "model": "Eclipse GSX"
+        "models": [
+            {
+                "model": "Mitsubishi Eclipse GSX"
+            }
+        ]
     },
     {
         "make": "Mitsubishi",
         "baseModel": "FTO",
         "year": 1994,
-        "model": "FTO GS"
+        "models": [
+            {
+                "model": "Mitsubishi FTO GS"
+            }
+        ]
     },
     {
         "make": "Mitsubishi",
         "baseModel": "Lancer",
         "year": 1995,
-        "model": "Lancer Evolution VI"
+        "models": [
+            {
+                "model": "Mitsubishi Lancer Evolution VI"
+            }
+        ]
     },
     {
         "make": "Mitsubishi",
         "baseModel": "Lancer",
         "year": 2002,
-        "model": "Lancer Evolution VIII"
+        "models": [
+            {
+                "model": "Mitsubishi Lancer Evolution VIII"
+            }
+        ]
     },
     {
         "make": "Nissan",
         "baseModel": "300ZX",
         "year": 1989,
-        "model": "300ZX Z32"
+        "models": [
+            {
+                "model": "Nissan 300ZX Z32"
+            }
+        ]
     },
     {
         "make": "Nissan",
@@ -177,13 +283,21 @@
         "make": "Nissan",
         "baseModel": "Skyline",
         "year": 1998,
-        "model": "Skyline GT-R"
+        "models": [
+            {
+                "model": "Nissan Skyline GT-R"
+            }
+        ]
     },
     {
         "make": "Peugeot",
         "baseModel": "206",
         "year": 1998,
-        "model": "206 RC"
+        "models": [
+            {
+                "model": "Peugeot 206 RC"
+            }
+        ]
     },
     {
         "make": "Pontiac",
@@ -194,37 +308,64 @@
         "make": "Pontiac",
         "baseModel": "GTO",
         "year": 2004,
-        "note": "Pontiac GTO\nHolden Monaro CV8"
+        "models": [
+            {
+                "model": "Pontiac GTO"
+            },
+            {
+                "model": "Holden Monaro CV8"
+            }
+        ]
     },
     {
         "make": "Renault",
         "baseModel": "Clio",
         "year": 2001,
-        "model": "Clio RS"
+        "models": [
+            {
+                "model": "Renault Clio RS"
+            }
+        ]
     },
     {
         "make": "Subaru",
         "baseModel": "Impreza",
         "year": 1992,
-        "model": "Impreza 22B-STi"
+        "models": [
+            {
+                "model": "Subaru Impreza 22B-STi"
+            }
+        ]
     },
     {
         "make": "Subaru",
         "baseModel": "Impreza",
         "year": 2000,
-        "model": "WRX STI"
+        "models": [
+            {
+                "model": "Subaru Impreza WRX STI"
+            }
+        ]
     },
     {
         "make": "Toyota",
         "baseModel": "Celica",
         "year": 1994,
-        "model": "Celica GT"
+        "models": [
+            {
+                "model": "Toyota Celica GT"
+            }
+        ]
     },
     {
         "make": "Toyota",
         "baseModel": "Celica",
         "year": 1999,
-        "model": "Celica VVT-i"
+        "models": [
+            {
+                "model": "Toyota Celica VVT-i"
+            }
+        ]
     },
     {
         "make": "Toyota",
@@ -240,7 +381,11 @@
         "make": "Toyota",
         "baseModel": "MR2",
         "year": 1999,
-        "model": "MR-S"
+        "models": [
+            {
+                "model": "Toyota MR-S"
+            }
+        ]
     },
     {
         "make": "Toyota",
@@ -256,7 +401,11 @@
         "make": "Volkswagen",
         "baseModel": "Corrado",
         "year": 1988,
-        "model": "Corrado VR6"
+        "models": [
+            {
+                "model": "Volkswagen Corrado VR6"
+            }
+        ]
     },
     {
         "make": "Volkswagen",

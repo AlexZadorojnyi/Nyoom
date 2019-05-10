@@ -1,5 +1,6 @@
 .car {
   max-width: 75rem;
+  width: 95%;
   margin: auto;
   margin-top: 1vw;
   margin-bottom: 1vw;

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CarsService } from '../cars.service';
 
 @Component({
   selector: 'app-select',
@@ -6,10 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./select.component.css']
 })
 export class SelectComponent implements OnInit {
+  carsService: CarsService;
+  carMakes = new Array();
+  filters: any = {};
 
-  constructor() { }
+  constructor(carsService: CarsService) {
+    this.carsService = carsService;
+    this.carMakes = this.carsService.carMakes;
+    this.filters = this.carsService.filters;
+  }
 
   ngOnInit() {
+    this.carsService.filtersChanged.subscribe(
+      () => {
+        this.filters = this.carsService.filters;
+      }
+    );
   }
 
 }

@@ -187,6 +187,12 @@
     "model": "Gemballa F355"
   },
   {
+    "make": "Ford",
+    "baseModel": "Mustang",
+    "year": 1994,
+	"model": "Saleen SR"
+  },
+  {
     "make": "GMC",
     "baseModel": "Yukon",
     "year": 2000,
@@ -363,11 +369,6 @@
     "make": "Saleen",
     "baseModel": "S7",
     "year": 2000
-  },
-  {
-    "make": "Saleen",
-    "baseModel": "SR",
-    "year": 1994
   },
   {
     "make": "Scion",

@@ -8,11 +8,18 @@ import { CarsService } from '../../cars.service';
 })
 export class CarListSelectComponent implements OnInit {
   carsService: CarsService;
+  filters: any = {};
 
   constructor(carsService: CarsService) {
     this.carsService = carsService;
+    this.filters = this.carsService.filters;
   }
 
   ngOnInit() {
+    this.carsService.filtersChanged.subscribe(
+      () => {
+        this.filters = this.carsService.filters;
+      }
+    );
   }
 }
