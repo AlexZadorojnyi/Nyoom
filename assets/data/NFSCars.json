@@ -260,14 +260,14 @@
     },
     {
         "make": "Toyota",
-        "baseModel": "GT86",
-        "year": 2012
-    },
-    {
-        "make": "Toyota",
         "baseModel": "Corolla",
         "year": 1984,
         "model": "Sprinter Trueno GT-Apex"
+    },
+    {
+        "make": "Toyota",
+        "baseModel": "GT86",
+        "year": 2012
     },
     {
         "make": "Toyota",

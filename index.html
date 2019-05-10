@@ -9,9 +9,22 @@
   <link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Barlow:300,800i" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="stylesheet" href="styles.b8353e7bdb66cebe8c7d.css"></head>
+<link rel="stylesheet" href="styles.fb2e0f10a67ab06df8d1.css"></head>
 
 <body>
+   <script>
+    (function () {
+      // Retrieve the URL the user was trying to access when receiving the 404.
+      var redirect = sessionStorage.redirect;
+      // Remove the URL from sessionStorage.
+      delete sessionStorage.redirect;
+      // Check if we actually need to redirect.
+      if (redirect && redirect != location.href) {
+        // We need to redirect to the URL the user was trying to access.
+        history.replaceState(null, null, redirect);
+      }
+    })();
+  </script>
   <app-root></app-root>
-<script type="text/javascript" src="runtime.ec2944dd8b20ec099bf3.js"></script><script type="text/javascript" src="polyfills.9d3a8743be9f041e6ba8.js"></script><script type="text/javascript" src="main.3349291e83bbf5f0ffd8.js"></script></body>
+<script type="text/javascript" src="runtime.ec2944dd8b20ec099bf3.js"></script><script type="text/javascript" src="polyfills.9d3a8743be9f041e6ba8.js"></script><script type="text/javascript" src="main.4bcfcbda3e115856322b.js"></script></body>
 </html>
