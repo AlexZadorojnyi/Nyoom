@@ -44,6 +44,9 @@ body {
   max-height: 4.5rem;
   min-height: 3rem;
   line-height: 10px;
+  /* Temp until there is a logo */
+  font-family: 'Barlow', sans-serif;
+  font-size: 2rem;
 }
 
 /*.header__title {

@@ -35,8 +35,8 @@ export class SortCarsPipe implements PipeTransform {
         }
       });
 
-      // Sort by make
-      if (args.carsSort === 'make') {
+      // Sort by model
+      if (args.carsSort.model) {
         array.sort((a: any, b: any) => {
           if (a.make.toLowerCase() < b.make.toLowerCase()) { return -1;
           } else if (a.make.toLowerCase() > b.make.toLowerCase()) { return 1;
@@ -54,10 +54,10 @@ export class SortCarsPipe implements PipeTransform {
       }
 
       // Sort by year
-      if (args.carsSort === 'year') {
+      if (args.carsSort.year) {
         array.sort((a: any, b: any) => {
-          if (a.year < b.year) { return -1;
-          } else if (a.year > b.year) { return 1;
+          if (a.year < b.year) { return 1;
+          } else if (a.year > b.year) { return -1;
           } else {
             if (a.make.toLowerCase() < b.make.toLowerCase()) { return -1;
             } else if (a.make.toLowerCase() > b.make.toLowerCase()) { return 1;
@@ -69,6 +69,11 @@ export class SortCarsPipe implements PipeTransform {
             }
           }
         });
+      }
+
+      // Reverse order
+      if (args.carsSort.reverse) {
+        array.reverse();
       }
 
       return array;

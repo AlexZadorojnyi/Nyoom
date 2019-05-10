@@ -16,7 +16,7 @@
       <span class="imageCenterHelper"></span>
       <img src="assets/images/game-logos/{{ gameA.id }}.png" alt="{{ gameA.title }}">
       <div class="game-a_dropdown">
-        <div *ngFor="let game of games | sortGamesPipe:{ sortBy: 'order' }" (click)="gameA = { id: game.id, title: game.title }; this.updateCarList();">
+        <div *ngFor="let game of games" (click)="gameA = { id: game.id, title: game.title }; this.updateCarList();">
           <span class="imageCenterHelper"></span>
           <img src="assets/images/game-logos/{{ game.id }}.png" alt="{{ game.title }}">
         </div>
@@ -36,7 +36,7 @@
       <span class="imageCenterHelper"></span>
       <img src="assets/images/game-logos/{{ gameB.id }}.png" alt="{{ gameB.title }}">
       <div class="game-b_dropdown">
-        <div *ngFor="let game of games | sortGamesPipe:{ sortBy: 'order' }" (click)="gameB = { id: game.id, title: game.title }; this.updateCarList();">
+        <div *ngFor="let game of games" (click)="gameB = { id: game.id, title: game.title }; this.updateCarList();">
           <span class="imageCenterHelper"></span>
           <img src="assets/images/game-logos/{{ game.id }}.png" alt="{{ game.title }}"></div>
       </div>

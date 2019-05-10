@@ -1,24 +1,80 @@
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: "car-list game-list";
+  grid-template-rows: 3rem auto;
+  grid-template-areas:
+    "filters__cars filters__games"
+    "car-list      game-list";
   /* grid-gap: 1rem; */
   max-width: 75rem;
   margin: auto;
 }
 
+.filters__cars {
+  grid-area: filters__cars;
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+
+.filters__games {
+  grid-area: filters__games;
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+
+.filters__cars > div,
+.filters__games > div {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.25rem;
+  display: inline;
+  border: 1px solid grey;
+  padding: 1px 0.5rem;
+  cursor: pointer;
+}
+
+.filters__cars-sort-model,
+.filters__games-games,
+.filters__games-sort-title,
+.filters__clear,
+.filters__reset {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.filters__cars-sort-year,
+.filters__games-movies,
+.filters__games-sort-year,
+.filters__clear,
+.filters__reset {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.filters__cars > select {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.25rem;
+  padding: 1px 3px;
+  cursor: pointer;
+}
+
+.filters__cars > .selected,
+.filters__games > .selected {
+  background-color: lightgrey;
+  /* cursor: default; */
+}
+
 app-car-list-select {
   grid-area: car-list;
-  height: calc(100vh - 6vw);
-  max-height: calc(100vh - 3rem);
-  min-height: calc(100vh - 4.5rem);
+  height: calc(100vh - 3rem - 6vw);
+  max-height: calc(100vh - 3rem - 3rem);
+  min-height: calc(100vh - 3rem - 4.5rem);
   overflow-y: auto;
 }
 
 app-game-list-select {
   grid-area: game-list;
-  height: calc(100vh - 6vw);
-  max-height: calc(100vh - 3rem);
-  min-height: calc(100vh - 4.5rem);
+  height: calc(100vh - 3rem - 6vw);
+  max-height: calc(100vh - 3rem - 3rem);
+  min-height: calc(100vh - 3rem - 4.5rem);
   overflow-y: auto;
 }

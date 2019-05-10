@@ -33,6 +33,7 @@ export class HeaderCompareComponent implements OnInit, AfterContentInit {
     while (this.gameA === this.gameB) {
       this.gameB = this.carsService.getRandomGame();
     }
+    this.carsService.resetFilters();
   }
 
   ngAfterContentInit () {

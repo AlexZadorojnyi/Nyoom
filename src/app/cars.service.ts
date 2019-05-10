@@ -34,11 +34,21 @@ export class CarsService {
       make: '',
       decade: -1
     },
-    carsSort: 'make',
-    gamesFilter: {
-      type: ''
+    carsSort: {
+      model: true,
+      year: false,
+      reverse: false
     },
-    gamesSort: 'order'
+    gamesFilter: {
+      games: true,
+      movies: true
+    },
+    gamesSort: {
+      title: true,
+      pct: false,
+      year: false,
+      reverse: false
+    }
   };
 
   carListChanged = new Subject<void>();
@@ -648,6 +658,31 @@ export class CarsService {
     }
     // console.log(this.games);
     this.gameListChanged.next();
+  };
+
+  resetFilters = function() {
+    this.filters = {
+      carsFilter: {
+        make: '',
+        decade: -1
+      },
+      carsSort: {
+        model: true,
+        year: false,
+        reverse: false
+      },
+      gamesFilter: {
+        games: true,
+        movies: true
+      },
+      gamesSort: {
+        title: true,
+        pct: false,
+        year: false,
+        reverse: false
+      }
+    };
+    this.filtersChanged.next();
   };
 
   updateFilters = function(newFilters: any) {

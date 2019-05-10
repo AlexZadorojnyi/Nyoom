@@ -15,16 +15,18 @@ export class SortGamesPipe implements PipeTransform {
 
       // Filter by type
       array = array.filter((a: any) => {
-        if (args.gamesFilter.type === '') {
+        if (args.gamesFilter.games && args.gamesFilter.movies) {
           return true;
-        } else {
-          return a.type === args.gamesFilter.type;
+        } else if (args.gamesFilter.games) {
+          return a.type === 'game';
+        } else if (args.gamesFilter.movies) {
+          return a.type === 'movie';
         }
       });
     }
 
     // Sort by percentage
-    if (args.gamesSort === 'pct') {
+    if (args.gamesSort.pct) {
       array.sort((a: any, b: any) => {
         if (a.pct > b.pct) {
           return -1;
@@ -42,7 +44,7 @@ export class SortGamesPipe implements PipeTransform {
       });
 
     // Sort by order (title)
-    } else if (args.gamesSort === 'order') {
+    } else if (args.gamesSort.title) {
       array.sort((a: any, b: any) => {
         if (a.order < b.order) {
           return -1;
@@ -54,7 +56,7 @@ export class SortGamesPipe implements PipeTransform {
       });
 
     // Sort by release date
-    } else if (args.gamesSort === 'releaseDate') {
+    } else if (args.gamesSort.year) {
       array.sort((a: any, b: any) => {
         if (a.releaseDate < b.releaseDate) {
           return -1;
@@ -64,6 +66,11 @@ export class SortGamesPipe implements PipeTransform {
           return 0;
         }
       });
+    }
+
+    // Reverse order
+    if (args.gamesSort.reverse) {
+      array.reverse();
     }
 
     return array;
