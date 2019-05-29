@@ -120,6 +120,19 @@
 		"year": 1996
 	},
 	{
+		"make": "Infiniti",
+		"baseModel": "M",
+		"year": 2003,
+		"models": [
+			{
+				"model": "Nissan Cedric"
+			},
+			{
+				"model": "Nissan Gloria"
+			}
+		]
+	},
+	{
 		"make": "Lexus",
 		"baseModel": "GS",
 		"year": 1998
@@ -285,28 +298,21 @@
 	},
 	{
 		"make": "Nissan",
-		"baseModel": "Cedric",
-		"year": 1995
-	},
-	{
-		"make": "Nissan",
-		"baseModel": "Cedric",
-		"year": 1999
-	},
-	{
-		"make": "Nissan",
 		"baseModel": "Cefiro",
 		"year": 1988
 	},
 	{
 		"make": "Nissan",
 		"baseModel": "Gloria",
-		"year": 1995
-	},
-	{
-		"make": "Nissan",
-		"baseModel": "Gloria",
-		"year": 1999
+		"year": 1995,
+		"models": [
+			{
+				"model": "Nissan Cedric"
+			},
+			{
+				"model": "Nissan Gloria"
+			}
+		]
 	},
 	{
 		"make": "Nissan",
@@ -547,12 +553,7 @@
 	{
 		"make": "Toyota",
 		"baseModel": "Soarer",
-		"year": 1991,
-		"models": [
-			{
-				"model": "Toyota MR-S"
-			}
-		]
+		"year": 1991
 	},
 	{
 		"make": "Toyota",

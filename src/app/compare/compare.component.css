@@ -1,0 +1,87 @@
+.header > div {
+  grid-template-columns: 2fr 8fr 5fr 2fr 5fr;
+  grid-template-areas: "mode title game-a set-relation game-b";
+}
+
+.header__button--game-a {
+  grid-area: game-a;
+}
+
+.header__button--game-b {
+  grid-area: game-b;
+}
+
+.header__button--set-relation {
+  grid-area: set-relation;
+  display: inline-block;
+  position: relative;
+  border-left: 1px solid #850000;
+  border-right: 1px solid #850000;
+  text-align: center;
+}
+
+.list-item {
+  display: grid;
+  grid-template-columns: 10fr 6fr 6fr;
+  grid-template-areas:
+    'info game-a game-b'
+    'note .      .';
+  max-width: 75rem;
+  margin: auto;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+}
+
+.list-item__car {
+  grid-area: info;
+}
+
+.info__note {
+  grid-area: note;
+}
+
+.list-item__game-check--a {
+  grid-area: game-a;
+}
+
+.list-item__game-check--b {
+  grid-area: game-b;
+}
+
+.list-item__game-check {
+  height: 20vw;
+  padding: 5vw;
+  text-align: center;
+}
+
+.list-item__game-check img {
+  height: 100%;
+  vertical-align: middle;
+}
+
+@media only screen and (min-width: 45rem) {
+  .header > div {
+    grid-template-columns: 2fr 11fr 5fr 2fr 5fr;
+  }
+
+  .list-item {
+    grid-template-columns: 13fr 6fr 6fr;
+  }
+
+  .list-item__game-check {
+    height: 8vw;
+    padding: 1.75vw;
+  }
+}
+
+@media only screen and (min-width: 75rem) {
+  .list-item {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .list-item__game-check {
+    max-height: 6rem;
+    padding: 1.3125rem;
+  }
+}

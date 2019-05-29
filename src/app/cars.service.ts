@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 
 import JCars from '../assets/data/JCars.json';
 import LARCars from '../assets/data/LARCars.json';
+import MMCars from '../assets/data/MMCars.json';
+import MM2Cars from '../assets/data/MM2Cars.json';
 import MCSRCars from '../assets/data/MCSRCars.json';
 import MC2Cars from '../assets/data/MC2Cars.json';
 import MC3Cars from '../assets/data/MC3Cars.json';
@@ -20,6 +22,9 @@ import TFTFCars from '../assets/data/TFTFCars.json';
 import TD2002Cars from '../assets/data/TD2002Cars.json';
 import TXRCars from '../assets/data/TXRCars.json';
 import TXR2Cars from '../assets/data/TXR2Cars.json';
+import TXRZCars from '../assets/data/TXRZCars.json';
+import TXR3Cars from '../assets/data/TXR3Cars.json';
+import ITCCars from '../assets/data/ITCCars.json';
 
 @Injectable({ providedIn: 'root' })
 export class CarsService {
@@ -59,11 +64,13 @@ export class CarsService {
     { id: 'TFATF2006',  order: 11,  type: 'game',   releaseDate: 20060926,  pct: 0,  title: 'The Fast and the Furious (2006)' },
     { id: 'J',          order: 21,  type: 'game',   releaseDate: 20050613,  pct: 0,  title: 'Juiced' },
     { id: 'LAR',        order: 31,  type: 'game',   releaseDate: 20051010,  pct: 0,  title: 'LA Rush' },
-    { id: 'MCSR',       order: 41,  type: 'game',   releaseDate: 20001025,  pct: 0,  title: 'Midnight Club: Street Racing' },
-    { id: 'MC2',        order: 42,  type: 'game',   releaseDate: 20030409,  pct: 0,  title: 'Midnight Club 2' },
-    { id: 'MC3',        order: 43,  type: 'game',   releaseDate: 20050411,  pct: 0,  title: 'Midnight Club 3: Dub Edition' },
-    { id: 'MC3R',       order: 44,  type: 'game',   releaseDate: 20060312,  pct: 0,  title: 'Midnight Club 3: Dub Edition Remix' },
-    { id: 'MCLA',       order: 45,  type: 'game',   releaseDate: 20081020,  pct: 0,  title: 'Midnight Club: Los Angeles' },
+    { id: 'MM',         order: 41,  type: 'game',   releaseDate: 19990430,  pct: 0,  title: 'Midnight Madness' },
+    { id: 'MM2',        order: 42,  type: 'game',   releaseDate: 20000921,  pct: 0,  title: 'Midnight Madness 2' },
+    { id: 'MCSR',       order: 43,  type: 'game',   releaseDate: 20001025,  pct: 0,  title: 'Midnight Club: Street Racing' },
+    { id: 'MC2',        order: 44,  type: 'game',   releaseDate: 20030409,  pct: 0,  title: 'Midnight Club 2' },
+    { id: 'MC3',        order: 45,  type: 'game',   releaseDate: 20050411,  pct: 0,  title: 'Midnight Club 3: Dub Edition' },
+    { id: 'MC3R',       order: 46,  type: 'game',   releaseDate: 20060312,  pct: 0,  title: 'Midnight Club 3: Dub Edition Remix' },
+    { id: 'MCLA',       order: 47,  type: 'game',   releaseDate: 20081020,  pct: 0,  title: 'Midnight Club: Los Angeles' },
     { id: 'NFSU',       order: 51,  type: 'game',   releaseDate: 20031117,  pct: 0,  title: 'Need for Speed: Underground' },
     { id: 'NFSU2',      order: 52,  type: 'game',   releaseDate: 20041115,  pct: 0,  title: 'Need for Speed: Underground 2' },
     { id: 'NFSMW',      order: 53,  type: 'game',   releaseDate: 20051116,  pct: 0,  title: 'Need for Speed: Most Wanted' },
@@ -73,17 +80,18 @@ export class CarsService {
     { id: 'TD2002',     order: 71,  type: 'game',   releaseDate: 20020528,  pct: 0,  title: 'Test Drive (2002)' },
     { id: 'TXR',        order: 81,  type: 'game',   releaseDate: 19990909,  pct: 0,  title: 'Tokyo Xtreme Racer' },
     { id: 'TXR2',       order: 82,  type: 'game',   releaseDate: 20000927,  pct: 0,  title: 'Tokyo Xtreme Racer 2' },
+    { id: 'TXRZ',       order: 83,  type: 'game',   releaseDate: 20010315,  pct: 0,  title: 'Tokyo Xtreme Racer Zero' },
+    { id: 'TXR3',       order: 84,  type: 'game',   releaseDate: 20030724,  pct: 0,  title: 'Tokyo Xtreme Racer 3' },
+    { id: 'ITC',        order: 85,  type: 'game',   releaseDate: 20060727,  pct: 0,  title: 'Import Tuner Challenge' },
     { id: 'TFATF',      order: 101, type: 'movie',  releaseDate: 20010622,  pct: 0,  title: 'The Fast and the Furious' },
-    { id: '2F2F',       order: 102, type: 'movie',  releaseDate: 20030606,  pct: 0,  title: '2 Fast 2 Furious' },
-    /*{ id: 'TXRZ',       title: 'Tokyo Xtreme Racer Zero' },
-    { id: 'TXR3',       title: 'Tokyo Xtreme Racer 3' },
-    { id: 'ITC',        title: 'Import Tuner Challenge' },*/
-    // { id: 'All',        title: 'All' }, // Debug only
+    { id: '2F2F',       order: 102, type: 'movie',  releaseDate: 20030606,  pct: 0,  title: '2 Fast 2 Furious' }
   ];
 
   constructor() {
     this.cars['J'] = JCars;
     this.cars['LAR'] = LARCars;
+    this.cars['MM'] = MMCars;
+    this.cars['MM2'] = MM2Cars;
     this.cars['MCSR'] = MCSRCars;
     this.cars['MC2'] = MC2Cars;
     this.cars['MC3'] = MC3Cars;
@@ -101,10 +109,12 @@ export class CarsService {
     this.cars['TD2002'] = TD2002Cars;
     this.cars['TXR'] = TXRCars;
     this.cars['TXR2'] = TXR2Cars;
+    this.cars['TXRZ'] = TXRZCars;
+    this.cars['TXR3'] = TXR3Cars;
+    this.cars['ITC'] = ITCCars;
     this.cars['All'] = [];
     this.cars['All'] = this.getAllCars();
     this.carMakes = this.getAllCarMakes(this.cars['All']);
-    console.log(this.carMakes);
   }
 
   compareCars = function(car1, car2) {
@@ -584,7 +594,6 @@ export class CarsService {
     if (typeof arr !== 'undefined' && arr.length > 0) {
       for (let i = 0; i < arr.length; i++) {
         if (temp.indexOf(arr[i].make) === -1) {
-          console.log('hello');
           temp.push(arr[i].make);
         }
       }

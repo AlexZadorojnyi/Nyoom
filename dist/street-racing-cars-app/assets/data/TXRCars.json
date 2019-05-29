@@ -83,13 +83,16 @@
     },
     {
         "make": "Nissan",
-        "baseModel": "Cedric",
-        "year": 1995
-    },
-    {
-        "make": "Nissan",
         "baseModel": "Gloria",
-        "year": 1995
+        "year": 1995,
+        "models": [
+            {
+                "model": "Nissan Cedric"
+            },
+            {
+                "model": "Nissan Gloria"
+            }
+        ]
     },
     {
         "make": "Nissan",

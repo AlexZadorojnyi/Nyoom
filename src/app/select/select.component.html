@@ -1,14 +1,13 @@
-<app-header-select></app-header-select>
+<app-select-header></app-select-header>
 <div class="grid-container">
-    <div class="filters__cars">
+    <div class="car-filters">
       <!-- Filter cars by make -->
-      <select class="filters__cars-makes">
+      <select class="filter__select filter__select--car-make">
         <option (click)="filters.carsFilter.make = ''; carsService.updateFilters(filters);">All Makes</option>
         <option *ngFor="let carMake of carMakes" (click)="filters.carsFilter.make = carMake; carsService.updateFilters(filters);">{{ carMake }}</option>
       </select>
-      <span>&nbsp;&nbsp;</span>
       <!-- Filter cars by year -->
-      <select class="filters__cars-years">
+      <select class="filter__select filter__select--car-year">
         <option (click)="filters.carsFilter.decade = -1; carsService.updateFilters(filters);">All Years</option>
         <option (click)="filters.carsFilter.decade = 1940; carsService.updateFilters(filters);">1940s</option>
         <option (click)="filters.carsFilter.decade = 1950; carsService.updateFilters(filters);">1950s</option>
@@ -19,53 +18,47 @@
         <option (click)="filters.carsFilter.decade = 2000; carsService.updateFilters(filters);">2000s</option>
         <option (click)="filters.carsFilter.decade = 2010; carsService.updateFilters(filters);">2010s</option>
       </select>
-      <span>&nbsp;&nbsp;</span>
       <!-- Sort cars desc/asc order -->
-      <i class="fas"
+      <i class="filter__button filter__button--car-order fas"
          (click)="filters.carsSort.reverse = !filters.carsSort.reverse; carsService.updateFilters(filters);"
          [ngClass]="{'fa-sort-amount-up': filters.carsSort.reverse, 'fa-sort-amount-down': !filters.carsSort.reverse}"></i>
-      <span>&nbsp;&nbsp;</span>
       <!-- Sort cars -->
-      <div class="filters__cars-sort-model"
+      <div class="filter__radio filter__radio--car-model round-left"
            (click)="filters.carsSort.model = true; filters.carsSort.year = false; carsService.updateFilters(filters);"
            [ngClass]="{selected: filters.carsSort.model}">Model</div>
-      <div class="filters__cars-sort-year"
+      <div class="filter__radio filter__radio--car-year round-right"
            (click)="filters.carsSort.model = false; filters.carsSort.year = true; carsService.updateFilters(filters);"
            [ngClass]="{selected: filters.carsSort.year}">Year</div>
     </div>
-    <div class="filters__games">
+    <div class="game-filters">
       <!-- Filter games by type -->
-      <div class="filters__games-games"
+      <div class="filter__checkbox filter__checkbox--game-type-game round-left"
            (click)="filters.gamesFilter.games = !filters.gamesFilter.games; carsService.updateFilters(filters);"
            [ngClass]="{selected: filters.gamesFilter.games}">Games</div>
-      <div class="filters__games-movies"
+      <div class="filter__checkbox filter__checkbox--game-type-movie round-right"
            (click)="filters.gamesFilter.movies = !filters.gamesFilter.movies; carsService.updateFilters(filters);"
            [ngClass]="{selected: filters.gamesFilter.movies}">Movies</div>
-      <span>&nbsp;&nbsp;</span>
       <!-- Sort games desc/asc order -->
-      <i class="fas"
+      <i class="filter__button filter__button--game-order fas"
          (click)="filters.gamesSort.reverse = !filters.gamesSort.reverse; carsService.updateFilters(filters);"
          [ngClass]="{'fa-sort-amount-up': filters.gamesSort.reverse, 'fa-sort-amount-down': !filters.gamesSort.reverse}"></i>
-      <span>&nbsp;&nbsp;</span>
       <!-- Sort games -->
-      <div class="filters__games-sort-title"
+      <div class="filter__radio filter__radio--game-title round-left"
            (click)="filters.gamesSort.title = true; filters.gamesSort.pct = false; filters.gamesSort.year = false; carsService.updateFilters(filters);"
            [ngClass]="{selected: filters.gamesSort.title}">Title</div>
-      <div class="filters__games-sort-pct"
+      <div class="filter__radio filter__radio--game-pct"
            (click)="filters.gamesSort.title = false; filters.gamesSort.pct = true; filters.gamesSort.year = false; carsService.updateFilters(filters);"
            [ngClass]="{selected: filters.gamesSort.pct}">%</div>
-      <div class="filters__games-sort-year"
+      <div class="filter__radio filter__radio--game-year round-right"
            (click)="filters.gamesSort.title = false; filters.gamesSort.pct = false; filters.gamesSort.year = true; carsService.updateFilters(filters);"
            [ngClass]="{selected: filters.gamesSort.year}">Year</div>
-      <span>&nbsp;&nbsp;</span>
       <!-- Clear selected cars -->
-      <div class="filters__clear"
+      <div class="filter__button filter__button--clear round-left round-right"
            (click)="carsService.clearSelectedCars()"><b>Clear</b></div>
-      <span>&nbsp;&nbsp;</span>
       <!-- Reset filters -->
-      <div class="filters__reset"
+      <div class="filter__button filter__button--reset round-left round-right"
            (click)="carsService.resetFilters()"><b>Reset Filters</b></div>
     </div>
-  <app-car-list-select></app-car-list-select>
-  <app-game-list-select></app-game-list-select>
+  <app-select-car-list></app-select-car-list>
+  <app-select-game-list></app-select-game-list>
 </div>

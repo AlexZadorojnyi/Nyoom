@@ -1,0 +1,9 @@
+<div class="list-item" *ngFor="let game of games | sortGamesPipe:filters">
+  <div class="list-item__game" (click)="carsService.selectGame(game.id)">
+      <div class="pct" [ngStyle]="{ 'width.%': (game.pct * 100).toFixed(0) }"></div>
+      <div class="game-logo">
+        <span class="img-center-helper"></span>
+        <img src="assets/images/game-logos/{{ game.id }}.png" alt="{{ game.title }}">
+      </div>
+  </div>
+</div>

@@ -81,16 +81,19 @@
     "year": 1989,
     "model": "300ZX Z32"
   },
-  {
-    "make": "Nissan",
-    "baseModel": "Cedric",
-    "year": 1995
-  },
-  {
-    "make": "Nissan",
-    "baseModel": "Gloria",
-    "year": 1995
-  },
+	{
+		"make": "Nissan",
+		"baseModel": "Gloria",
+		"year": 1995,
+		"models": [
+			{
+				"model": "Nissan Cedric"
+			},
+			{
+				"model": "Nissan Gloria"
+			}
+		]
+	},
   {
     "make": "Nissan",
     "baseModel": "Silvia",

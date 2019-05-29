@@ -1,13 +1,15 @@
 * {
   box-sizing: border-box;
+  font-family: 'Barlow', sans-serif;
 }
 
 body {
   margin: 0;
   overflow-x: hidden;
+  background-color: black;
 }
 
-.imageCenterHelper {
+.img-center-helper {
   display: inline-block;
   height: 100%;
   vertical-align: middle;
@@ -18,7 +20,8 @@ body {
   position: sticky;
   top: 0px;
   width: 100%;
-  background-color: red;
+  background-color: #d2092d;
+  z-index: 10;
 }
 
 .header > div {
@@ -30,7 +33,7 @@ body {
   margin: auto;
 }
 
-.mode {
+.header__button--mode {
   grid-area: mode;
   display: inline-block;
   position: relative;
@@ -46,7 +49,7 @@ body {
   line-height: 10px;
   /* Temp until there is a logo */
   font-family: 'Barlow', sans-serif;
-  font-size: 2rem;
+  /* font-size: 2rem; */
 }
 
 /*.header__title {
@@ -84,15 +87,15 @@ body {
 }
 
 /** Header buttons dropdown show **/
-.mode:hover .mode_dropdown,
-.game-a:hover .game-a_dropdown,
-.game-b:hover .game-b_dropdown,
-.set-relation:hover .set-relation_dropdown {
+.header__button--mode:hover .header__dropdown--mode,
+.header__button--game-a:hover .header__dropdown--game-a,
+.header__button--game-b:hover .header__dropdown--game-b,
+.header__button--set-relation:hover .header__dropdown--set-relation {
   display: block;
 }
 
 /** Header buttons dropdown hide **/
-.mode_dropdown {
+.header__dropdown--mode {
   display: none;
   position: absolute;
   z-index: 1;
@@ -105,15 +108,15 @@ body {
   box-shadow: 0px 0px 5px #888888;
 }
 
-.mode_dropdown div {
+.header__dropdown--mode div {
   font-family: 'Barlow', sans-serif;
   font-size: 3.75vw;
   line-height: 6vw;
 }
 
-.game-a_dropdown,
-.game-b_dropdown,
-.set-relation_dropdown {
+.header__dropdown--game-a,
+.header__dropdown--game-b,
+.header__dropdown--set-relation {
   display: none;
   position: absolute;
   z-index: 1;
@@ -127,25 +130,19 @@ body {
 }
 
 /** Header buttons dropdown options **/
-.mode_dropdown div,
-.game-a_dropdown div,
-.game-b_dropdown div,
-.set-relation_dropdown div {
+.header__dropdown div {
   height: 6vw;
   max-height: 4.5rem;
   min-height: 3rem;
 }
 
 /** Header buttons dropdown options hover effects **/
-.mode_dropdown div:hover,
-.game-a_dropdown div:hover,
-.game-b_dropdown div:hover,
-.set-relation_dropdown div:hover {
-  background-color: red;
+.header__dropdown div:hover {
+  background-color: #d2092d;
 }
 
 /** LIST **/
-.car__info {
+.list-item__car {
   display: grid;
   grid-template-columns: 40% 60%;
   grid-template-rows: auto auto;
@@ -153,41 +150,45 @@ body {
       "brand image"
       "info  info";
   overflow: hidden;
-  background-color: white;
-  box-shadow: 0px 0px 5px #888888;
+  background-color: #1a1a1a;
+  border: 1px solid #d2092d;
+  /* box-shadow: 0px 0px 5px #888888; */
 }
 
-.car__info--brand-logo {
+.list-item__car .brand-logo {
   grid-area: brand;
   height: 100%;
   float: left;
 }
 
-.car__info--brand-logo img {
+.list-item__car .brand-logo img {
   height: 100%;
   width: 100%;
-  padding: 0.75vw;
+  padding: 0.5vw;
+  filter: grayscale(20%)
 }
 
-.car__info--image {
+.list-item__car .model-image {
   grid-area: image;
   height: 100%;
   float: left;
 }
 
-.car__info--image img {
+.list-item__car .model-image img {
   height: 100%;
   width: 100%;
+  filter: grayscale(50%)
 }
 
-.car__info--model-info {
+.list-item__car .info {
   grid-area: info;
   overflow: hidden;
   height: 100%;
   padding-left: 0.75vw;
+  color: #d2092d;
 }
 
-.car__info--model-info > span {
+.list-item__car > .info span {
   text-align: left;
   font-family: 'Barlow', sans-serif;
   font-size: 3.75vw;
@@ -195,37 +196,39 @@ body {
   font-weight: bold;
 }
 
+/* Medium width */
 @media only screen and (min-width: 45rem) {
-  .mode_dropdown div {
+  .header__dropdown--mode div {
     font-size: 2vw;
     line-height: 2vw;
   }
 
-  .car__info {
+  .list-item__car {
     grid-template-columns: 8vw 12vw auto;
     grid-template-rows: 8vw;
     grid-template-areas: "brand image info";
   }
 
-  .car__info--model-info > span {
+  .list-item__car > .info span {
     font-size: 2vw;
     line-height: 8vw;
   }
 }
 
+/* Maximum width */
 @media only screen and (min-width: 75rem) {
-  .mode_dropdown div {
+  .header__dropdown--mode div {
     font-size: 1.5rem;
     line-height: 1.5rem;
   }
 
-  .car__info {
+  .list-item__car {
     grid-template-columns: 6rem 9rem auto;
     grid-template-rows: 6rem;
   }
 
-  .car__info--model-info > span {
+  .list-item__car > .info span {
     font-size: 1.5rem;
-    line-height: 6rem;
+    line-height: 3rem;
   }
 }

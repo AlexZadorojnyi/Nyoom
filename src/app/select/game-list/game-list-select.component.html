@@ -1,7 +1,0 @@
-<div class="game" *ngFor="let game of games | sortGamesPipe:filters" (click)="carsService.selectGame(game.id)" >
-  <div class="game__percentage" [ngStyle]="{ 'width.%': (game.pct * 100).toFixed(0) }"></div>
-  <div class="game__info">
-    <span class="imageCenterHelper"></span>
-      <img src="assets/images/game-logos/{{ game.id }}.png" alt="{{ game.title }}">
-  </div>
-</div>

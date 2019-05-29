@@ -8,24 +8,14 @@
     "make": "BMW",
     "baseModel": "5 Series",
     "year": 1995,
-    "model": "M5"
+    "model": "M5",
+	"note": "barely"
   },
   {
     "make": "Chevrolet",
     "baseModel": "Camaro",
     "year": 1967,
     "model": "Camaro SS"
-  },
-  {
-    "make": "Ferrari",
-    "baseModel": "360",
-    "year": 2000,
-    "model": "360 Modena"
-  },
-  {
-    "make": "Ferrari",
-    "baseModel": "F50",
-    "year": 1995
   },
   {
     "make": "Ford",
@@ -41,12 +31,13 @@
   {
     "make": "Ford",
     "baseModel": "Fairlane",
-    "year": 1962
+    "year": 1960
   },
   {
-    "make": "Mitsubishi",
-    "baseModel": "3000GT",
-    "year": 1994
+    "make": "Honda",
+    "baseModel": "Civic",
+    "year": 1992,
+    "model": "Honda Civic Hatch"
   },
   {
     "make": "Nissan",
@@ -54,14 +45,8 @@
     "year": 1998
   },
   {
-    "make": "Renault",
-    "baseModel": "5",
-    "year": 1972
-  },
-  {
-    "make": "Renault",
-    "baseModel": "Clio",
-    "year": 2001,
-    "model": "Clio V6"
+    "make": "Zender",
+    "baseModel": "Fact 4",
+    "year": 1989
   }
 ]

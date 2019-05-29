@@ -1,7 +1,15 @@
+.header > div {
+  grid-template-columns: 2fr 8fr 12fr;
+  grid-template-areas: "mode title";
+}
+
+.header__title {
+  border: none
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 3rem auto;
   grid-template-areas:
     "filters__cars filters__games"
     "car-list      game-list";
@@ -10,20 +18,20 @@
   margin: auto;
 }
 
-.filters__cars {
+.car-filters {
   grid-area: filters__cars;
   padding-left: 1rem;
   padding-top: 1rem;
 }
 
-.filters__games {
+.game-filters {
   grid-area: filters__games;
   padding-left: 1rem;
   padding-top: 1rem;
 }
 
-.filters__cars > div,
-.filters__games > div {
+.car-filters > div,
+.game-filters > div {
   font-family: 'Barlow', sans-serif;
   font-size: 1.25rem;
   display: inline;
@@ -32,33 +40,48 @@
   cursor: pointer;
 }
 
-.filters__cars-sort-model,
-.filters__games-games,
-.filters__games-sort-title,
-.filters__clear,
-.filters__reset {
+.filter__button--car-order,
+.filter__button--game-order {
+  margin-right: 0.5rem;
+}
+
+.filter__select--car-make,
+.filter__select--car-year,
+.filter__checkbox--game-type-movie,
+.filter__radio--game-year,
+.filter__button--clear {
+  margin-right: 0.5rem;
+}
+
+/*.filter__select--car-make,
+.filter__select--car-year {
+  width: 100%;
+}*/
+
+.filter__radio--car-model,
+.filter__radio--car-year {
+  width: calc(50% - 1rem);
+}
+
+.round-left {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
 
-.filters__cars-sort-year,
-.filters__games-movies,
-.filters__games-sort-year,
-.filters__clear,
-.filters__reset {
+.round-right {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
-.filters__cars > select {
+.car-filters > select {
   font-family: 'Barlow', sans-serif;
   font-size: 1.25rem;
   padding: 1px 3px;
   cursor: pointer;
 }
 
-.filters__cars > .selected,
-.filters__games > .selected {
+.car-filters > .selected,
+.game-filters > .selected {
   background-color: lightgrey;
   /* cursor: default; */
 }
@@ -71,10 +94,77 @@ app-car-list-select {
   overflow-y: auto;
 }
 
+.list-item {
+  max-width: 75rem;
+  width: 95%;
+  margin: auto;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  cursor: pointer;
+}
+
+.selected .info {
+  background-color: #d2092d;
+  color: black !important;
+}
+
 app-game-list-select {
   grid-area: game-list;
   height: calc(100vh - 3rem - 6vw);
   max-height: calc(100vh - 3rem - 3rem);
   min-height: calc(100vh - 3rem - 4.5rem);
   overflow-y: auto;
+}
+
+.list-item__game {
+  background-color: #1a1a1a;
+  border: 1px solid #d2092d;
+  max-width: 75rem;
+  width: 95%;
+  max-height: calc(45px - 0.5vw);
+  margin: auto;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  cursor: pointer;
+}
+
+.pct {
+  width: 0%;
+  height: calc(45px - 0.5vw);
+  background-color: #d2092d;
+  transition: width 1s;
+}
+
+.list-item__game .game-logo {
+  position: relative;
+  top: calc(-45px + 0.5vw);
+  max-width: 75rem;
+  max-height: calc(45px - 0.5vw);
+  overflow: hidden;
+  /* box-shadow: 0px 0px 5px #888888; */
+  margin: auto;
+}
+
+.list-item__game .game-logo img {
+  max-width: 75rem;
+  max-height: calc(45px - 0.5vw);
+  margin: auto;
+  vertical-align: middle;
+}
+
+
+/* Medium width */
+@media only screen and (min-width: 45rem) {
+  .header > div {
+    grid-template-columns: 2fr 11fr 12fr;
+  }
+
+  .grid-container {
+    grid-template-rows: 3rem auto;
+  }
+}
+
+/* Maximum width */
+@media only screen and (min-width: 75rem) {
+
 }

@@ -100,7 +100,8 @@
   {
     "make": "Honda",
     "baseModel": "S2000",
-    "year": 2004
+    "year": 1999,
+	"note": "Facelift version"
   },
   {
     "make": "Infiniti",

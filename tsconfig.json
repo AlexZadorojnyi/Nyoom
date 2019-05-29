@@ -20,5 +20,9 @@
     ],
     "resolveJsonModule": true,
     "esModuleInterop": true
-  }
+  },
+  "exclude": [
+    "src/assets/images/cars-original/**",
+    "src/assets/images/game-logos/Logos.psd"
+  ]
 }
