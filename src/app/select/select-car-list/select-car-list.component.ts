@@ -4,7 +4,7 @@ import { CarsService } from '../../cars.service';
 @Component({
   selector: 'app-select-car-list',
   templateUrl: './select-car-list.component.html',
-  styleUrls: ['./../select.component.css']
+  styleUrls: ['./../select.component.scss']
 })
 export class SelectCarListComponent implements OnInit {
   carsService: CarsService;

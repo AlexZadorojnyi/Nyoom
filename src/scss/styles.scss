@@ -1,0 +1,243 @@
+@import "_vars.scss";
+
+* {
+  box-sizing: border-box;
+  font-family: 'Barlow', sans-serif;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: black;
+}
+
+.img-center-helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+/** HEADER **/
+.header {
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  background-color: $nyoom-red;
+  z-index: 10;
+
+  > div {
+    display: grid;
+    max-width: 75rem;
+    height: 6vw;
+    max-height: 4.5rem;
+    min-height: 3rem;
+    margin: auto;
+  }
+
+  &__title, &__button {
+    img {
+      max-height: 100%;
+      max-width: 100%;
+      margin: auto;
+      vertical-align: middle;
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    max-height: 4.5rem;
+    min-height: 3rem;
+    line-height: 10px;
+    font-family: 'Barlow', sans-serif;
+  }
+
+  &__button {
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    max-height: 4.5rem;
+    min-height: 3rem;
+    line-height: 10px;
+
+    &:hover {
+      background-color: $nyoom-dark-red;
+    }
+
+    &--mode {
+      grid-area: mode;
+      display: inline-block;
+      position: relative;
+      text-align: center;
+    }
+  }
+
+  /** Header buttons dropdown show **/
+  &__button--mode:hover &__dropdown--mode,
+  &__button--game-a:hover &__dropdown--game-a,
+  &__button--game-b:hover &__dropdown--game-b,
+  &__button--set-relation:hover &__dropdown--set-relation {
+    display: block;
+  }
+
+  &__dropdown {
+    /** Header buttons dropdown options **/
+    div {
+      height: 6vw;
+      max-height: 4.5rem;
+      min-height: 3rem;
+      background-color: white;
+    }
+
+    :hover {
+      background-color: $nyoom-red;
+    }
+
+    /** Header buttons dropdown hide **/
+    &--mode {
+      display: none;
+      position: absolute;
+      z-index: 1;
+      overflow: auto;
+      height: 12vw;
+      max-height: 9rem;
+      min-height: 6rem;
+      width: 300%;
+      background-color: white;
+
+      div {
+        font-family: 'Barlow', sans-serif;
+        font-size: 3.75vw;
+        line-height: 6vw;
+      }
+    }
+
+    &--game-a,
+    &--game-b,
+    &--set-relation {
+      display: none;
+      position: absolute;
+      z-index: 1;
+      overflow: auto;
+      height: 42vw;
+      max-height: 31.5rem;
+      min-height: 21rem;
+      width: 100%;
+      background-color: white;
+    }
+  }
+}
+
+/** LIST **/
+.list-item {
+  &__car {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+      "brand image"
+      "info  info";
+  overflow: hidden;
+  background-color: $nyoom-dark-grey;
+  border: 1px solid $nyoom-red;
+
+    .brand-logo {
+      grid-area: brand;
+      height: 100%;
+      float: left;
+
+      img {
+        height: 100%;
+        width: 100%;
+        padding: 0.5vw;
+        filter: grayscale(20%)
+      }
+    }
+
+    .model-image {
+      grid-area: image;
+      height: 100%;
+      float: left;
+
+      img {
+        height: 100%;
+        width: 100%;
+        filter: grayscale(50%)
+      }
+    }
+
+    .info {
+      grid-area: info;
+      overflow: hidden;
+      height: 100%;
+      padding-left: 0.75vw;
+      color: $nyoom-red;
+
+      span {
+        text-align: left;
+        font-family: 'Barlow', sans-serif;
+        font-size: 3.75vw;
+        line-height: 6vw;
+        font-weight: bold;
+      }
+
+      span:first-child {
+        color: $nyoom-blue;
+      }
+    }
+  }
+}
+
+/* Medium width */
+@media only screen and (min-width: 45rem) {
+  .header{
+    &__dropdown {
+      &--mode {
+        div {
+          font-size: 2vw;
+          line-height: 2vw;
+        }
+      }
+    }
+  }
+
+  .list-item__car {
+    grid-template-columns: 8vw 12vw auto;
+    grid-template-rows: 8vw;
+    grid-template-areas: "brand image info";
+
+    .info {
+      span {
+        font-size: 2vw;
+        line-height: 8vw;
+      }
+    }
+  }
+}
+
+/* Maximum width */
+@media only screen and (min-width: $breakpoint-max) {
+  .header{
+    &__dropdown {
+      &--mode {
+        div {
+          font-size: 1.5rem;
+          line-height: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .list-item__car {
+    grid-template-columns: 6rem 9rem auto;
+    grid-template-rows: 6rem;
+
+    .info {
+      span {
+        font-size: 1.5rem;
+        line-height: 3rem;
+      }
+    }
+  }
+}

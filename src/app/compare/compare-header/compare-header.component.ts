@@ -5,7 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-compare-header',
   templateUrl: './compare-header.component.html',
-  styleUrls: ['./../compare.component.css']
+  styleUrls: ['./../compare.component.scss']
 })
 export class CompareHeaderComponent implements OnInit, AfterContentInit {
   carsService: CarsService;

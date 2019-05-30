@@ -4,7 +4,7 @@ import { CarsService } from '../../cars.service';
 @Component({
   selector: 'app-compare-car-list',
   templateUrl: './compare-car-list.component.html',
-  styleUrls: ['./../compare.component.css']
+  styleUrls: ['./../compare.component.scss']
 })
 export class CompareCarListComponent implements OnInit {
   carsService: CarsService;

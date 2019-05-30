@@ -1,0 +1,168 @@
+@import "../../scss/_vars.scss";
+
+.header {
+  div {
+    grid-template-columns: 2fr 8fr 12fr;
+    grid-template-areas: "mode title";
+  }
+
+  &__title {
+    border: none
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "filters__cars filters__games"
+    "car-list      game-list";
+  max-width: 75rem;
+  margin: auto;
+}
+
+.car-filters {
+  grid-area: filters__cars;
+  padding-left: 1rem;
+  padding-top: 1rem;
+
+  select {
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.25rem;
+    padding: 1px 3px;
+    cursor: pointer;
+  }
+}
+
+.game-filters {
+  grid-area: filters__games;
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+
+.car-filters,
+.game-filters {
+  div {
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.25rem;
+    display: inline;
+    border: 1px solid grey;
+    padding: 1px 0.5rem;
+    cursor: pointer;
+  }
+
+  .filter {
+    &__radio {
+      &--car-model,
+      &--car-year {
+        width: calc(50% - 1rem);
+      }
+    }
+  }
+
+  .selected {
+    background-color: lightgrey;
+  }
+
+  .round {
+    &-left {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+
+    &-right {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+
+  .space-right {
+    margin-right: 0.5rem;
+  }
+}
+
+app-car-list-select {
+  grid-area: car-list;
+  height: calc(100vh - 3rem - 6vw);
+  max-height: calc(100vh - 3rem - 3rem);
+  min-height: calc(100vh - 3rem - 4.5rem);
+  overflow-y: auto;
+}
+
+.list-item {
+  max-width: 75rem;
+  width: 95%;
+  margin: auto;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  cursor: pointer;
+
+  .selected {
+    .info {
+      background-color: $nyoom-red;
+      color: black !important;
+    }
+  }
+
+  &__game {
+    background-color: $nyoom-dark-grey;
+    border: 1px solid $nyoom-red;
+    max-width: 75rem;
+    width: 95%;
+    max-height: calc(45px - 0.5vw);
+    margin: auto;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    cursor: pointer;
+
+    .pct {
+      width: 0%;
+      height: calc(45px - 0.5vw);
+      background-color: $nyoom-red;
+      transition: width 1s;
+    }
+
+    .game-logo {
+      position: relative;
+      top: calc(-45px + 0.5vw);
+      max-width: 75rem;
+      max-height: calc(45px - 0.5vw);
+      overflow: hidden;
+      margin: auto;
+
+      img {
+        max-width: 75rem;
+        max-height: calc(45px - 0.5vw);
+        margin: auto;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+app-game-list-select {
+  grid-area: game-list;
+  height: calc(100vh - 3rem - 6vw);
+  max-height: calc(100vh - 3rem - 3rem);
+  min-height: calc(100vh - 3rem - 4.5rem);
+  overflow-y: auto;
+}
+
+
+/* Medium width */
+@media only screen and (min-width: $breakpoint-med) {
+  .header {
+    div {
+      grid-template-columns: 2fr 11fr 12fr;
+    }
+  }
+
+  .grid-container {
+    grid-template-rows: 3rem auto;
+  }
+}
+
+/* Maximum width */
+@media only screen and (min-width: $breakpoint-max) {
+
+}
