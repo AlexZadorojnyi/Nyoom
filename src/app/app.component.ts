@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { CarsService } from './cars.service';
 
 @Component({
   selector: 'app-root',
