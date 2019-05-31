@@ -25,4 +25,19 @@ export class SelectComponent implements OnInit {
     );
   }
 
+  filterGamesType = function (str: string) {
+    if (str === 'games') {
+      this.filters.gamesFilter.games = !this.filters.gamesFilter.games;
+      if (this.filters.gamesFilter.games === false && this.filters.gamesFilter.movies === false) {
+        this.filters.gamesFilter.movies = true;
+      }
+    } else if (str === 'movies') {
+      this.filters.gamesFilter.movies = !this.filters.gamesFilter.movies;
+      if (this.filters.gamesFilter.games === false && this.filters.gamesFilter.movies === false) {
+        this.filters.gamesFilter.games = true;
+      }
+    }
+    this.carsService.updateFilters(this.filters);
+  };
+
 }

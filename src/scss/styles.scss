@@ -8,7 +8,14 @@
 body {
   margin: 0;
   overflow-x: hidden;
-  background-color: black;
+  background-image:
+    linear-gradient(black, black),
+    url("../assets/images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: saturation;
+  /*background-color: black;*/
 }
 
 .img-center-helper {
@@ -73,28 +80,26 @@ body {
     }
   }
 
-  /** Header buttons dropdown show **/
-  &__button--mode:hover &__dropdown--mode,
-  &__button--game-a:hover &__dropdown--game-a,
-  &__button--game-b:hover &__dropdown--game-b,
-  &__button--set-relation:hover &__dropdown--set-relation {
+  &__button--mode:hover &__dropdown--mode {
     display: block;
   }
 
   &__dropdown {
-    /** Header buttons dropdown options **/
+    background-color: $nyoom-dark-grey;
+    border: 1px solid $nyoom-red;
+    border-top: none;
+    box-sizing: content-box;
+
     div {
       height: 6vw;
       max-height: 4.5rem;
       min-height: 3rem;
-      background-color: white;
     }
 
     :hover {
       background-color: $nyoom-red;
     }
 
-    /** Header buttons dropdown hide **/
     &--mode {
       display: none;
       position: absolute;
@@ -104,7 +109,6 @@ body {
       max-height: 9rem;
       min-height: 6rem;
       width: 300%;
-      background-color: white;
 
       div {
         font-family: 'Barlow', sans-serif;
@@ -112,35 +116,26 @@ body {
         line-height: 6vw;
       }
     }
-
-    &--game-a,
-    &--game-b,
-    &--set-relation {
-      display: none;
-      position: absolute;
-      z-index: 1;
-      overflow: auto;
-      height: 42vw;
-      max-height: 31.5rem;
-      min-height: 21rem;
-      width: 100%;
-      background-color: white;
-    }
   }
 }
 
 /** LIST **/
 .list-item {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+
   &__car {
-  display: grid;
-  grid-template-columns: 40% 60%;
-  grid-template-rows: auto auto;
-  grid-template-areas:
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: auto auto;
+    grid-template-areas:
       "brand image"
       "info  info";
-  overflow: hidden;
-  background-color: $nyoom-dark-grey;
-  border: 1px solid $nyoom-red;
+    overflow: hidden;
+    background-color: $nyoom-dark-grey;
+    border: 1px solid $nyoom-red;
 
     .brand-logo {
       grid-area: brand;
@@ -179,11 +174,13 @@ body {
         font-family: 'Barlow', sans-serif;
         font-size: 3.75vw;
         line-height: 6vw;
-        font-weight: bold;
+        font-weight: 500;
       }
 
       span:first-child {
         color: $nyoom-blue;
+        font-weight: 700;
+        font-style: italic;
       }
     }
   }
@@ -216,7 +213,7 @@ body {
   }
 }
 
-/* Maximum width */
+/** MEDIA QUERIES **/
 @media only screen and (min-width: $breakpoint-max) {
   .header{
     &__dropdown {

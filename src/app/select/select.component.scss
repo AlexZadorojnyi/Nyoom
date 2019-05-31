@@ -1,7 +1,8 @@
 @import "../../scss/_vars.scss";
 
+/** HEADER **/
 .header {
-  div {
+  > div {
     grid-template-columns: 2fr 8fr 12fr;
     grid-template-areas: "mode title";
   }
@@ -11,6 +12,7 @@
   }
 }
 
+/** GRID **/
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -21,6 +23,23 @@
   margin: auto;
 }
 
+app-select-car-list {
+  grid-area: car-list;
+  height: calc(100vh - 3rem - 6vw);
+  max-height: calc(100vh - 3rem - 3rem);
+  min-height: calc(100vh - 3rem - 4.5rem);
+  overflow-y: auto;
+}
+
+app-select-game-list {
+  grid-area: game-list;
+  height: calc(100vh - 3rem - 6vw);
+  max-height: calc(100vh - 3rem - 3rem);
+  min-height: calc(100vh - 3rem - 4.5rem);
+  overflow-y: auto;
+}
+
+/** FILTERS **/
 .car-filters {
   grid-area: filters__cars;
   padding-left: 1rem;
@@ -46,55 +65,54 @@
     font-family: 'Barlow', sans-serif;
     font-size: 1.25rem;
     display: inline;
-    border: 1px solid grey;
     padding: 1px 0.5rem;
     cursor: pointer;
   }
 
   .filter {
     &__radio {
+      background-color: white;
+
       &--car-model,
       &--car-year {
         width: calc(50% - 1rem);
       }
+
+      &--game-pct {
+        border-left: 1px solid $nyoom-dark-grey;
+        border-right: 1px solid $nyoom-dark-grey;
+      }
+    }
+
+    &__checkbox {
+      background-color: white;
+    }
+
+    &__button--clear,
+    &__button--reset {
+      background-color: white;
     }
   }
 
   .selected {
-    background-color: lightgrey;
-  }
-
-  .round {
-    &-left {
-      border-top-left-radius: 5px;
-      border-bottom-left-radius: 5px;
-    }
-
-    &-right {
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px;
-    }
+    background-color: $nyoom-dark-grey;
+    color: white;
   }
 
   .space-right {
     margin-right: 0.5rem;
   }
+
+  .fas {
+    color: white;
+    cursor: pointer;
+  }
 }
 
-app-car-list-select {
-  grid-area: car-list;
-  height: calc(100vh - 3rem - 6vw);
-  max-height: calc(100vh - 3rem - 3rem);
-  min-height: calc(100vh - 3rem - 4.5rem);
-  overflow-y: auto;
-}
-
+/** LIST **/
 .list-item {
   max-width: 75rem;
   width: 95%;
-  margin: auto;
-  margin-top: 1vw;
-  margin-bottom: 1vw;
   cursor: pointer;
 
   .selected {
@@ -108,16 +126,12 @@ app-car-list-select {
     background-color: $nyoom-dark-grey;
     border: 1px solid $nyoom-red;
     max-width: 75rem;
-    width: 95%;
     max-height: calc(45px - 0.5vw);
-    margin: auto;
-    margin-top: 1vw;
-    margin-bottom: 1vw;
     cursor: pointer;
 
     .pct {
       width: 0%;
-      height: calc(45px - 0.5vw);
+      height: calc(43px - 0.5vw);
       background-color: $nyoom-red;
       transition: width 1s;
     }
@@ -131,25 +145,15 @@ app-car-list-select {
       margin: auto;
 
       img {
-        max-width: 75rem;
         max-height: calc(45px - 0.5vw);
-        margin: auto;
         vertical-align: middle;
+        padding: 2px;
       }
     }
   }
 }
 
-app-game-list-select {
-  grid-area: game-list;
-  height: calc(100vh - 3rem - 6vw);
-  max-height: calc(100vh - 3rem - 3rem);
-  min-height: calc(100vh - 3rem - 4.5rem);
-  overflow-y: auto;
-}
-
-
-/* Medium width */
+/** MEDIA QUERIES **/
 @media only screen and (min-width: $breakpoint-med) {
   .header {
     div {
@@ -160,9 +164,4 @@ app-game-list-select {
   .grid-container {
     grid-template-rows: 3rem auto;
   }
-}
-
-/* Maximum width */
-@media only screen and (min-width: $breakpoint-max) {
-
 }

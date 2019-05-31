@@ -1,7 +1,8 @@
 @import "../../scss/_vars.scss";
 
+/** HEADER **/
 .header {
-  div {
+  > div {
     grid-template-columns: 2fr 8fr 5fr 2fr 5fr;
     grid-template-areas: "mode title game-a set-relation game-b";
   }
@@ -24,8 +25,34 @@
       text-align: center;
     }
   }
+
+  &__button--game-a:hover &__dropdown--game-a,
+  &__button--game-b:hover &__dropdown--game-b,
+  &__button--set-relation:hover &__dropdown--set-relation {
+    display: block;
+  }
+
+  &__dropdown {
+    &--game-a,
+    &--game-b,
+    &--set-relation {
+      display: none;
+      position: absolute;
+      z-index: 1;
+      overflow: auto;
+      height: 42vw;
+      max-height: 31.5rem;
+      min-height: 21rem;
+      width: 100%;
+    }
+
+    &--set-relation {
+      overflow: hidden;
+    }
+  }
 }
 
+/** LIST **/
 .list-item {
   display: grid;
   grid-template-columns: 10fr 6fr 6fr;
@@ -33,9 +60,6 @@
     'info game-a game-b'
     'note .      .';
   max-width: 75rem;
-  margin: auto;
-  margin-top: 1vw;
-  margin-bottom: 1vw;
 
   &__car {
     grid-area: info;
@@ -65,6 +89,7 @@
   }
 }
 
+/** MEDIA QUERIES **/
 @media only screen and (min-width: $breakpoint-med) {
   .header {
     div {

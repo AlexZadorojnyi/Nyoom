@@ -23,40 +23,40 @@
          (click)="filters.carsSort.reverse = !filters.carsSort.reverse; carsService.updateFilters(filters);"
          [ngClass]="{'fa-sort-amount-up': filters.carsSort.reverse, 'fa-sort-amount-down': !filters.carsSort.reverse}"></i>
       <!-- Sort cars -->
-      <div class="filter__radio filter__radio--car-model round-left"
+      <div class="filter__radio filter__radio--car-model"
            (click)="filters.carsSort.model = true; filters.carsSort.year = false; carsService.updateFilters(filters);"
            [ngClass]="{selected: filters.carsSort.model}">Model</div>
-      <div class="filter__radio filter__radio--car-year round-right"
+      <div class="filter__radio filter__radio--car-year"
            (click)="filters.carsSort.model = false; filters.carsSort.year = true; carsService.updateFilters(filters);"
            [ngClass]="{selected: filters.carsSort.year}">Year</div>
     </div>
     <div class="game-filters">
       <!-- Filter games by type -->
-      <div class="filter__checkbox filter__checkbox--game-type-game round-left"
-           (click)="filters.gamesFilter.games = !filters.gamesFilter.games; carsService.updateFilters(filters);"
+      <div class="filter__checkbox filter__checkbox--game-type-game"
+           (click)="filterGamesType('games');"
            [ngClass]="{selected: filters.gamesFilter.games}">Games</div>
-      <div class="filter__checkbox filter__checkbox--game-type-movie round-right space-right"
-           (click)="filters.gamesFilter.movies = !filters.gamesFilter.movies; carsService.updateFilters(filters);"
+      <div class="filter__checkbox filter__checkbox--game-type-movie space-right"
+           (click)="filterGamesType('movies');"
            [ngClass]="{selected: filters.gamesFilter.movies}">Movies</div>
       <!-- Sort games desc/asc order -->
       <i class="filter__button filter__button--game-order space-right fas"
          (click)="filters.gamesSort.reverse = !filters.gamesSort.reverse; carsService.updateFilters(filters);"
          [ngClass]="{'fa-sort-amount-up': filters.gamesSort.reverse, 'fa-sort-amount-down': !filters.gamesSort.reverse}"></i>
       <!-- Sort games -->
-      <div class="filter__radio filter__radio--game-title round-left"
+      <div class="filter__radio filter__radio--game-title"
            (click)="filters.gamesSort.title = true; filters.gamesSort.pct = false; filters.gamesSort.year = false; carsService.updateFilters(filters);"
            [ngClass]="{selected: filters.gamesSort.title}">Title</div>
       <div class="filter__radio filter__radio--game-pct"
            (click)="filters.gamesSort.title = false; filters.gamesSort.pct = true; filters.gamesSort.year = false; carsService.updateFilters(filters);"
            [ngClass]="{selected: filters.gamesSort.pct}">%</div>
-      <div class="filter__radio filter__radio--game-year round-right space-right"
+      <div class="filter__radio filter__radio--game-year space-right"
            (click)="filters.gamesSort.title = false; filters.gamesSort.pct = false; filters.gamesSort.year = true; carsService.updateFilters(filters);"
            [ngClass]="{selected: filters.gamesSort.year}">Year</div>
       <!-- Clear selected cars -->
-      <div class="filter__button filter__button--clear round-left round-right space-right"
+      <div class="filter__button filter__button--clear space-right"
            (click)="carsService.clearSelectedCars()"><b>Clear</b></div>
       <!-- Reset filters -->
-      <div class="filter__button filter__button--reset round-left round-right"
+      <div class="filter__button filter__button--reset"
            (click)="carsService.resetFilters()"><b>Reset Filters</b></div>
     </div>
   <app-select-car-list></app-select-car-list>
