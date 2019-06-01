@@ -42,6 +42,7 @@ export class CarsService {
     carsSort: {
       model: true,
       year: false,
+      selected: false,
       reverse: false
     },
     gamesFilter: {
@@ -611,7 +612,6 @@ export class CarsService {
       this.selectedCars.sort(this.compareCars);
     }
     this.updateGamePercentages();
-    // console.log(this.selectedCars);
   };
 
   selectGame = function(gameID: string) {

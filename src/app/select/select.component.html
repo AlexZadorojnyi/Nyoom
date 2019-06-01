@@ -24,11 +24,14 @@
          [ngClass]="{'fa-sort-amount-up': filters.carsSort.reverse, 'fa-sort-amount-down': !filters.carsSort.reverse}"></i>
       <!-- Sort cars -->
       <div class="filter__radio filter__radio--car-model"
-           (click)="filters.carsSort.model = true; filters.carsSort.year = false; carsService.updateFilters(filters);"
+           (click)="filters.carsSort.model = true; filters.carsSort.year = false; filters.carsSort.selected = false; carsService.updateFilters(filters);"
            [ngClass]="{selected: filters.carsSort.model}">Model</div>
       <div class="filter__radio filter__radio--car-year"
-           (click)="filters.carsSort.model = false; filters.carsSort.year = true; carsService.updateFilters(filters);"
+           (click)="filters.carsSort.model = false; filters.carsSort.year = true; filters.carsSort.selected = false; carsService.updateFilters(filters);"
            [ngClass]="{selected: filters.carsSort.year}">Year</div>
+      <div class="filter__radio filter__radio--car-selected"
+           (click)="filters.carsSort.model = false; filters.carsSort.year = false; filters.carsSort.selected = true; carsService.updateFilters(filters);"
+           [ngClass]="{selected: filters.carsSort.selected}">Selected</div>
     </div>
     <div class="game-filters">
       <!-- Filter games by type -->

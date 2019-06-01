@@ -143,6 +143,11 @@
         "year": 1999
     },
     {
+        "make": "Lexus",
+        "baseModel": "SC",
+        "year": 1991
+    },
+    {
         "make": "Mazda",
         "baseModel": "Eunos Cosmo",
         "year": 1990
@@ -549,11 +554,6 @@
                 "model": "Toyota MR-S"
             }
         ]
-    },
-    {
-        "make": "Toyota",
-        "baseModel": "Soarer",
-        "year": 1991
     },
     {
         "make": "Toyota",

@@ -166,6 +166,19 @@
 		"year": 2001
 	},
 	{
+		"make": "Lexus",
+		"baseModel": "SC",
+		"year": 1991,
+		"models": [
+			{
+				"model": "Toyota Soarer GT 2.5"
+			},
+			{
+				"model": "Toyota Soarer GT 4.0"
+			}
+		]
+	},
+	{
 		"make": "Mazda",
 		"baseModel": "Eunos Cosmo",
 		"year": 1990
@@ -702,19 +715,6 @@
 		"models": [
 			{
 				"model": "Toyota MR-S"
-			}
-		]
-	},
-	{
-		"make": "Toyota",
-		"baseModel": "Soarer",
-		"year": 1991,
-		"models": [
-			{
-				"model": "Toyota Soarer GT 2.5"
-			},
-			{
-				"model": "Toyota Soarer GT 4.0"
 			}
 		]
 	},

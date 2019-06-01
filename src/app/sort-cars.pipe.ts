@@ -1,10 +1,16 @@
 import {Pipe, PipeTransform} from '@angular/core';
+import { CarsService } from './cars.service';
 
 @Pipe({
  name: 'sortCarsPipe',
  pure: false
 })
 export class SortCarsPipe implements PipeTransform {
+  carsService: CarsService;
+
+  constructor(carsService: CarsService) {
+    this.carsService = carsService;
+  }
 
   transform(array: Array<any>, args: any): Array<any> {
 
@@ -53,7 +59,32 @@ export class SortCarsPipe implements PipeTransform {
         });
       }
 
-      // Sort by year
+      // Sort by year (reuses sort by model)
+      if (args.carsSort.selected) {
+        array.sort((a: any, b: any) => {
+          if (this.carsService.isSelected(a.make, a.baseModel, a.year) &&
+             !this.carsService.isSelected(b.make, b.baseModel, b.year)) { return -1;
+          } else if (
+            !this.carsService.isSelected(a.make, a.baseModel, a.year) &&
+             this.carsService.isSelected(b.make, b.baseModel, b.year)) { return 1;
+          } else {
+            if (a.make.toLowerCase() < b.make.toLowerCase()) { return -1;
+            } else if (a.make.toLowerCase() > b.make.toLowerCase()) { return 1;
+            } else {
+              if (a.baseModel.toLowerCase() < b.baseModel.toLowerCase()) { return -1;
+              } else if (a.baseModel.toLowerCase() > b.baseModel.toLowerCase()) { return 1;
+              } else {
+                if (a.year < b.year) { return -1;
+                } else if (a.year > b.year) { return 1;
+                } else { return 0;
+                }
+              }
+            }
+          }
+        });
+      }
+
+      // Sort by selected
       if (args.carsSort.year) {
         array.sort((a: any, b: any) => {
           if (a.year < b.year) { return 1;
