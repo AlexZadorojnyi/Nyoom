@@ -8,13 +8,21 @@
         "make": "Ford",
         "baseModel": "F-150",
         "year": 1997,
-        "model": "F-150 SVT Lightning"
+        "models": [
+            {
+                "model": "Ford F-150 SVT Lightning"
+            }
+        ]
     },
     {
         "make": "Honda",
         "baseModel": "Civic",
         "year": 1992,
-        "note": "Civic Coupe"
+        "models": [
+            {
+                "model": "Honda Civic Coupe"
+            }
+        ]
     },
     {
         "make": "Mazda",
@@ -25,19 +33,26 @@
         "make": "Mitsubishi",
         "baseModel": "Eclipse",
         "year": 1995,
-        "model": "Eclipse RS"
+        "models": [
+            {
+                "model": "Mitsubishi Eclipse RS"
+            }
+        ]
     },
     {
         "make": "Nissan",
         "baseModel": "240SX",
-        "year": 1995,
-        "note": "'Kouki' facelift"
+        "year": 1997
     },
     {
         "make": "Nissan",
         "baseModel": "Skyline",
         "year": 1998,
-        "model": "Skyline GT-R"
+        "models": [
+            {
+                "model": "Nissan Skyline GT-R"
+            }
+        ]
     },
     {
         "make": "Toyota",

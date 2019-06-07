@@ -3,7 +3,11 @@
         "make": "Acura",
         "baseModel": "Integra",
         "year": 1994,
-        "model": "Integra Type R"
+        "models": [
+            {
+                "model": "Acura Integra Type R"
+            }
+        ]
     },
     {
         "make": "Acura",
@@ -19,14 +23,21 @@
         "make": "Ford",
         "baseModel": "Focus",
         "year": 1998,
-        "model": "Focus ZX3"
+        "models": [
+            {
+                "model": "Ford Focus ZX3"
+            }
+        ]
     },
     {
         "make": "Honda",
         "baseModel": "Civic",
         "year": 1996,
-        "model": "Civic Si",
-        "note": "Coupe"
+        "models": [
+            {
+                "model": "Honda Civic Si Coupe"
+            }
+        ]
     },
     {
         "make": "Honda",
@@ -37,7 +48,11 @@
         "make": "Hyundai",
         "baseModel": "Tiburon",
         "year": 2002,
-        "model": "Tiburon GT"
+        "models": [
+            {
+                "model": "Hyundai Tiburon GT"
+            }
+        ]
     },
     {
         "make": "Mazda",
@@ -53,13 +68,21 @@
         "make": "Mitsubishi",
         "baseModel": "Eclipse",
         "year": 1995,
-        "model": "Eclipse GSX"
+        "models": [
+            {
+                "model": "Mitsubishi Eclipse GSX"
+            }
+        ]
     },
     {
         "make": "Mitsubishi",
         "baseModel": "Lancer",
         "year": 2002,
-        "model": "Lancer ES"
+        "models": [
+            {
+                "model": "Mitsubishi Lancer ES"
+            }
+        ]
     },
     {
         "make": "Nissan",
@@ -75,31 +98,51 @@
         "make": "Nissan",
         "baseModel": "Sentra",
         "year": 2000,
-        "model": "Sentra SE-R Spec V"
+        "models": [
+            {
+                "model": "Nissan Sentra SE-R Spec V"
+            }
+        ]
     },
     {
         "make": "Nissan",
         "baseModel": "Skyline",
         "year": 1998,
-        "model": "Skyline GT-R"
+        "models": [
+            {
+                "model": "Nissan Skyline GT-R"
+            }
+        ]
     },
     {
         "make": "Peugeot",
         "baseModel": "206",
         "year": 1998,
-        "model": "206 GTi"
+        "models": [
+            {
+                "model": "Peugeot 206 GTi"
+            }
+        ]
     },
     {
         "make": "Subaru",
         "baseModel": "Impreza",
         "year": 2000,
-        "model": "Impreza 2.5 RS"
+        "models": [
+            {
+                "model": "Subaru Impreza 2.5 RS"
+            }
+        ]
     },
     {
         "make": "Toyota",
         "baseModel": "Celica",
         "year": 1999,
-        "model": "Celica GT-S"
+        "models": [
+            {
+                "model": "Toyota Celica GT-S"
+            }
+        ]
     },
     {
         "make": "Toyota",
@@ -110,6 +153,10 @@
         "make": "Volkswagen",
         "baseModel": "Golf",
         "year": 1997,
-        "model": "Golf GTi"
+        "models": [
+            {
+                "model": "Volkswagen Golf GTi"
+            }
+        ]
     }
 ]

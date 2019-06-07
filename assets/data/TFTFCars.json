@@ -3,13 +3,21 @@
         "make": "Chevrolet",
         "baseModel": "Camaro",
         "year": 1967,
-        "model": "Camaro Yenko S/C Replica"
+        "models": [
+            {
+                "model": "Chevrolet Camaro Yenko S/C Replica"
+            }
+        ]
     },
     {
         "make": "Dodge",
         "baseModel": "Challenger",
         "year": 1970,
-        "model": "Challenger R/T"
+        "models": [
+            {
+                "model": "Dodge Challenger R/T"
+            }
+        ]
     },
     {
         "make": "Honda",
@@ -25,19 +33,31 @@
         "make": "Mitsubishi",
         "baseModel": "Eclipse",
         "year": 2000,
-        "model": "Eclipse Spyder GTS"
+        "models": [
+            {
+                "model": "Mitsubishi Eclipse Spyder GTS"
+            }
+        ]
     },
     {
         "make": "Mitsubishi",
         "baseModel": "Lancer",
         "year": 2002,
-        "model": "Lancer Evolution VII"
+        "models": [
+            {
+                "model": "Mitsubishi Lancer Evolution VII"
+            }
+        ]
     },
     {
         "make": "Nissan",
         "baseModel": "Skyline",
         "year": 1998,
-        "model": "Skyline GT-R"
+        "models": [
+            {
+                "model": "Nissan Skyline GT-R"
+            }
+        ]
     },
     {
         "make": "Toyota",
