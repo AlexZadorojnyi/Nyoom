@@ -127,6 +127,7 @@ body {
   margin-right: auto;
 
   &__car {
+    @extend %list-item-border;
     display: grid;
     grid-template-columns: 40% 60%;
     grid-template-rows: auto auto;
@@ -135,7 +136,8 @@ body {
       "info  info";
     overflow: hidden;
     background-color: $nyoom-dark-grey;
-    border: 1px solid $nyoom-red;
+    /* border: $list-item-border; */
+
 
     .brand-logo {
       grid-area: brand;

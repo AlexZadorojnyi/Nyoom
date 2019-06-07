@@ -13,73 +13,121 @@
         "make": "Audi",
         "baseModel": "R8",
         "year": 2006,
-        "model": "Le Mans quattro concept (2003)"
+        "models": [
+            {
+                "model": "Audi Le Mans quattro concept (2003)"
+            }
+        ]
     },
     {
         "make": "BMW",
         "baseModel": "3 Series",
         "year": 1998,
-        "model": "M3 GTR"
+        "models": [
+            {
+                "model": "BMW M3 GTR"
+            }
+        ]
     },
     {
         "make": "Chevrolet",
         "baseModel": "Camaro",
         "year": 1967,
-        "model": "Camaro SS 396"
+        "models": [
+            {
+                "model": "Chevrolet Camaro SS 396"
+            }
+        ]
     },
     {
         "make": "Chevrolet",
         "baseModel": "Camaro",
         "year": 2010,
-        "model": "Camaro Concept (2006)"
+        "models": [
+            {
+                "model": "Chevrolet Camaro Concept (2006)"
+            }
+        ]
     },
     {
         "make": "Chevrolet",
         "baseModel": "Chevelle",
         "year": 1968,
-        "model": "Chevelle SS"
+        "models": [
+            {
+                "model": "Chevrolet Chevelle SS"
+            }
+        ]
     },
     {
         "make": "Chevrolet",
         "baseModel": "Corvette",
         "year": 2005,
-        "model": "Corvette Z06 C6"
+        "models": [
+            {
+                "model": "Chevrolet Corvette Z06 C6"
+            }
+        ]
     },
     {
         "make": "Chrysler",
         "baseModel": "300C",
         "year": 2005,
-        "model": "300C SRT-8"
+        "models": [
+            {
+                "model": "Chrysler 300C SRT-8"
+            }
+        ]
     },
     {
         "make": "Dodge",
         "baseModel": "Challenger",
         "year": 1970,
-        "model": "Challenger R/T"
+        "models": [
+            {
+                "model": "Dodge Challenger R/T"
+            }
+        ]
     },
     {
         "make": "Dodge",
         "baseModel": "Challenger",
         "year": 2008,
-        "model": "Challenger Concept (2006)"
+        "models": [
+            {
+                "model": "Dodge Challenger Concept (2006)"
+            }
+        ]
     },
     {
         "make": "Dodge",
         "baseModel": "Charger",
         "year": 1968,
-        "model": "Charger R/T"
+        "models": [
+            {
+                "model": "Dodge Charger R/T"
+            }
+        ]
     },
     {
         "make": "Dodge",
         "baseModel": "Charger",
         "year": 2006,
-        "model": "Charger SRT-8"
+        "models": [
+            {
+                "model": "Dodge Charger SRT-8"
+            }
+        ]
     },
     {
         "make": "Dodge",
         "baseModel": "Viper",
         "year": 2003,
-        "model": "Viper SRT-10"
+        "models": [
+            {
+                "model": "Dodge Viper SRT-10"
+            }
+        ]
     },
     {
         "make": "Ford",
@@ -90,13 +138,24 @@
         "make": "Ford",
         "baseModel": "Mustang",
         "year": 1965,
-        "model": "Shelby GT500"
+        "models": [
+            {
+                "model": "Shelby GT500"
+            }
+        ]
     },
     {
         "make": "Ford",
         "baseModel": "Mustang",
         "year": 2005,
-        "model": "Mustang  GT; Shelby GT500 Concept"
+        "models": [
+            {
+                "model": "Ford Mustang  GT"
+            },
+            {
+                "model": "Shelby GT500 Concept"
+            }
+        ]
     },
     {
         "make": "Infiniti",
@@ -107,7 +166,11 @@
         "make": "Jaguar",
         "baseModel": "XK",
         "year": 2007,
-        "model": "XK"
+        "models": [
+            {
+                "model": "Jaguar XK"
+            }
+        ]
     },
     {
         "make": "Koenigsegg",
@@ -123,13 +186,24 @@
         "make": "Lamborghini",
         "baseModel": "Murciélago",
         "year": 2001,
-        "note": "Murciélago\nMurciélago LP 640"
+        "models": [
+            {
+                "model": "Lamborghini Murciélago"
+            },
+            {
+                "model": "Lamborghini Murciélago LP 640"
+            }
+        ]
     },
     {
         "make": "Lexus",
         "baseModel": "IS",
         "year": 1999,
-        "model": "IS 300"
+        "models": [
+            {
+                "model": "Lexus IS 300"
+            }
+        ]
     },
     {
         "make": "Lotus",
@@ -140,7 +214,11 @@
         "make": "Lotus",
         "baseModel": "Europa",
         "year": 2006,
-        "model": "Europa S"
+        "models": [
+            {
+                "model": "Lotus Europa S"
+            }
+        ]
     },
     {
         "make": "Mazda",
@@ -161,13 +239,21 @@
         "make": "Mercedes-Benz",
         "baseModel": "CLK-Class",
         "year": 2002,
-        "model": "CLK 500"
+        "models": [
+            {
+                "model": "Mercedes-Benz CLK 500"
+            }
+        ]
     },
     {
         "make": "Mercedes-Benz",
         "baseModel": "SL-Class",
         "year": 2001,
-        "model": "SL 65 AMG"
+        "models": [
+            {
+                "model": "Mercedes-Benz SL 65 AMG"
+            }
+        ]
     },
     {
         "make": "Mercedes-Benz",
@@ -178,19 +264,31 @@
         "make": "Mitsubishi",
         "baseModel": "Eclipse",
         "year": 1995,
-        "model": "Eclipse GS-T"
+        "models": [
+            {
+                "model": "Mitsubishi Eclipse GS-T"
+            }
+        ]
     },
     {
         "make": "Mitsubishi",
         "baseModel": "Eclipse",
         "year": 2006,
-        "model": "Eclipse GT"
+        "models": [
+            {
+                "model": "Mitsubishi Eclipse GT"
+            }
+        ]
     },
     {
         "make": "Mitsubishi",
         "baseModel": "Lancer",
         "year": 2002,
-        "model": "Lancer Evolution IX MR"
+        "models": [
+            {
+                "model": "Mitsubishi Lancer Evolution IX MR"
+            }
+        ]
     },
     {
         "make": "Nissan",
@@ -206,19 +304,31 @@
         "make": "Nissan",
         "baseModel": "Skyline",
         "year": 1998,
-        "model": "Skyline GT-R V-spec"
+        "models": [
+            {
+                "model": "Nissan Skyline GT-R V-spec"
+            }
+        ]
     },
     {
         "make": "Pagani",
         "baseModel": "Zonda",
         "year": 1999,
-        "model": "Zonda F"
+        "models": [
+            {
+                "model": "Pagani Zonda F"
+            }
+        ]
     },
     {
         "make": "Plymouth",
         "baseModel": "Barracuda",
         "year": 1970,
-        "model": "\"Cuda"
+        "models": [
+            {
+                "model": "Plymouth \"Cuda"
+            }
+        ]
     },
     {
         "make": "Plymouth",
@@ -229,13 +339,27 @@
         "make": "Pontiac",
         "baseModel": "GTO",
         "year": 2004,
-        "note": "Pontiac GTO\nHolden Monaro VXR"
+        "models": [
+            {
+                "model": "Pontiac GTO"
+            },
+            {
+                "model": "Holden Monaro VXR"
+            }
+        ]
     },
     {
         "make": "Porsche",
         "baseModel": "911",
         "year": 2005,
-        "note": "911 GT3 RS\n911 Turbo"
+        "models": [
+            {
+                "model": "Porsche 911 GT3 RS"
+            },
+            {
+                "model": "Porsche 911 Turbo"
+            }
+        ]
     },
     {
         "make": "Porsche",
@@ -246,25 +370,41 @@
         "make": "Porsche",
         "baseModel": "Cayman",
         "year": 2005,
-        "model": "Cayman S"
+        "models": [
+            {
+                "model": "Porsche Cayman S"
+            }
+        ]
     },
     {
         "make": "Renault",
         "baseModel": "Clio",
         "year": 2001,
-        "model": "Clio V6"
+        "models": [
+            {
+                "model": "Renault Clio V6"
+            }
+        ]
     },
     {
         "make": "Subaru",
         "baseModel": "Impreza",
         "year": 2005,
-        "model": "Impreza WRX STi"
+        "models": [
+            {
+                "model": "Subaru Impreza WRX STi"
+            }
+        ]
     },
     {
         "make": "Toyota",
         "baseModel": "Corolla",
         "year": 1984,
-        "model": "Corolla GT-S"
+        "models": [
+            {
+                "model": "Toyota Corolla GT-S"
+            }
+        ]
     },
     {
         "make": "Toyota",
@@ -280,6 +420,10 @@
         "make": "Volkswagen",
         "baseModel": "Golf",
         "year": 2003,
-        "model": "Golf R32"
+        "models": [
+            {
+                "model": "Volkswagen Golf R32"
+            }
+        ]
     }
 ]

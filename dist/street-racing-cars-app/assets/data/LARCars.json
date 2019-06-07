@@ -3,13 +3,21 @@
         "make": "Buick",
         "baseModel": "Regal",
         "year": 1978,
-        "model": "Regal GNX"
+        "models": [
+            {
+                "model": "Buick Regal GNX"
+            }
+        ]
     },
     {
         "make": "Cadillac",
         "baseModel": "Eldorado",
         "year": 1971,
-        "model": "Eldorado Convertible"
+        "models": [
+            {
+                "model": "Cadillac Eldorado Convertible"
+            }
+        ]
     },
     {
         "make": "Cadillac",
@@ -20,25 +28,41 @@
         "make": "Chevrolet",
         "baseModel": "Camaro",
         "year": 1967,
-        "model": "Camaro SS/RS"
+        "models": [
+            {
+                "model": "Chevrolet Camaro SS/RS"
+            }
+        ]
     },
     {
         "make": "Chevrolet",
         "baseModel": "Chevelle",
         "year": 1968,
-        "model": "Chevelle SS"
+        "models": [
+            {
+                "model": "Chevrolet Chevelle SS"
+            }
+        ]
     },
     {
         "make": "Chevrolet",
         "baseModel": "Corvette",
         "year": 1968,
-        "model": "Corvette C3"
+        "models": [
+            {
+                "model": "Chevrolet Corvette C3"
+            }
+        ]
     },
     {
         "make": "Chevrolet",
         "baseModel": "Corvette",
         "year": 1997,
-        "model": "Corvette C5 Z06"
+        "models": [
+            {
+                "model": "Chevrolet Corvette C5 Z06"
+            }
+        ]
     },
     {
         "make": "Chevrolet",
@@ -49,13 +73,21 @@
         "make": "Chevrolet",
         "baseModel": "Impala",
         "year": 1961,
-        "model": "Impala SS"
+        "models": [
+            {
+                "model": "Chevrolet Impala SS"
+            }
+        ]
     },
     {
         "make": "Chevrolet",
         "baseModel": "Impala",
         "year": 2000,
-        "model": "Impala SS"
+        "models": [
+            {
+                "model": "Chevrolet Impala SS"
+            }
+        ]
     },
     {
         "make": "Chevrolet",
@@ -71,13 +103,21 @@
         "make": "Dodge",
         "baseModel": "Charger",
         "year": 1968,
-        "model": "Charger R/T"
+        "models": [
+            {
+                "model": "Dodge Charger R/T"
+            }
+        ]
     },
     {
         "make": "Dodge",
         "baseModel": "Charger",
         "year": 2006,
-        "model": "Charger R/T"
+        "models": [
+            {
+                "model": "Dodge Charger R/T"
+            }
+        ]
     },
     {
         "make": "Dodge",
@@ -88,19 +128,31 @@
         "make": "Dodge",
         "baseModel": "Neon",
         "year": 1995,
-        "model": "Neon SRT-4"
+        "models": [
+            {
+                "model": "Dodge Neon SRT-4"
+            }
+        ]
     },
     {
         "make": "Dodge",
         "baseModel": "Ram",
         "year": 2002,
-        "model": "Ram Rumble Bee"
+        "models": [
+            {
+                "model": "Dodge Ram Rumble Bee"
+            }
+        ]
     },
     {
         "make": "Dodge",
         "baseModel": "Viper",
         "year": 2003,
-        "model": "Viper SRT-10"
+        "models": [
+            {
+                "model": "Dodge Viper SRT-10"
+            }
+        ]
     },
     {
         "make": "Hummer",
@@ -126,13 +178,21 @@
         "make": "Mitsubishi",
         "baseModel": "Eclipse",
         "year": 2000,
-        "model": "Eclipse Spyder"
+        "models": [
+            {
+                "model": "Mitsubishi Eclipse Spyder"
+            }
+        ]
     },
     {
         "make": "Mitsubishi",
         "baseModel": "Lancer",
         "year": 2002,
-        "model": "Lancer Evolution VIII"
+        "models": [
+            {
+                "model": "Mitsubishi Lancer Evolution VIII"
+            }
+        ]
     },
     {
         "make": "Nissan",
@@ -148,31 +208,51 @@
         "make": "Nissan",
         "baseModel": "Frontier",
         "year": 2004,
-        "model": "Frontier LE Crew Cab 4x4"
+        "models": [
+            {
+                "model": "Nissan Frontier LE Crew Cab 4x4"
+            }
+        ]
     },
     {
         "make": "Nissan",
         "baseModel": "Sentra",
         "year": 2000,
-        "model": "Sentra SE-R Spec V"
+        "models": [
+            {
+                "model": "Nissan Sentra SE-R Spec V"
+            }
+        ]
     },
     {
         "make": "Nissan",
         "baseModel": "Skyline",
         "year": 1998,
-        "model": "Skyline GT-R"
+        "models": [
+            {
+                "model": "Nissan Skyline GT-R"
+            }
+        ]
     },
     {
         "make": "Nissan",
         "baseModel": "Titan",
         "year": 2003,
-        "model": "SE Crew Cab 4x4"
+        "models": [
+            {
+                "model": "Nissan Titan SE Crew Cab 4x4"
+            }
+        ]
     },
     {
         "make": "Oldsmobile",
         "baseModel": "Cutlass",
         "year": 1978,
-        "model": "Cutlass Supreme Classic"
+        "models": [
+            {
+                "model": "Oldsmobile Cutlass Supreme Classic"
+            }
+        ]
     },
     {
         "make": "Pontiac",
@@ -198,6 +278,10 @@
         "make": "Subaru",
         "baseModel": "Impreza",
         "year": 2002,
-        "model": "Impreza WRX STi"
+        "models": [
+            {
+                "model": "Subaru Impreza WRX STi"
+            }
+        ]
     }
 ]

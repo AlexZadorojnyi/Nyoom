@@ -3,25 +3,44 @@
         "make": "Cadillac",
         "baseModel": "Cien",
         "year": 2002,
-        "model": "Cien (2002 Concept)"
+        "models": [
+            {
+                "model": "Cadillac Cien (2002 Concept)"
+            }
+        ]
     },
     {
         "make": "Cadillac",
         "baseModel": "CTS",
         "year": 2003,
-        "model": "CTS-V"
+        "models": [
+            {
+                "model": "Cadillac CTS-V"
+            }
+        ]
     },
     {
         "make": "Cadillac",
         "baseModel": "Escalade",
         "year": 2002,
-        "note": "Escalade\nEscalade EXT"
+        "models": [
+            {
+                "model": "Cadillac Escalade"
+            },
+            {
+                "model": "Cadillac Escalade EXT"
+            }
+        ]
     },
     {
         "make": "Cadillac",
         "baseModel": "Sixteen",
         "year": 2003,
-        "model": "Sixteen (2003 Concept)"
+        "models": [
+            {
+                "model": "Cadillac Sixteen (2003 Concept)"
+            }
+        ]
     },
     {
         "make": "Chevrolet",
@@ -32,25 +51,41 @@
         "make": "Chevrolet",
         "baseModel": "Camaro",
         "year": 1967,
-        "model": "Camaro Z/28"
+        "models": [
+            {
+                "model": "Chevrolet Camaro Z/28"
+            }
+        ]
     },
     {
         "make": "Chevrolet",
         "baseModel": "Camaro",
         "year": 1970,
-        "model": "Camaro Z28"
+        "models": [
+            {
+                "model": "Chevrolet Camaro Z28"
+            }
+        ]
     },
     {
         "make": "Chevrolet",
         "baseModel": "Corvette",
         "year": 1968,
-        "model": "Corvette C3"
+        "models": [
+            {
+                "model": "Chevrolet Corvette C3"
+            }
+        ]
     },
     {
         "make": "Chevrolet",
         "baseModel": "Corvette",
         "year": 1997,
-        "model": "Corvette C5 Z06"
+        "models": [
+            {
+                "model": "Chevrolet Corvette C5 Z06"
+            }
+        ]
     },
     {
         "make": "Chevrolet",
@@ -71,7 +106,11 @@
         "make": "Chevrolet",
         "baseModel": "Impala",
         "year": 1994,
-        "model": "Impala SS"
+        "models": [
+            {
+                "model": "Chevrolet Impala SS"
+            }
+        ]
     },
     {
         "make": "Chevrolet",
@@ -82,55 +121,91 @@
         "make": "Chevrolet",
         "baseModel": "Silverado",
         "year": 1999,
-        "model": "Silverado SST Concept"
+        "models": [
+            {
+                "model": "Chevrolet Silverado SST Concept"
+            }
+        ]
     },
     {
         "make": "Chrysler",
         "baseModel": "300C",
         "year": 2005,
-        "model": "300C"
+        "models": [
+            {
+                "model": "Chrysler 300C"
+            }
+        ]
     },
     {
         "make": "Chrysler",
         "baseModel": "ME Four-Twelve",
         "year": 2004,
-        "model": "ME Four-Twelve (2004 Concept)"
+        "models": [
+            {
+                "model": "Chrysler ME Four-Twelve (2004 Concept)"
+            }
+        ]
     },
     {
         "make": "Dodge",
         "baseModel": "Charger",
         "year": 1968,
-        "model": "Charger R/T"
+        "models": [
+            {
+                "model": "Dodge Charger R/T"
+            }
+        ]
     },
     {
         "make": "Dodge",
         "baseModel": "Charger",
         "year": 1999,
-        "model": "Charger R/T (1999 Concept)"
+        "models": [
+            {
+                "model": "Dodge Charger R/T (1999 Concept)"
+            }
+        ]
     },
     {
         "make": "Dodge",
         "baseModel": "Neon",
         "year": 1995,
-        "model": "Neon SRT-4"
+        "models": [
+            {
+                "model": "Dodge Neon SRT-4"
+            }
+        ]
     },
     {
         "make": "Dodge",
         "baseModel": "Ram",
         "year": 2002,
-        "model": "Ram SRT-10"
+        "models": [
+            {
+                "model": "Dodge Ram SRT-10"
+            }
+        ]
     },
     {
         "make": "Dodge",
         "baseModel": "Viper",
         "year": 2003,
-        "model": "Viper GTS-R Concept (2000)"
+        "models": [
+            {
+                "model": "Dodge Viper GTS-R Concept (2000)"
+            }
+        ]
     },
     {
         "make": "Ford",
         "baseModel": "Mustang",
         "year": 1999,
-        "model": "Saleen SR"
+        "models": [
+            {
+                "model": "Saleen SR"
+            }
+        ]
     },
     {
         "make": "Hummer",
@@ -156,19 +231,31 @@
         "make": "Lexus",
         "baseModel": "GS",
         "year": 1998,
-        "model": "GS 430"
+        "models": [
+            {
+                "model": "Lexus GS 430"
+            }
+        ]
     },
     {
         "make": "Lexus",
         "baseModel": "IS",
         "year": 1999,
-        "model": "IS 300"
+        "models": [
+            {
+                "model": "Lexus IS 300"
+            }
+        ]
     },
     {
         "make": "Lexus",
         "baseModel": "SC",
         "year": 2001,
-        "model": "SC 430"
+        "models": [
+            {
+                "model": "Lexus SC 430"
+            }
+        ]
     },
     {
         "make": "Lotus",
@@ -179,19 +266,34 @@
         "make": "Lotus",
         "baseModel": "Esprit",
         "year": 1993,
-        "model": "Esprit V8"
+        "models": [
+            {
+                "model": "Lotus Esprit V8"
+            }
+        ]
     },
     {
         "make": "McLaren",
         "baseModel": "F1",
         "year": 1993,
-        "model": "F1 LM"
+        "models": [
+            {
+                "model": "McLaren F1 LM"
+            }
+        ]
     },
     {
         "make": "Mercedes-Benz",
         "baseModel": "CL-Class",
         "year": 2000,
-        "note": "CL 500\nCL 55 AMG"
+        "models": [
+            {
+                "model": "Mercedes-Benz CL 500"
+            },
+            {
+                "model": "Mercedes-Benz CL 55 AMG"
+            }
+        ]
     },
     {
         "make": "Mercedes-Benz",
@@ -202,13 +304,27 @@
         "make": "Mercedes-Benz",
         "baseModel": "G-Class",
         "year": 1990,
-        "note": "G 500\nG 55 AMG"
+        "models": [
+            {
+                "model": "Mercedes-Benz G 500"
+            },
+            {
+                "model": "Mercedes-Benz G 55 AMG"
+            }
+        ]
     },
     {
         "make": "Mercedes-Benz",
         "baseModel": "SL-Class",
         "year": 2001,
-        "note": "SL 500\nSL 55 AMG"
+        "models": [
+            {
+                "model": "Mercedes-Benz SL 500"
+            },
+            {
+                "model": "Mercedes-Benz SL 55 AMG"
+            }
+        ]
     },
     {
         "make": "Mercedes-Benz",
@@ -224,7 +340,11 @@
         "make": "Mitsubishi",
         "baseModel": "Lancer",
         "year": 2002,
-        "model": "Lancer Evolution VIII"
+        "models": [
+            {
+                "model": "Mitsubishi Lancer Evolution VIII"
+            }
+        ]
     },
     {
         "make": "Nissan",
@@ -235,13 +355,21 @@
         "make": "Nissan",
         "baseModel": "Skyline",
         "year": 1998,
-        "model": "Skyline GT-R V-spec"
+        "models": [
+            {
+                "model": "Nissan Skyline GT-R V-spec"
+            }
+        ]
     },
     {
         "make": "Pontiac",
         "baseModel": "GTO",
         "year": 1968,
-        "model": "GTO \"The Judge\""
+        "models": [
+            {
+                "model": "Pontiac GTO \"The Judge\""
+            }
+        ]
     },
     {
         "make": "Pontiac",
@@ -252,7 +380,11 @@
         "make": "Porsche",
         "baseModel": "911",
         "year": 1998,
-        "model": "Gemballa Sport Coupe"
+        "models": [
+            {
+                "model": "Gemballa Sport Coupe"
+            }
+        ]
     },
     {
         "make": "Saleen",
@@ -268,7 +400,11 @@
         "make": "Volkswagen",
         "baseModel": "Golf",
         "year": 2003,
-        "model": "Golf R32"
+        "models": [
+            {
+                "model": "Volkswagen Golf R32"
+            }
+        ]
     },
     {
         "make": "Volkswagen",

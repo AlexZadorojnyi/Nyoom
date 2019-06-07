@@ -8,14 +8,21 @@
         "make": "BMW",
         "baseModel": "5 Series",
         "year": 1995,
-        "model": "M5",
-        "note": "barely"
+        "models": [
+            {
+                "model": "BMW M5"
+            }
+        ]
     },
     {
         "make": "Chevrolet",
         "baseModel": "Camaro",
         "year": 1967,
-        "model": "Camaro SS"
+        "models": [
+            {
+                "model": "Chevrolet Camaro SS"
+            }
+        ]
     },
     {
         "make": "Ford",
@@ -26,7 +33,11 @@
         "make": "Ford",
         "baseModel": "F-150",
         "year": 1997,
-        "model": "F-150 SVT Lightning"
+        "models": [
+            {
+                "model": "Ford F-150 SVT Lightning"
+            }
+        ]
     },
     {
         "make": "Ford",
@@ -37,7 +48,11 @@
         "make": "Honda",
         "baseModel": "Civic",
         "year": 1992,
-        "model": "Honda Civic Hatch"
+        "models": [
+            {
+                "model": "Honda Civic Hatch"
+            }
+        ]
     },
     {
         "make": "Nissan",

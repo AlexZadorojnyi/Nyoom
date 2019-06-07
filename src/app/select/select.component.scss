@@ -1,5 +1,10 @@
 @import "../../scss/_vars.scss";
 
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
 /** HEADER **/
 .header {
   > div {
@@ -16,6 +21,7 @@
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
   grid-template-areas:
     "filters__cars filters__games"
     "car-list      game-list";
@@ -45,75 +51,76 @@ app-select-game-list {
 .car-filters {
   grid-area: filters__cars;
   padding-left: 1rem;
-  padding-top: 1rem;
+
+  > div {
+    display: inline-block;
+    margin-top: 1rem;
+  }
 
   select {
     font-family: 'Barlow', sans-serif;
     font-size: 1.25rem;
     padding: 1px 3px;
     cursor: pointer;
+
+    option {
+      font-size: 1rem;
+    }
   }
 }
 
 .game-filters {
   grid-area: filters__games;
   padding-left: 1rem;
-  padding-top: 1rem;
+
+  > div {
+    display: inline-block;
+    margin-top: 1rem;
+  }
 }
 
-.car-filters,
-.game-filters {
-  div {
+.filter {
+  font-weight: 400;
+
+  &__radio,
+  &__checkbox,
+  &__button {
+    @extend %filter-border;
     font-family: 'Barlow', sans-serif;
     font-size: 1.25rem;
     display: inline;
     padding: 1px 0.5rem;
     cursor: pointer;
-  }
+    background-color: white;
 
-  .filter {
-    &__radio {
-      background-color: white;
-
-      &--car-model,
-      &--car-year {
-        width: calc(50% - 1rem);
-      }
-
-      &--car-year,
-      &--game-pct {
-        border-left: 1px solid $nyoom-dark-grey;
-        border-right: 1px solid $nyoom-dark-grey;
-      }
+    &:hover {
+      @extend %filter-border-hover;
     }
 
-    &__checkbox {
-      background-color: white;
-    }
+    &.selected,
+    &:active {
+      @extend %filter-border-selected;
+      color: white;
+      background-color: $nyoom-grey;
 
-    &__button--clear,
-    &__button--reset {
-      background-color: white;
-
-      &:active {
-        background-color: $nyoom-dark-grey;
-        color: white;
+      &:hover {
+        @extend %filter-border-selected-hover;
       }
     }
   }
 
-  .selected {
-    background-color: $nyoom-dark-grey;
-    color: white;
+  &__button {
+    font-weight: 500;
   }
 
-  .space-right {
+  &.space-right {
     margin-right: 0.5rem;
   }
 
-  .fas {
+  &.fas {
     color: white;
     cursor: pointer;
+    font-weight: 900 !important;
   }
 }
 
@@ -131,12 +138,18 @@ app-select-game-list {
     }
   }
 
+  .info {
+    transition: background-color 0.5s, color 0.5s;
+  }
+
   &__game {
+    @extend %list-item-border;
     background-color: $nyoom-dark-grey;
-    border: 1px solid $nyoom-red;
     max-width: 75rem;
     max-height: calc(45px - 0.5vw);
     cursor: pointer;
+    overflow: hidden;
+    /* border: $list-item-border; */
 
     .pct {
       width: 0%;
@@ -168,9 +181,5 @@ app-select-game-list {
     div {
       grid-template-columns: 2fr 11fr 12fr;
     }
-  }
-
-  .grid-container {
-    grid-template-rows: 3rem auto;
   }
 }

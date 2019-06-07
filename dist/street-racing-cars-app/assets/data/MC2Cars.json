@@ -13,25 +13,41 @@
         "make": "BMW",
         "baseModel": "5 Series",
         "year": 1987,
-        "model": "M5"
+        "models": [
+            {
+                "model": "BMW M5"
+            }
+        ]
     },
     {
         "make": "Dodge",
         "baseModel": "Viper",
         "year": 2003,
-        "model": "Viper GTS-R Concept (2000)"
+        "models": [
+            {
+                "model": "Dodge Viper GTS-R Concept (2000)"
+            }
+        ]
     },
     {
         "make": "Ford",
         "baseModel": "Escort",
         "year": 1986,
-        "model": "Escort RS Turbo"
+        "models": [
+            {
+                "model": "Ford Escort RS Turbo"
+            }
+        ]
     },
     {
         "make": "Ford",
         "baseModel": "Escort",
         "year": 1990,
-        "model": "Escort RS Cosworth"
+        "models": [
+            {
+                "model": "Ford Escort RS Cosworth"
+            }
+        ]
     },
     {
         "make": "Ford",
@@ -42,7 +58,14 @@
         "make": "Honda",
         "baseModel": "Civic",
         "year": 1996,
-        "note": "Civic Coupe\nCivic Si"
+        "models": [
+            {
+                "model": "Honda Civic Coupe"
+            },
+            {
+                "model": "Civic Si"
+            }
+        ]
     },
     {
         "make": "Honda",
@@ -53,7 +76,11 @@
         "make": "Lexus",
         "baseModel": "GS",
         "year": 1998,
-        "model": "GS 300"
+        "models": [
+            {
+                "model": "Lexus GS 300"
+            }
+        ]
     },
     {
         "make": "Lotus",
@@ -69,7 +96,11 @@
         "make": "Mitsubishi",
         "baseModel": "Lancer",
         "year": 2002,
-        "model": "Lancer Evolution VII"
+        "models": [
+            {
+                "model": "Mitsubishi Lancer Evolution VII"
+            }
+        ]
     },
     {
         "make": "Nissan",
@@ -80,7 +111,11 @@
         "make": "Nissan",
         "baseModel": "Skyline",
         "year": 1998,
-        "model": "Skyline GT-R"
+        "models": [
+            {
+                "model": "Nissan Skyline GT-R"
+            }
+        ]
     },
     {
         "make": "Pontiac",
@@ -91,13 +126,21 @@
         "make": "Porsche",
         "baseModel": "911",
         "year": 1998,
-        "model": "911 GT3"
+        "models": [
+            {
+                "model": "Porsche 911 GT3"
+            }
+        ]
     },
     {
         "make": "Renault",
         "baseModel": "Clio",
         "year": 1998,
-        "model": "Clio V6"
+        "models": [
+            {
+                "model": "Renault Clio V6"
+            }
+        ]
     },
     {
         "make": "Saleen",
@@ -113,7 +156,14 @@
         "make": "Toyota",
         "baseModel": "Supra",
         "year": 1993,
-        "note": "Supra\nAB Flug bodykit"
+        "models": [
+            {
+                "model": "Toyota Supra\nAB Flug bodykit"
+            },
+            {
+                "model": "AB Flug Supra"
+            }
+        ]
     },
     {
         "make": "Volkswagen",

@@ -3,8 +3,12 @@
         "make": "Acura",
         "baseModel": "RSX",
         "year": 2002,
-        "model": "RSX Type S",
-        "note": "North America exclusive"
+        "models": [
+            {
+                "model": "Acura RSX Type S",
+                "note": "North America exclusive"
+            }
+        ]
     },
     {
         "make": "Audi",
@@ -25,20 +29,32 @@
         "make": "Ford",
         "baseModel": "Focus",
         "year": 1998,
-        "model": "Focus ZX3"
+        "models": [
+            {
+                "model": "Ford Focus ZX3"
+            }
+        ]
     },
     {
         "make": "Ford",
         "baseModel": "Mustang",
         "year": 2005,
-        "model": "Mustang  GT"
+        "models": [
+            {
+                "model": "Ford Mustang  GT"
+            }
+        ]
     },
     {
         "make": "Honda",
         "baseModel": "Civic",
         "year": 1996,
-        "model": "Civic Si",
-        "note": "North America exclusive"
+        "models": [
+            {
+                "model": "Honda Civic Si",
+                "note": "North America exclusive"
+            }
+        ]
     },
     {
         "make": "Hummer",
@@ -49,7 +65,11 @@
         "make": "Hyundai",
         "baseModel": "Tiburon",
         "year": 2002,
-        "model": "Tiburon GT"
+        "models": [
+            {
+                "model": "Hyundai Tiburon GT"
+            }
+        ]
     },
     {
         "make": "Infiniti",
@@ -60,7 +80,11 @@
         "make": "Lexus",
         "baseModel": "IS",
         "year": 1999,
-        "model": "IS 300"
+        "models": [
+            {
+                "model": "Lexus IS 300"
+            }
+        ]
     },
     {
         "make": "Lincoln",
@@ -91,13 +115,21 @@
         "make": "Mitsubishi",
         "baseModel": "Eclipse",
         "year": 1995,
-        "model": "Eclipse GSX"
+        "models": [
+            {
+                "model": "Mitsubishi Eclipse GSX"
+            }
+        ]
     },
     {
         "make": "Mitsubishi",
         "baseModel": "Lancer",
         "year": 2002,
-        "model": "Lancer Evolution VIII"
+        "models": [
+            {
+                "model": "Mitsubishi Lancer Evolution VIII"
+            }
+        ]
     },
     {
         "make": "Nissan",
@@ -113,26 +145,42 @@
         "make": "Nissan",
         "baseModel": "Sentra",
         "year": 2000,
-        "model": "Sentra SE-R Spec V"
+        "models": [
+            {
+                "model": "Nissan Sentra SE-R Spec V"
+            }
+        ]
     },
     {
         "make": "Nissan",
         "baseModel": "Skyline",
         "year": 1998,
-        "model": "Skyline GT-R"
+        "models": [
+            {
+                "model": "Nissan Skyline GT-R"
+            }
+        ]
     },
     {
         "make": "Peugeot",
         "baseModel": "106",
         "year": 1996,
-        "model": "106 GTi",
-        "note": "Europea and Asia exclusive"
+        "models": [
+            {
+                "model": "Peugeot 106 GTi",
+                "note": "Europe and Asia exclusive"
+            }
+        ]
     },
     {
         "make": "Peugeot",
         "baseModel": "206",
         "year": 1998,
-        "model": "206 GTi"
+        "models": [
+            {
+                "model": "Peugeot 206 GTi"
+            }
+        ]
     },
     {
         "make": "Pontiac",
@@ -143,19 +191,31 @@
         "make": "Subaru",
         "baseModel": "Impreza",
         "year": 2002,
-        "model": "Impreza WRX STI"
+        "models": [
+            {
+                "model": "Subaru Impreza WRX STI"
+            }
+        ]
     },
     {
         "make": "Toyota",
         "baseModel": "Celica",
         "year": 1999,
-        "model": "Celica GT-S"
+        "models": [
+            {
+                "model": "Toyota Celica GT-S"
+            }
+        ]
     },
     {
         "make": "Toyota",
         "baseModel": "Corolla",
         "year": 1984,
-        "model": "Corolla GT-S"
+        "models": [
+            {
+                "model": "Toyota Corolla GT-S"
+            }
+        ]
     },
     {
         "make": "Toyota",
@@ -166,13 +226,21 @@
         "make": "Vauxhall",
         "baseModel": "Corsa",
         "year": 2000,
-        "model": "Corsa 1.8 SRi",
-        "note": "Europea and Asia exclusive"
+        "models": [
+            {
+                "model": "Vauxhall Corsa 1.8 SRi",
+                "note": "Europe and Asia exclusive"
+            }
+        ]
     },
     {
         "make": "Volkswagen",
         "baseModel": "Golf",
         "year": 1997,
-        "model": "Golf GTi"
+        "models": [
+            {
+                "model": "Volkswagen Golf GTi"
+            }
+        ]
     }
 ]

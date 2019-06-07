@@ -3,6 +3,34 @@ $nyoom-dark-red: #78051a;
 $nyoom-blue: #213aca;
 $nyoom-yellow: #e0c20a;
 $nyoom-dark-grey: #1a1a1a;
+$nyoom-grey: #454545;
+$nyoom-light-grey: #737373;
+
+%filter-border {
+  border-bottom: 3px solid $nyoom-light-grey;
+  border-right: 3px solid $nyoom-light-grey;
+  border-top: 3px solid white;
+  border-left: 3px solid white;}
+%filter-border-hover {
+  border-top: 3px solid $nyoom-light-grey;
+  border-left: 3px solid $nyoom-light-grey;
+  border-bottom: 3px solid white;
+  border-right: 3px solid white;}
+%filter-border-selected {
+  border-bottom: 3px solid $nyoom-grey;
+  border-right: 3px solid $nyoom-grey;
+  border-top: 3px solid $nyoom-dark-grey;
+  border-left: 3px solid $nyoom-dark-grey;}
+%filter-border-selected-hover {
+  border-top: 3px solid $nyoom-grey;
+  border-left: 3px solid $nyoom-grey;
+  border-bottom: 3px solid $nyoom-dark-grey;
+  border-right: 3px solid $nyoom-dark-grey;}
+%list-item-border {
+  border-bottom: 3px solid $nyoom-dark-red;
+  border-right: 3px solid $nyoom-dark-red;
+  border-top: 3px solid $nyoom-red;
+  border-left: 3px solid $nyoom-red;}
 
 $breakpoint-med: 45rem;
 $breakpoint-max: 75rem;

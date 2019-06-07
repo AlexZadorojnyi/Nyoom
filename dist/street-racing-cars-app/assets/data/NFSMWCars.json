@@ -8,26 +8,45 @@
         "make": "Audi",
         "baseModel": "A3",
         "year": 2003,
-        "model": "A3 3.2 quattro"
+        "models": [
+            {
+                "model": "Audi A3 3.2 quattro"
+            }
+        ]
     },
     {
         "make": "Audi",
         "baseModel": "A4",
         "year": 2004,
-        "model": "A3 3.2 FSI quattro"
+        "models": [
+            {
+                "model": "Audi A3 3.2 FSI quattro"
+            }
+        ]
     },
     {
         "make": "Audi",
         "baseModel": "TT",
         "year": 1998,
-        "model": "TT 3.2 quattro"
+        "models": [
+            {
+                "model": "Audi TT 3.2 quattro"
+            }
+        ]
     },
     {
         "make": "BMW",
         "baseModel": "3 Series",
         "year": 1998,
-        "model": "M3 GTR",
-        "note": "M3 GTR\nM3 GTR (stock) (Black Edition)"
+        "models": [
+            {
+                "model": "BMW M3 GTR"
+            },
+            {
+                "model": "BMW M3 GTR (stock)",
+                "note": "Black Edition"
+            }
+        ]
     },
     {
         "make": "Cadillac",
@@ -38,27 +57,46 @@
         "make": "Chevrolet",
         "baseModel": "Camaro",
         "year": 1967,
-        "model": "Camaro SS/RS",
-        "note": "Black Edition"
+        "models": [
+            {
+                "model": "Chevrolet Camaro SS/RS",
+                "note": "Black Edition"
+            }
+        ]
     },
     {
         "make": "Chevrolet",
         "baseModel": "Cobalt",
         "year": 2005,
-        "model": "Cobalt SS"
+        "models": [
+            {
+                "model": "Chevrolet Cobalt SS"
+            }
+        ]
     },
     {
         "make": "Chevrolet",
         "baseModel": "Corvette",
         "year": 2005,
-        "model": "Corvette C6",
-        "note": "Corvette C6\nCorvette C6R (Black Edition)"
+        "models": [
+            {
+                "model": "Chevrolet Corvette C6"
+            },
+            {
+                "model": "Chevrolet Corvette C6R",
+                "note": "Black Edition"
+            }
+        ]
     },
     {
         "make": "Dodge",
         "baseModel": "Viper",
         "year": 2003,
-        "model": "Viper SRT-10"
+        "models": [
+            {
+                "model": "Dodge Viper SRT-10"
+            }
+        ]
     },
     {
         "make": "Fiat",
@@ -74,7 +112,11 @@
         "make": "Ford",
         "baseModel": "Mustang",
         "year": 2005,
-        "model": "Mustang  GT"
+        "models": [
+            {
+                "model": "Ford Mustang  GT"
+            }
+        ]
     },
     {
         "make": "Lamborghini",
@@ -90,7 +132,11 @@
         "make": "Lexus",
         "baseModel": "IS",
         "year": 1999,
-        "model": "IS 300"
+        "models": [
+            {
+                "model": "Lexus IS 300"
+            }
+        ]
     },
     {
         "make": "Lotus",
@@ -111,13 +157,24 @@
         "make": "Mercedes-Benz",
         "baseModel": "CLK-Class",
         "year": 2002,
-        "model": "CLK 500"
+        "models": [
+            {
+                "model": "Mercedes-Benz CLK 500"
+            }
+        ]
     },
     {
         "make": "Mercedes-Benz",
         "baseModel": "SL-Class",
         "year": 2001,
-        "note": "SL 500\nSL 65 AMG"
+        "models": [
+            {
+                "model": "Mercedes-Benz SL 500"
+            },
+            {
+                "model": "Mercedes-Benz SL 65 AMG"
+            }
+        ]
     },
     {
         "make": "Mercedes-Benz",
@@ -127,32 +184,54 @@
     {
         "make": "Mitsubishi",
         "baseModel": "Eclipse",
-        "year": 2006,
-        "model": "Eclipse"
+        "year": 2006
     },
     {
         "make": "Mitsubishi",
         "baseModel": "Lancer",
         "year": 2002,
-        "model": "Lancer Evolution VIII"
+        "models": [
+            {
+                "model": "Mitsubishi Lancer Evolution VIII"
+            }
+        ]
     },
     {
         "make": "Pontiac",
         "baseModel": "GTO",
         "year": 2004,
-        "note": "Pontiac GTO\nHolden Monaro VXR"
+        "models": [
+            {
+                "model": "Pontiac GTO"
+            },
+            {
+                "model": "Holden Monaro VXR"
+            }
+        ]
     },
     {
         "make": "Porsche",
         "baseModel": "911",
         "year": 1998,
-        "note": "911 Turbo S\n911 GT2 (Black Edition)"
+        "models": [
+            {
+                "model": "Porsche 911 Turbo S"
+            },
+            {
+                "model": "Porsche 911 GT2",
+                "note": "Black Edition"
+            }
+        ]
     },
     {
         "make": "Porsche",
         "baseModel": "911",
         "year": 2005,
-        "model": "911 Carrera S"
+        "models": [
+            {
+                "model": "Porsche 911 Carrera S"
+            }
+        ]
     },
     {
         "make": "Porsche",
@@ -163,19 +242,31 @@
         "make": "Porsche",
         "baseModel": "Cayman",
         "year": 2005,
-        "model": "Cayman S"
+        "models": [
+            {
+                "model": "Porsche Cayman S"
+            }
+        ]
     },
     {
         "make": "Renault",
         "baseModel": "Clio",
         "year": 2001,
-        "model": "Clio V6 2"
+        "models": [
+            {
+                "model": "Renault Clio V6 2"
+            }
+        ]
     },
     {
         "make": "Subaru",
         "baseModel": "Impreza",
         "year": 2002,
-        "model": "Impreza WRX STi"
+        "models": [
+            {
+                "model": "Subaru Impreza WRX STi"
+            }
+        ]
     },
     {
         "make": "Toyota",
@@ -186,6 +277,10 @@
         "make": "Volkswagen",
         "baseModel": "Golf",
         "year": 2003,
-        "model": "Golf GTI"
+        "models": [
+            {
+                "model": "Volkswagen Golf GTI"
+            }
+        ]
     }
 ]
