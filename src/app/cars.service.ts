@@ -205,15 +205,15 @@ export class CarsService {
     while (i < arr1.length || j < arr2.length) {
       switch (this.compareCars(arr1[i], arr2[j])) {
         case -1:
-          this.carList.push(this.formatEntry(arr1[i], null));
+          this.carList.push(this.formatEntryCompare(arr1[i], null));
           i++;
           break;
         case 1:
-          this.carList.push(this.formatEntry(null, arr2[j]));
+          this.carList.push(this.formatEntryCompare(null, arr2[j]));
           j++;
           break;
         case 0:
-          this.carList.push(this.formatEntry(arr1[i], arr2[j]));
+          this.carList.push(this.formatEntryCompare(arr1[i], arr2[j]));
           i++;
           j++;
           break;
@@ -230,14 +230,14 @@ export class CarsService {
     while (i < arr1.length || j < arr2.length) {
       switch (this.compareCars(arr1[i], arr2[j])) {
         case -1:
-          this.carList.push(this.formatEntry(arr1[i], null));
+          this.carList.push(this.formatEntryCompare(arr1[i], null));
           i++;
           break;
         case 1:
           j++;
           break;
         case 0:
-          this.carList.push(this.formatEntry(arr1[i], arr2[j]));
+          this.carList.push(this.formatEntryCompare(arr1[i], arr2[j]));
           i++;
           j++;
           break;
@@ -257,11 +257,11 @@ export class CarsService {
           i++;
           break;
         case 1:
-          this.carList.push(this.formatEntry(null, arr2[j]));
+          this.carList.push(this.formatEntryCompare(null, arr2[j]));
           j++;
           break;
         case 0:
-          this.carList.push(this.formatEntry(arr1[i], arr2[j]));
+          this.carList.push(this.formatEntryCompare(arr1[i], arr2[j]));
           i++;
           j++;
           break;
@@ -284,7 +284,7 @@ export class CarsService {
           j++;
           break;
         case 0:
-          this.carList.push(this.formatEntry(arr1[i], arr2[j]));
+          this.carList.push(this.formatEntryCompare(arr1[i], arr2[j]));
           i++;
           j++;
           break;
@@ -301,7 +301,7 @@ export class CarsService {
     while (i < arr1.length || j < arr2.length) {
       switch (this.compareCars(arr1[i], arr2[j])) {
         case -1:
-          this.carList.push(this.formatEntry(arr1[i], null));
+          this.carList.push(this.formatEntryCompare(arr1[i], null));
           i++;
           break;
         case 1:
@@ -327,7 +327,7 @@ export class CarsService {
           i++;
           break;
         case 1:
-          this.carList.push(this.formatEntry(null, arr2[j]));
+          this.carList.push(this.formatEntryCompare(null, arr2[j]));
           j++;
           break;
         case 0:
@@ -347,11 +347,11 @@ export class CarsService {
     while (i < arr1.length || j < arr2.length) {
       switch (this.compareCars(arr1[i], arr2[j])) {
         case -1:
-          this.carList.push(this.formatEntry(arr1[i], null));
+          this.carList.push(this.formatEntryCompare(arr1[i], null));
           i++;
           break;
         case 1:
-          this.carList.push(this.formatEntry(null, arr2[j]));
+          this.carList.push(this.formatEntryCompare(null, arr2[j]));
           j++;
           break;
         case 0:
@@ -362,15 +362,13 @@ export class CarsService {
     }
   };
 
-  formatEntry = function (car1: any, car2: any) {
+  formatEntryCompare = function (car1: any, car2: any) {
     const car = {
       make: null,
       baseModel: null,
       year: null,
-      gameAModel: null,
-      gameBModel: null,
-      gameANote: null,
-      gameBNote: null,
+      gameAModels: [],
+      gameBModels: [],
       isInGameA: false,
       isInGameB: false
     };
@@ -380,48 +378,88 @@ export class CarsService {
       car.make = car1.make;
       car.baseModel = car1.baseModel;
       car.year = car1.year;
-      if (typeof car1.model !== 'undefined') {
-        car.gameAModel = car1.model;
+      if (typeof car1.models !== 'undefined') {
+        car.gameAModels = car1.models;
       }
       car.isInGameA = true;
-      if (typeof car1.note !== 'undefined') {
-        car.gameANote = car1.note;
-      }
     // car 1 is null
     } else if (car1 === null) {
       car.make = car2.make;
       car.baseModel = car2.baseModel;
       car.year = car2.year;
-      if (typeof car2.model !== 'undefined') {
-        car.gameBModel = car2.model;
+      if (typeof car2.models !== 'undefined') {
+        car.gameBModels = car2.models;
       }
       car.isInGameB = true;
-      if (typeof car2.note !== 'undefined') {
-        car.gameBNote = car2.note;
-      }
     // neither car is null
     } else {
       car.make = car1.make;
       car.baseModel = car1.baseModel;
       car.year = car1.year;
-      if (typeof car1.model !== 'undefined') {
-        car.gameAModel = car1.model;
+      if (typeof car1.models !== 'undefined') {
+        car.gameAModels = car1.models;
       }
-      if (typeof car2.model !== 'undefined') {
-        car.gameBModel = car2.model;
+      if (typeof car2.models !== 'undefined') {
+        car.gameBModels = car2.models;
       }
       car.isInGameA = true;
-      if (typeof car1.note !== 'undefined') {
-        car.gameANote = car1.note;
-      }
       car.isInGameB = true;
-      if (typeof car2.note !== 'undefined') {
-        car.gameBNote = car2.note;
+    }
+    return car;
+  };
+
+  formatEntrySelect = function (car1: any, car2: any) {
+    const car = {
+      make: null,
+      baseModel: null,
+      year: null,
+      models: []
+    };
+
+    // Old car
+    if (car2 === null) {
+      car.make = car1.make;
+      car.baseModel = car1.baseModel;
+      car.year = car1.year;
+      if (typeof car1.models !== 'undefined') {
+        car.models = car1.models;
+      }
+    // New car
+    } else if (car1 === null) {
+      car.make = car2.make;
+      car.baseModel = car2.baseModel;
+      car.year = car2.year;
+      if (typeof car2.models !== 'undefined') {
+        car2.models.forEach(element => {
+          car.models.push(element.model);
+        });
+      }
+    // Possible new models
+    } else {
+      car.make = car1.make;
+      car.baseModel = car1.baseModel;
+      car.year = car1.year;
+      car.models = car1.models;
+      // No old models
+      if (typeof car.models === 'undefined') {
+        car2.models.forEach(element => {
+          car.models.push(element.model);
+        });
+      // Old models + new models
+      } else if (typeof car2.models !== 'undefined') {
+        car2.models.forEach(element => {
+          // Model is new
+          if (car.models.indexOf(element.model) === -1) {
+            car.models.push(element.model);
+          }
+        });
+        car.models.sort();
       }
     }
     return car;
   };
 
+  /* Returns the union of all cars */
   getAllCars = function () {
     let temp = [];
     let allCars = [];
@@ -436,34 +474,36 @@ export class CarsService {
       while (i < temp.length || j < this.cars[game.id].length) {
         switch (this.compareCars(temp[i], this.cars[game.id][j])) {
           case -1:
-            allCars.push(this.formatEntry(temp[i], null));
+            allCars.push(this.formatEntrySelect(temp[i], null));
             i++;
             break;
           case 1:
-            allCars.push(this.formatEntry(null, this.cars[game.id][j]));
+            allCars.push(this.formatEntrySelect(null, this.cars[game.id][j]));
             j++;
             break;
           case 0:
-            allCars.push(this.formatEntry(temp[i], this.cars[game.id][j]));
+            allCars.push(this.formatEntrySelect(temp[i], this.cars[game.id][j]));
             i++;
             j++;
             break;
         }
       }
     });
+    console.log(allCars);
     return allCars;
   };
 
+  /* Returns all car makes from an array of cars */
   getAllCarMakes = function (arr: any[]) {
-    const temp = [];
+    const allCarMakes = [];
     if (typeof arr !== 'undefined' && arr.length > 0) {
       for (let i = 0; i < arr.length; i++) {
-        if (temp.indexOf(arr[i].make) === -1) {
-          temp.push(arr[i].make);
+        if (allCarMakes.indexOf(arr[i].make) === -1) {
+          allCarMakes.push(arr[i].make);
         }
       }
     }
-    return temp;
+    return allCarMakes;
   };
 
   selectCar = function(make: string, baseModel: string, year: number) {
