@@ -1,0 +1,51 @@
+<div class="car-filters">
+  <!-- FILTER-->
+  <div>
+    <!-- Make -->
+    <select class="filter filter__select filter__select--car-make space-right">
+      <option (click)="filterSettings.cars.makeFilter = ''; carsService.updateFilterSettings(filterSettings);">All Makes</option>
+      <option *ngFor="let carMake of carMakes" (click)="filterSettings.cars.makeFilter = carMake; carsService.updateFilterSettings(filterSettings);">{{ carMake }}</option>
+    </select>
+    <!-- Year -->
+    <select class="filter filter__select filter__select--car-year space-right">
+      <option (click)="filterSettings.cars.decadeFilter = -1; carsService.updateFilterSettings(filterSettings);">All Years</option>
+      <option (click)="filterSettings.cars.decadeFilter = 1940; carsService.updateFilterSettings(filterSettings);">1940s</option>
+      <option (click)="filterSettings.cars.decadeFilter = 1950; carsService.updateFilterSettings(filterSettings);">1950s</option>
+      <option (click)="filterSettings.cars.decadeFilter = 1960; carsService.updateFilterSettings(filterSettings);">1960s</option>
+      <option (click)="filterSettings.cars.decadeFilter = 1970; carsService.updateFilterSettings(filterSettings);">1970s</option>
+      <option (click)="filterSettings.cars.decadeFilter = 1980; carsService.updateFilterSettings(filterSettings);">1980s</option>
+      <option (click)="filterSettings.cars.decadeFilter = 1990; carsService.updateFilterSettings(filterSettings);">1990s</option>
+      <option (click)="filterSettings.cars.decadeFilter = 2000; carsService.updateFilterSettings(filterSettings);">2000s</option>
+      <option (click)="filterSettings.cars.decadeFilter = 2010; carsService.updateFilterSettings(filterSettings);">2010s</option>
+    </select>
+  </div>
+  <!-- SORT -->
+  <div>
+    <!-- Model -->
+    <div class="filter filter__radio filter__radio--car-model"
+         [ngClass]="{selected: filterSettings.cars.modelSort}"
+         (click)="filterSettings.cars.modelSort = true;
+                  filterSettings.cars.yearSort = false;
+                  filterSettings.cars.selectedSort = false;
+                  carsService.updateFilterSettings(filterSettings);">Model</div>
+    <!-- Year -->
+    <div class="filter filter__radio filter__radio--car-year"
+         [ngClass]="{selected: filterSettings.cars.yearSort}"
+         (click)="filterSettings.cars.modelSort = false;
+                  filterSettings.cars.yearSort = true;
+                  filterSettings.cars.selectedSort = false;
+                  carsService.updateFilterSettings(filterSettings);">Year</div>
+    <!-- Selected -->
+    <div class="filter filter__radio filter__radio--car-selected space-right"
+         [ngClass]="{selected: filterSettings.cars.selectedSort}"
+         (click)="filterSettings.cars.modelSort = false;
+                  filterSettings.cars.yearSort = false;
+                  filterSettings.cars.selectedSort = true;
+                  carsService.updateFilterSettings(filterSettings);">Selected</div>
+    <!-- Order -->
+    <i class="filter filter__sort filter__sort--car-order fas"
+       [ngClass]="{'fa-sort-amount-up': filterSettings.cars.reverse, 'fa-sort-amount-down': !filterSettings.cars.reverse}"
+       (click)="filterSettings.cars.reverse = !filterSettings.cars.reverse;
+                carsService.updateFilterSettings(filterSettings);"></i>
+  </div>
+</div>

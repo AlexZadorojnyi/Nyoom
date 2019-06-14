@@ -8,17 +8,17 @@ import { CarsService } from '../../cars.service';
 })
 export class SelectCarListComponent implements OnInit {
   carsService: CarsService;
-  filters: any = {};
+  filterSettings: any = {};
 
   constructor(carsService: CarsService) {
     this.carsService = carsService;
-    this.filters = this.carsService.filters;
+    this.filterSettings = this.carsService.filterSettings;
   }
 
   ngOnInit() {
     this.carsService.filtersChanged.subscribe(
       () => {
-        this.filters = this.carsService.filters;
+        this.filterSettings = this.carsService.filterSettings;
       }
     );
   }

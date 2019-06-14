@@ -13,6 +13,8 @@ import { SelectComponent } from './select/select.component';
 import { SelectHeaderComponent } from './select/select-header/select-header.component';
 import { SelectCarListComponent } from './select/select-car-list/select-car-list.component';
 import { SelectGameListComponent } from './select/select-game-list/select-game-list.component';
+import { SelectFilterCarsComponent } from './select/select-filter-cars/select-filter-cars.component';
+import { SelectFilterGamesComponent } from './select/select-filter-games/select-filter-games.component';
 
 import { SortGamesPipe } from './sort-games.pipe';
 import { SortCarsPipe } from './sort-cars.pipe';
@@ -29,13 +31,15 @@ const routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    CompareComponent,
     CompareHeaderComponent,
     CompareCarListComponent,
+    SelectComponent,
+    SelectHeaderComponent,
+    SelectFilterCarsComponent,
+    SelectFilterGamesComponent,
     SelectCarListComponent,
     SelectGameListComponent,
-    SelectHeaderComponent,
-    CompareComponent,
-    SelectComponent,
     SortGamesPipe,
     SortCarsPipe
   ],

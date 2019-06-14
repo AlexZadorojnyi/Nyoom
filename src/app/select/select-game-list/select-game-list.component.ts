@@ -9,12 +9,12 @@ import { CarsService } from '../../cars.service';
 export class SelectGameListComponent implements OnInit {
   carsService: CarsService;
   games = new Array();
-  filters: any = {};
+  filterSettings: any = {};
 
   constructor(carsService: CarsService) {
     this.carsService = carsService;
     this.games = this.carsService.games;
-    this.filters = this.carsService.filters;
+    this.filterSettings = this.carsService.filterSettings;
   }
 
   ngOnInit() {
@@ -25,7 +25,7 @@ export class SelectGameListComponent implements OnInit {
     );
     this.carsService.filtersChanged.subscribe(
       () => {
-        this.filters = this.carsService.filters;
+        this.filterSettings = this.carsService.filterSettings;
       }
     );
   }

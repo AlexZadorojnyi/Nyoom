@@ -1,0 +1,51 @@
+<div class="game-filters">
+  <!-- FILTER -->
+  <div>
+    <!-- Games -->
+    <div class="filter filter__checkbox filter__checkbox--game-type-game"
+         [ngClass]="{selected: filterSettings.games.gamesFilter}"
+         (click)="filterGamesType('games');">Games</div>
+    <!-- Movies -->
+    <div class="filter filter__checkbox filter__checkbox--game-type-movie space-right"
+         [ngClass]="{selected: filterSettings.games.moviesFilter}"
+         (click)="filterGamesType('movies');">Movies</div>
+  </div>
+  <!-- SORT -->
+  <div>
+    <!-- Title -->
+    <div class="filter filter__radio filter__radio--game-title"
+         [ngClass]="{selected: filterSettings.games.titleSort}"
+         (click)="filterSettings.games.titleSort = true;
+                  filterSettings.games.pctSort = false;
+                  filterSettings.games.yearSort = false;
+                  carsService.updateFilterSettings(filterSettings);">Title</div>
+    <!-- Pct -->
+    <div class="filter filter__radio filter__radio--game-pct"
+         [ngClass]="{selected: filterSettings.games.pctSort}"
+         (click)="filterSettings.games.titleSort = false;
+                  filterSettings.games.pctSort = true;
+                  filterSettings.games.yearSort = false;
+                  carsService.updateFilterSettings(filterSettings);">%</div>
+    <!-- Year -->
+    <div class="filter filter__radio filter__radio--game-year space-right"
+         [ngClass]="{selected: filterSettings.games.yearSort}"
+         (click)="filterSettings.games.titleSort = false;
+                  filterSettings.games.pctSort = false;
+                  filterSettings.games.yearSort = true;
+                  carsService.updateFilterSettings(filterSettings);">Year</div>
+    <!-- Order -->
+    <i class="filter filter__sort filter__sort--game-order space-right fas"
+       [ngClass]="{'fa-sort-amount-up': filterSettings.games.reverse, 'fa-sort-amount-down': !filterSettings.games.reverse}"
+       (click)="filterSettings.games.reverse = !filterSettings.games.reverse;
+                carsService.updateFilterSettings(filterSettings);"></i>
+  </div>
+  <!-- OTHER -->
+  <div>
+    <!-- Clear selected cars -->
+    <div class="filter filter__button filter__button--clear space-right"
+         (click)="carsService.clearSelectedCars()">Clear</div>
+    <!-- Reset filterSettings -->
+    <div class="filter filter__button filter__button--reset"
+         (click)="carsService.resetFilterSettings()">Reset Filters</div>
+  </div>
+</div>

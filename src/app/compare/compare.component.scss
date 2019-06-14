@@ -1,10 +1,10 @@
-@import "../../scss/_vars.scss";
+@import '../../scss/_vars.scss';
 
 /** HEADER **/
 .header {
   > div {
     grid-template-columns: 2fr 8fr 5fr 2fr 5fr;
-    grid-template-areas: "mode title game-a set-relation game-b";
+    grid-template-areas: 'mode title game-a set-relation game-b';
   }
 
   &__button {
@@ -56,17 +56,23 @@
 .list-item {
   display: grid;
   grid-template-columns: 10fr 6fr 6fr;
-  grid-template-areas:
-    'info game-a game-b'
-    'note .      .';
+  grid-template-areas: 'car  game-a game-b';
   max-width: 75rem;
 
   &__car {
-    grid-area: info;
-  }
+    grid-area: car;
+    grid-template-rows: auto 0fr;
+    grid-template-areas:
+      'brand image info'
+      'note  note  note';
 
-  .info__note {
-    grid-area: note;
+    .note {
+      grid-area: note;
+    }
+
+    &.selected {
+      grid-template-rows: auto auto;
+    }
   }
 
   &__game-check {

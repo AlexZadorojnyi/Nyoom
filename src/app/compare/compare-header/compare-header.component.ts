@@ -43,11 +43,13 @@ export class CompareHeaderComponent implements OnInit, AfterContentInit {
     this.gameA.title = temp1.title;
     this.gameB.id = temp2.id;
     this.gameB.title = temp2.title;
-    this.carsService.resetFilters();
+    this.carsService.resetFilterSettings();
 
     this.activatedRoute.params.subscribe(
       (params) => {
-        if (typeof params.gameA !== 'undefined' && typeof params.setRelation !== 'undefined' && typeof params.gameB !== 'undefined') {
+        if (typeof params.gameA !== 'undefined' &&
+            typeof params.setRelation !== 'undefined' &&
+            typeof params.gameB !== 'undefined') {
           // Titles should be set too
           this.gameA.id = params.gameA;
           this.setRelation.id = params.setRelation;

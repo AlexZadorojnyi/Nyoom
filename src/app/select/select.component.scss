@@ -131,7 +131,8 @@ app-select-game-list {
   cursor: pointer;
   margin-top: 0;
 
-  .selected {
+  .selected,
+  :hover {
     .info {
       background-color: $nyoom-red;
       color: black !important;
@@ -150,6 +151,11 @@ app-select-game-list {
     cursor: pointer;
     overflow: hidden;
     /* border: $list-item-border; */
+    transition: background-color 0.5s;
+
+    &:hover {
+      background-color: $nyoom-red;
+    }
 
     .pct {
       width: 0%;

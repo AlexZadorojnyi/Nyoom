@@ -17,23 +17,23 @@ export class SortCarsPipe implements PipeTransform {
     if (!array || array === undefined || array.length === 0) { return null; }
     // console.log(args);
 
-    if (typeof args.carsFilter !== 'undefined') {
+    if (typeof args !== 'undefined') {
 
       // Filter by make
       array = array.filter((a: any) => {
-        if (args.carsFilter.make === '') {
+        if (args.makeFilter === '') {
           return true;
         } else {
-          return a.make === args.carsFilter.make;
+          return a.make === args.makeFilter;
         }
       });
 
       // Filter by decade
       array = array.filter((a: any) => {
-        if (args.carsFilter.decade === -1) {
+        if (args.decadeFilter === -1) {
           return true;
         } else {
-          if (a.year > args.carsFilter.decade && a.year - args.carsFilter.decade < 10) {
+          if (a.year > args.decadeFilter && a.year - args.decadeFilter < 10) {
             return true;
           } else {
             return false;
@@ -42,7 +42,7 @@ export class SortCarsPipe implements PipeTransform {
       });
 
       // Sort by model
-      if (args.carsSort.model) {
+      if (args.modelSort) {
         array.sort((a: any, b: any) => {
           if (a.make.toLowerCase() < b.make.toLowerCase()) { return -1;
           } else if (a.make.toLowerCase() > b.make.toLowerCase()) { return 1;
@@ -60,7 +60,7 @@ export class SortCarsPipe implements PipeTransform {
       }
 
       // Sort by year (reuses sort by model)
-      if (args.carsSort.selected) {
+      if (args.selectedSort) {
         array.sort((a: any, b: any) => {
           if (this.carsService.isSelected(a.make, a.baseModel, a.year) &&
              !this.carsService.isSelected(b.make, b.baseModel, b.year)) { return -1;
@@ -85,7 +85,7 @@ export class SortCarsPipe implements PipeTransform {
       }
 
       // Sort by selected
-      if (args.carsSort.year) {
+      if (args.yearSort) {
         array.sort((a: any, b: any) => {
           if (a.year < b.year) { return 1;
           } else if (a.year > b.year) { return -1;
@@ -103,7 +103,7 @@ export class SortCarsPipe implements PipeTransform {
       }
 
       // Reverse order
-      if (args.carsSort.reverse) {
+      if (args.reverse) {
         array.reverse();
       }
 

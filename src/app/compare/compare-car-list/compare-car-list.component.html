@@ -1,14 +1,14 @@
 <div class="list-item" *ngFor="let car of carList">
-  <div class="list-item__car">
+  <div class="list-item__car" (click)="carsService.selectCar(car.make, car.baseModel, car.year);" [ngClass]="{selected: carsService.isSelected(car.make, car.baseModel, car.year)}">
     <div class="brand-logo"><img src="assets/images/brand-logos/{{ car.make }}.png" alt="{{ car.make }}"></div>
     <div class="model-image"><img src="assets/images/cars/{{ car.make }} {{ car.baseModel }} {{ car.year }}.jpg" alt=""></div>
     <div class="info">
       <span>{{ car.make }}<br></span>
       <span>{{ car.year }} {{ car.baseModel }}</span>
     </div>
-    <!-- <div class="info__note">
+    <div class="note">
       <span>{{ car.gameAModel }}{{ car.gameBModel }}</span>
-    </div> -->
+    </div>
   </div>
   <div class="list-item__game-check list-item__game-check--a">
     <span class="img-center-helper"></span>

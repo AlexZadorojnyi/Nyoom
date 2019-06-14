@@ -11,22 +11,22 @@ export class SortGamesPipe implements PipeTransform {
     if (!array || array === undefined || array.length === 0) { return null; }
     // console.log(args);
 
-    if (typeof args.gamesFilter !== 'undefined') {
+    if (typeof args !== 'undefined') {
 
       // Filter by type
       array = array.filter((a: any) => {
-        if (args.gamesFilter.games && args.gamesFilter.movies) {
+        if (args.gamesFilter && args.moviesFilter) {
           return true;
-        } else if (args.gamesFilter.games) {
+        } else if (args.gamesFilter) {
           return a.type === 'game';
-        } else if (args.gamesFilter.movies) {
+        } else if (args.moviesFilter) {
           return a.type === 'movie';
         }
       });
     }
 
     // Sort by percentage
-    if (args.gamesSort.pct) {
+    if (args.pctSort) {
       array.sort((a: any, b: any) => {
         if (a.pct > b.pct) {
           return -1;
@@ -44,7 +44,7 @@ export class SortGamesPipe implements PipeTransform {
       });
 
     // Sort by order (title)
-    } else if (args.gamesSort.title) {
+    } else if (args.titleSort) {
       array.sort((a: any, b: any) => {
         if (a.order < b.order) {
           return -1;
@@ -56,7 +56,7 @@ export class SortGamesPipe implements PipeTransform {
       });
 
     // Sort by release date
-    } else if (args.gamesSort.year) {
+    } else if (args.yearSort) {
       array.sort((a: any, b: any) => {
         if (a.releaseDate < b.releaseDate) {
           return -1;
@@ -69,7 +69,7 @@ export class SortGamesPipe implements PipeTransform {
     }
 
     // Reverse order
-    if (args.gamesSort.reverse) {
+    if (args.reverse) {
       array.reverse();
     }
 

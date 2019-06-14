@@ -1,6 +1,7 @@
 import { Subject } from 'rxjs';
 import { Injectable } from '@angular/core';
 
+import TFATF2006Cars from '../assets/data/TFATF2006Cars.json';
 import JCars from '../assets/data/JCars.json';
 import LARCars from '../assets/data/LARCars.json';
 import MMCars from '../assets/data/MMCars.json';
@@ -16,57 +17,46 @@ import NFSMWCars from '../assets/data/NFSMWCars.json';
 import NFSCCars from '../assets/data/NFSCCars.json';
 import NFSCars from '../assets/data/NFSCars.json';
 import SRSCars from '../assets/data/SRSCars.json';
-import TFATFCars from '../assets/data/TFATFCars.json';
-import TFATF2006Cars from '../assets/data/TFATF2006Cars.json';
-import TFTFCars from '../assets/data/TFTFCars.json';
 import TD2002Cars from '../assets/data/TD2002Cars.json';
 import TXRCars from '../assets/data/TXRCars.json';
 import TXR2Cars from '../assets/data/TXR2Cars.json';
 import TXRZCars from '../assets/data/TXRZCars.json';
 import TXR3Cars from '../assets/data/TXR3Cars.json';
 import ITCCars from '../assets/data/ITCCars.json';
+import TFATFCars from '../assets/data/TFATFCars.json';
+import TFTFCars from '../assets/data/TFTFCars.json';
 
 @Injectable({ providedIn: 'root' })
 export class CarsService {
 
+  /* Object storing key/value pairs
+     - Key: Game id
+     - Value: Array of car objects pertaining to that game */
   cars: any = {};
+  /* Array of car objects to be displayed in the compare section of the website */
   carList = new Array();
+  /* Array of car objects selected by the user in either the compare or select section of the website */
   selectedCars = new Array();
-  carMakes = new Array();
-
-  filters = {
-    carsFilter: {
-      make: '',
-      decade: -1
-    },
-    carsSort: {
-      model: true,
-      year: false,
-      selected: false,
-      reverse: false
-    },
-    gamesFilter: {
-      games: true,
-      movies: true
-    },
-    gamesSort: {
-      title: true,
-      pct: false,
-      year: false,
-      reverse: false
-    }
-  };
-
+  /* Observable used to update the car list in the compare section */
   carListChanged = new Subject<void>();
+  /* Observable used to update the game list in the select section with computed data */
   gameListChanged = new Subject<void>();
+  /* Observable used to update */
   filtersChanged = new Subject<void>();
-
+  /* Array of objects containing data about the games
+     - id: Shorthand unique notation
+     - order: Specifies the order the games should appear in when sorted alphabetically by title, the last digit determines the order
+       within the game's grouping and the other digits determine the grouping
+     - type: Used to differentiate between games and movies, which are not games :^P, used for sorting
+     - releaseDate: The release date of the game in YYYYMMDD format, used for sorting
+     - pct: The number of selected cars that also appear in a game
+     - title: The full title of the game */
   games = [
     { id: 'TFATF2006',  order: 11,  type: 'game',   releaseDate: 20060926,  pct: 0,  title: 'The Fast and the Furious (2006)' },
     { id: 'J',          order: 21,  type: 'game',   releaseDate: 20050613,  pct: 0,  title: 'Juiced' },
     { id: 'LAR',        order: 31,  type: 'game',   releaseDate: 20051010,  pct: 0,  title: 'LA Rush' },
-    { id: 'MM',         order: 41,  type: 'game',   releaseDate: 19990430,  pct: 0,  title: 'Midnight Madness' },
-    { id: 'MM2',        order: 42,  type: 'game',   releaseDate: 20000921,  pct: 0,  title: 'Midnight Madness 2' },
+    { id: 'MM',         order: 41,  type: 'game',   releaseDate: 19990430,  pct: 0,  title: 'Midtown Madness' },
+    { id: 'MM2',        order: 42,  type: 'game',   releaseDate: 20000921,  pct: 0,  title: 'Midtown Madness 2' },
     { id: 'MCSR',       order: 43,  type: 'game',   releaseDate: 20001025,  pct: 0,  title: 'Midnight Club: Street Racing' },
     { id: 'MC2',        order: 44,  type: 'game',   releaseDate: 20030409,  pct: 0,  title: 'Midnight Club 2' },
     { id: 'MC3',        order: 45,  type: 'game',   releaseDate: 20050411,  pct: 0,  title: 'Midnight Club 3: Dub Edition' },
@@ -84,11 +74,31 @@ export class CarsService {
     { id: 'TXRZ',       order: 83,  type: 'game',   releaseDate: 20010315,  pct: 0,  title: 'Tokyo Xtreme Racer Zero' },
     { id: 'TXR3',       order: 84,  type: 'game',   releaseDate: 20030724,  pct: 0,  title: 'Tokyo Xtreme Racer 3' },
     { id: 'ITC',        order: 85,  type: 'game',   releaseDate: 20060727,  pct: 0,  title: 'Import Tuner Challenge' },
-    { id: 'TFATF',      order: 101, type: 'movie',  releaseDate: 20010622,  pct: 0,  title: 'The Fast and the Furious' },
-    { id: '2F2F',       order: 102, type: 'movie',  releaseDate: 20030606,  pct: 0,  title: '2 Fast 2 Furious' }
+    { id: 'TFATF',      order: 991, type: 'movie',  releaseDate: 20010622,  pct: 0,  title: 'The Fast and the Furious' },
+    { id: 'TFTF',       order: 992, type: 'movie',  releaseDate: 20030606,  pct: 0,  title: '2 Fast 2 Furious' }
   ];
+  /* Object containing settings used to filter cars and games in the select section of the website */
+  filterSettings = {
+    cars: {
+      makeFilter: '',
+      decadeFilter: -1,
+      modelSort: true,
+      yearSort: false,
+      selectedSort: false,
+      reverse: false
+    },
+    games: {
+      gamesFilter: true,
+      moviesFilter: true,
+      titleSort: true,
+      pctSort: false,
+      yearSort: false,
+      reverse: false
+    }
+  };
 
   constructor() {
+    this.cars['TFATF2006'] = TFATF2006Cars;
     this.cars['J'] = JCars;
     this.cars['LAR'] = LARCars;
     this.cars['MM'] = MMCars;
@@ -104,39 +114,41 @@ export class CarsService {
     this.cars['NFSC'] = NFSCCars;
     this.cars['NFS'] = NFSCars;
     this.cars['SRS'] = SRSCars;
-    this.cars['TFATF'] = TFATFCars;
-    this.cars['2F2F'] = TFTFCars;
-    this.cars['TFATF2006'] = TFATF2006Cars;
     this.cars['TD2002'] = TD2002Cars;
     this.cars['TXR'] = TXRCars;
     this.cars['TXR2'] = TXR2Cars;
     this.cars['TXRZ'] = TXRZCars;
     this.cars['TXR3'] = TXR3Cars;
     this.cars['ITC'] = ITCCars;
+    this.cars['TFATF'] = TFATFCars;
+    this.cars['TFTF'] = TFTFCars;
     this.cars['All'] = [];
     this.cars['All'] = this.getAllCars();
-    this.carMakes = this.getAllCarMakes(this.cars['All']);
   }
 
+  /* Compares two car objects based on the name of make and model and the model year */
   compareCars = function(car1, car2) {
-    if (car1.make.toLowerCase() < car2.make.toLowerCase()) {
-      return -1;
-    } else if (car1.make.toLowerCase() > car2.make.toLowerCase()) {
-      return 1;
+    /* console.log('car1: { ' + car1.make + ', ' + car1.baseModel + ', ' + car1.year + '},\n' +
+                'car2: { ' + car2.make + ', ' + car2.baseModel + ', ' + car2.year + '}\n\n'); */
+    if (typeof car2 === 'undefined') { return -1; }
+    if (typeof car1 === 'undefined') { return 1; }
+    if (car1.make.toLowerCase() < car2.make.toLowerCase()) { return -1;
+    } else if (car1.make.toLowerCase() > car2.make.toLowerCase()) { return 1;
     } else {
-      if (car1.baseModel.toLowerCase() < car2.baseModel.toLowerCase()) {
-        return -1;
-      } else if (car1.baseModel.toLowerCase() > car2.baseModel.toLowerCase()) {
-        return 1;
+      if (car1.baseModel.toLowerCase() < car2.baseModel.toLowerCase()) { return -1;
+      } else if (car1.baseModel.toLowerCase() > car2.baseModel.toLowerCase()) { return 1;
       } else {
-        return car1.year - car2.year;
+        if (car1.year < car2.year) { return -1;
+        } else if (car1.year > car2.year) { return 1;
+        } else { return 0;
+        }
       }
     }
   };
 
+  /* Searches for a car object based on its make, model, and year and returns its index */
   indexOfCar = function(car, arr) {
-    let i;
-    for (i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
       if (arr[i].make.toLowerCase() === car.make.toLowerCase() &&
           arr[i].baseModel.toLowerCase() === car.baseModel.toLowerCase() &&
           arr[i].year === car.year) {
@@ -146,10 +158,12 @@ export class CarsService {
     return -1;
   };
 
+  /* Returns a random game object from the game array, used in the compare section */
   getRandomGame = function () {
     return this.games[Math.floor(Math.random() * (this.games.length - 1))];
   };
 
+  /* Updates carList with a list of cars computed based on game selection and set relation */
   updateCarList = function (gameA: string, gameB: string, setRelation: string) {
     if (typeof this.cars[gameA] !== 'undefined' && typeof this.cars[gameB] !== 'undefined') {
       switch (setRelation) {
@@ -178,281 +192,174 @@ export class CarsService {
           console.log('no cars for this game');
           break;
       }
+      this.carListChanged.next();
     }
   };
 
+  /* Sets carList to the union of two car lists (cars that are in either game) */
   getUnion = function (arr1: any[], arr2: any[]) {
     this.carList = [];
     let i = 0;
     let j = 0;
-    while (typeof arr1[i] !== 'undefined' && typeof arr2[j] !== 'undefined') {
-      // make of car 1 comes first
-      if (arr1[i].make.toLowerCase() < arr2[j].make.toLowerCase()) {
-        // add car 1
-        this.carList.push(this.formatEntry(arr1[i], null));
-        i++;
-      // make of car 2 comes first
-      } else if (arr1[i].make.toLowerCase() > arr2[j].make.toLowerCase()) {
-        // add car 2
-        this.carList.push(this.formatEntry(null, arr2[j]));
-        j++;
-      // make of car 1 and 2 is the same
-      } else if (arr1[i].make === arr2[j].make) {
-        // base model of car 1 comes first
-        if (arr1[i].baseModel.toLowerCase() < arr2[j].baseModel.toLowerCase()) {
-          // add car 1
+
+    while (i < arr1.length || j < arr2.length) {
+      switch (this.compareCars(arr1[i], arr2[j])) {
+        case -1:
           this.carList.push(this.formatEntry(arr1[i], null));
           i++;
-        // base model of car 2 comes first
-        } else if (arr1[i].baseModel.toLowerCase() > arr2[j].baseModel.toLowerCase()) {
-          // add car 2
+          break;
+        case 1:
           this.carList.push(this.formatEntry(null, arr2[j]));
           j++;
-        // base model of car 1 and 2 is the same
-        } else if (arr1[i].baseModel === arr2[j].baseModel) {
-          // year of car 1 comes first
-          if (arr1[i].year < arr2[j].year) {
-            // add car 1
-            this.carList.push(this.formatEntry(arr1[i], null));
-            i++;
-          // year of car 2 comes first
-          } else if (arr1[i].year > arr2[j].year) {
-            // add car 2
-            this.carList.push(this.formatEntry(null, arr2[j]));
-            j++;
-          // year of car 1 and 2 is the same
-          } else if (arr1[i].year === arr2[j].year) {
-            // add both cars
-            this.carList.push(this.formatEntry(arr1[i], arr2[j]));
-            i++;
-            j++;
-          }
-        }
+          break;
+        case 0:
+          this.carList.push(this.formatEntry(arr1[i], arr2[j]));
+          i++;
+          j++;
+          break;
       }
     }
-    // only car 1 remaining
-    while (typeof arr1[i] !== 'undefined') {
-      // add car 1
-      this.carList.push(this.formatEntry(arr1[i], null));
-      i++;
-    }
-    // only car 2 remaining
-    while (typeof arr2[j] !== 'undefined') {
-      // add car 2
-      this.carList.push(this.formatEntry(null, arr2[j]));
-      j++;
-    }
-    this.carListChanged.next();
   };
 
+  /* Sets carList to the first of two car lists (cars that are in game one) */
   getSetA = function (arr1: any[], arr2: any[]) {
     this.carList = [];
-    let tempCar: any = null;
-    for (let i = 0; i < arr1.length; i++) {
-      tempCar = null;
-      for (let j = 0; j < arr2.length; j++) {
-        if (arr1[i].make === arr2[j].make && arr1[i].baseModel === arr2[j].baseModel && arr1[i].year === arr2[j].year) {
-          tempCar = arr1[i];
-        }
+    let i = 0;
+    let j = 0;
+
+    while (i < arr1.length || j < arr2.length) {
+      switch (this.compareCars(arr1[i], arr2[j])) {
+        case -1:
+          this.carList.push(this.formatEntry(arr1[i], null));
+          i++;
+          break;
+        case 1:
+          j++;
+          break;
+        case 0:
+          this.carList.push(this.formatEntry(arr1[i], arr2[j]));
+          i++;
+          j++;
+          break;
       }
-      this.carList.push(this.formatEntry(arr1[i], tempCar));
     }
-    this.carListChanged.next();
   };
 
+  /* Sets carList to the second of two car lists (cars that are in game two) */
   getSetB = function (arr1: any[], arr2: any[]) {
     this.carList = [];
-    let tempCar: any = null;
-    for (let j = 0; j < arr2.length; j++) {
-      tempCar = null;
-      for (let i = 0; i < arr1.length; i++) {
-        if (arr1[i].make === arr2[j].make && arr1[i].baseModel === arr2[j].baseModel && arr1[i].year === arr2[j].year) {
-          tempCar = arr1[i];
-        }
+    let i = 0;
+    let j = 0;
+
+    while (i < arr1.length || j < arr2.length) {
+      switch (this.compareCars(arr1[i], arr2[j])) {
+        case -1:
+          i++;
+          break;
+        case 1:
+          this.carList.push(this.formatEntry(null, arr2[j]));
+          j++;
+          break;
+        case 0:
+          this.carList.push(this.formatEntry(arr1[i], arr2[j]));
+          i++;
+          j++;
+          break;
       }
-      this.carList.push(this.formatEntry(tempCar, arr2[j]));
     }
-    this.carListChanged.next();
   };
 
+  /* Sets carList to the intersection of two car lists (cars that are in both games) */
   getIntersection = function (arr1: any[], arr2: any[]) {
     this.carList = [];
-    for (let i = 0; i < arr1.length; i++) {
-      for (let j = 0; j < arr2.length; j++) {
-        if (arr1[i].make === arr2[j].make && arr1[i].baseModel === arr2[j].baseModel && arr1[i].year === arr2[j].year) {
+    let i = 0;
+    let j = 0;
+
+    while (i < arr1.length || j < arr2.length) {
+      switch (this.compareCars(arr1[i], arr2[j])) {
+        case -1:
+          i++;
+          break;
+        case 1:
+          j++;
+          break;
+        case 0:
           this.carList.push(this.formatEntry(arr1[i], arr2[j]));
-        }
+          i++;
+          j++;
+          break;
       }
     }
-    this.carListChanged.next();
   };
 
+  /* Sets carList to the compliment of the second car list (cars that are only in game one) */
   getComplimentB = function (arr1: any[], arr2: any[]) {
     this.carList = [];
     let i = 0;
     let j = 0;
-    while (typeof arr1[i] !== 'undefined' && typeof arr2[j] !== 'undefined') {
-      // make of car 1 comes first
-      if (arr1[i].make.toLowerCase() < arr2[j].make.toLowerCase()) {
-        // add car 1
-        this.carList.push(this.formatEntry(arr1[i], null));
-        i++;
-      // make of car 2 comes first
-      } else if (arr1[i].make.toLowerCase() > arr2[j].make.toLowerCase()) {
-        // skip car 2
-        j++;
-      // make of car 1 and 2 is the same
-      } else if (arr1[i].make === arr2[j].make) {
-        // base model of car 1 comes first
-        if (arr1[i].baseModel.toLowerCase() < arr2[j].baseModel.toLowerCase()) {
-          // add car 1
+
+    while (i < arr1.length || j < arr2.length) {
+      switch (this.compareCars(arr1[i], arr2[j])) {
+        case -1:
           this.carList.push(this.formatEntry(arr1[i], null));
           i++;
-        // base model of car 2 comes first
-        } else if (arr1[i].baseModel.toLowerCase() > arr2[j].baseModel.toLowerCase()) {
-          // skip car 2
+          break;
+        case 1:
           j++;
-        // base model of car 1 and 2 is the same
-        } else if (arr1[i].baseModel === arr2[j].baseModel) {
-          // year of car 1 comes first
-          if (arr1[i].year < arr2[j].year) {
-            // add car 1
-            this.carList.push(this.formatEntry(arr1[i], null));
-            i++;
-          // year of car 2 comes first
-          } else if (arr1[i].year > arr2[j].year) {
-            // skip car 2
-            j++;
-          // year of car 1 and 2 is the same
-          } else if (arr1[i].year === arr2[j].year) {
-            // skip car 1
-            i++;
-          }
-        }
+          break;
+        case 0:
+          i++;
+          j++;
+          break;
       }
     }
-    // only car 1 remaining
-    while (typeof arr1[i] !== 'undefined') {
-      // add car 1
-      this.carList.push(this.formatEntry(arr1[i], null));
-      i++;
-    }
-    this.carListChanged.next();
   };
 
+  /* Sets carList to the compliment of the first car list (cars that are only in game two) */
   getComplimentA = function (arr1: any[], arr2: any[]) {
     this.carList = [];
     let i = 0;
     let j = 0;
-    while (typeof arr1[i] !== 'undefined' && typeof arr2[j] !== 'undefined') {
-      // make of car 1 comes first
-      if (arr1[i].make.toLowerCase() < arr2[j].make.toLowerCase()) {
-        // skip car 1
-        i++;
-      // make of car 2 comes first
-      } else if (arr1[i].make.toLowerCase() > arr2[j].make.toLowerCase()) {
-        // add car 2
-        this.carList.push(this.formatEntry(null, arr2[j]));
-        j++;
-        // base model of car 1 comes first
-      } else if (arr1[i].make === arr2[j].make) {
-        if (arr1[i].baseModel.toLowerCase() < arr2[j].baseModel.toLowerCase()) {
-          // skip car 1
+
+    while (i < arr1.length || j < arr2.length) {
+      switch (this.compareCars(arr1[i], arr2[j])) {
+        case -1:
           i++;
-        // base model of car 2 comes first
-        } else if (arr1[i].baseModel.toLowerCase() > arr2[j].baseModel.toLowerCase()) {
-          // add car 2
+          break;
+        case 1:
           this.carList.push(this.formatEntry(null, arr2[j]));
           j++;
-        // base model of car 1 and 2 is the same
-        } else if (arr1[i].baseModel === arr2[j].baseModel) {
-          // year of car 1 comes first
-          if (arr1[i].year < arr2[j].year) {
-            // skip car 1
-            i++;
-          // year of car 2 comes first
-          } else if (arr1[i].year > arr2[j].year) {
-            // add car 2
-            this.carList.push(this.formatEntry(null, arr2[j]));
-            j++;
-          // year of car 1 and 2 is the same
-          } else if (arr1[i].year === arr2[j].year) {
-            // skip car 2
-            j++;
-          }
-        }
+          break;
+        case 0:
+          i++;
+          j++;
+          break;
       }
     }
-    // only car 2 remaining
-    while (typeof arr2[j] !== 'undefined') {
-      // add car 2
-      this.carList.push(this.formatEntry(null, arr2[j]));
-      j++;
-    }
-    this.carListChanged.next();
   };
 
+  /* Sets carList to the difference of the two car lists (cars that are not in both games) */
   getDifference = function (arr1: any[], arr2: any[]) {
     this.carList = [];
     let i = 0;
     let j = 0;
-    while (typeof arr1[i] !== 'undefined' && typeof arr2[j] !== 'undefined') {
-      // make of car 1 comes first
-      if (arr1[i].make.toLowerCase() < arr2[j].make.toLowerCase()) {
-        // add car 1
-        this.carList.push(this.formatEntry(arr1[i], null));
-        i++;
-      // make of car 2 comes first
-      } else if (arr1[i].make.toLowerCase() > arr2[j].make.toLowerCase()) {
-        // add car 2
-        this.carList.push(this.formatEntry(null, arr2[j]));
-        j++;
-      // make of car 1 and 2 is the same
-      } else if (arr1[i].make === arr2[j].make) {
-        // base model of car 1 comes first
-        if (arr1[i].baseModel.toLowerCase() < arr2[j].baseModel.toLowerCase()) {
-          // add car 1
+
+    while (i < arr1.length || j < arr2.length) {
+      switch (this.compareCars(arr1[i], arr2[j])) {
+        case -1:
           this.carList.push(this.formatEntry(arr1[i], null));
           i++;
-        // base model of car 2 comes first
-        } else if (arr1[i].baseModel.toLowerCase() > arr2[j].baseModel.toLowerCase()) {
-          // add car 2
+          break;
+        case 1:
           this.carList.push(this.formatEntry(null, arr2[j]));
           j++;
-        // base model of car 1 and 2 is the same
-        } else if (arr1[i].baseModel === arr2[j].baseModel) {
-          // year of car 1 comes first
-          if (arr1[i].year < arr2[j].year) {
-            // add car 1
-            this.carList.push(this.formatEntry(arr1[i], null));
-            i++;
-          // year of car 2 comes first
-          } else if (arr1[i].year > arr2[j].year) {
-            // add car 2
-            this.carList.push(this.formatEntry(null, arr2[j]));
-            j++;
-          // year of car 1 and 2 is the same
-          } else if (arr1[i].year === arr2[j].year) {
-            // skip both cars
-            i++;
-            j++;
-          }
-        }
+          break;
+        case 0:
+          i++;
+          j++;
+          break;
       }
     }
-    // only car 1 remaining
-    while (typeof arr1[i] !== 'undefined') {
-      // add car 1
-      this.carList.push(this.formatEntry(arr1[i], null));
-      i++;
-    }
-    // only car 2 remaining
-    while (typeof arr2[j] !== 'undefined') {
-      // add car 2
-      this.carList.push(this.formatEntry(null, arr2[j]));
-      j++;
-    }
-    this.carListChanged.next();
   };
 
   formatEntry = function (car1: any, car2: any) {
@@ -518,73 +425,30 @@ export class CarsService {
   getAllCars = function () {
     let temp = [];
     let allCars = [];
+
     this.games.forEach(game => {
-      // temp is empty
-      if (temp.length < 1) {
-        // set temp to car list of first game
-        temp = this.cars[game.id];
-      } else {
-        temp = allCars;
-        allCars = [];
-      }
+      temp = allCars;
+      allCars = [];
+
       let i = 0;
       let j = 0;
-      while (typeof temp[i] !== 'undefined' && typeof this.cars[game.id][j] !== 'undefined') {
-        // make of car 1 comes first
-        if (temp[i].make.toLowerCase() < this.cars[game.id][j].make.toLowerCase()) {
-          // add car 1
-          allCars.push(this.formatEntry(temp[i], null));
-          i++;
-        // make of car 2 comes first
-        } else if (temp[i].make.toLowerCase() > this.cars[game.id][j].make.toLowerCase()) {
-          // add car 2
-          allCars.push(this.formatEntry(null, this.cars[game.id][j]));
-          j++;
-        // make of car 1 and 2 is the same
-        } else if (temp[i].make === this.cars[game.id][j].make) {
-          // base model of car 1 comes first
-          if (temp[i].baseModel.toLowerCase() < this.cars[game.id][j].baseModel.toLowerCase()) {
-            // add car 1
+
+      while (i < temp.length || j < this.cars[game.id].length) {
+        switch (this.compareCars(temp[i], this.cars[game.id][j])) {
+          case -1:
             allCars.push(this.formatEntry(temp[i], null));
             i++;
-          // base model of car 2 comes first
-          } else if (temp[i].baseModel.toLowerCase() > this.cars[game.id][j].baseModel.toLowerCase()) {
-            // add car 2
+            break;
+          case 1:
             allCars.push(this.formatEntry(null, this.cars[game.id][j]));
             j++;
-          // base model of car 1 and 2 is the same
-          } else if (temp[i].baseModel === this.cars[game.id][j].baseModel) {
-            // year of car 1 comes first
-            if (temp[i].year < this.cars[game.id][j].year) {
-              // add car 1
-              allCars.push(this.formatEntry(temp[i], null));
-              i++;
-            // year of car 2 comes first
-            } else if (temp[i].year > this.cars[game.id][j].year) {
-              // add car 2
-              allCars.push(this.formatEntry(null, this.cars[game.id][j]));
-              j++;
-            // year of car 1 and 2 is the same
-            } else if (temp[i].year === this.cars[game.id][j].year) {
-              // add both cars
-              allCars.push(this.formatEntry(temp[i], this.cars[game.id][j]));
-              i++;
-              j++;
-            }
-          }
+            break;
+          case 0:
+            allCars.push(this.formatEntry(temp[i], this.cars[game.id][j]));
+            i++;
+            j++;
+            break;
         }
-      }
-      // only car 1 remaining
-      while (typeof temp[i] !== 'undefined') {
-        // add car 1
-        allCars.push(this.formatEntry(temp[i], null));
-        i++;
-      }
-      // only car 2 remaining
-      while (typeof this.cars[game.id][j] !== 'undefined') {
-        // add car 2
-        allCars.push(this.formatEntry(null, this.cars[game.id][j]));
-        j++;
       }
     });
     return allCars;
@@ -649,53 +513,49 @@ export class CarsService {
   };
 
   updateGamePercentages = function() {
-    let i;
-    for (i = 0; i < this.games.length; i++) {
-      let j;
+    for (let i = 0; i < this.games.length; i++) {
       let temp = 0;
-      for (j = 0; j < this.selectedCars.length; j++) {
+      for (let j = 0; j < this.selectedCars.length; j++) {
         if (this.indexOfCar(this.selectedCars[j], this.cars[this.games[i].id]) !== -1) {
           temp++;
         }
       }
-      if (temp === 0) {
+      // percentage
+      /* if (temp === 0) {
         this.games[i].pct = 0;
       } else {
         this.games[i].pct = temp / this.selectedCars.length;
-      }
-      // this.games[i].pct = ((temp / this.selectedCars.length) * 100).toFixed(0);
+      } */
+      // ratio
+      this.games[i].pct = temp;
     }
-    // console.log(this.games);
     this.gameListChanged.next();
   };
 
-  resetFilters = function() {
-    this.filters = {
-      carsFilter: {
-        make: '',
-        decade: -1
-      },
-      carsSort: {
-        model: true,
-        year: false,
+  resetFilterSettings = function() {
+    this.filterSettings = {
+      cars: {
+        makeFilter: '',
+        decadeFilter: -1,
+        modelSort: true,
+        yearSort: false,
+        selectedSort: false,
         reverse: false
       },
-      gamesFilter: {
-        games: true,
-        movies: true
-      },
-      gamesSort: {
-        title: true,
-        pct: false,
-        year: false,
+      games: {
+        gamesFilter: true,
+        moviesFilter: true,
+        titleSort: true,
+        pctSort: false,
+        yearSort: false,
         reverse: false
       }
     };
     this.filtersChanged.next();
   };
 
-  updateFilters = function(newFilters: any) {
-    this.filters = newFilters;
+  updateFilterSettings = function(newFilterSettings: any) {
+    this.filterSettings = newFilterSettings;
     this.filtersChanged.next();
   };
 }

@@ -218,11 +218,6 @@
 		]
 	},
 	{
-		"make": "Shelby",
-		"baseModel": "Cobra Concept 2004",
-		"year": 2004
-	},
-	{
 		"make": "Ford",
 		"baseModel": "Focus",
 		"year": 1998,
@@ -467,6 +462,16 @@
 		"model": [
 			{
 				"model": "Saleen S7 Twin Turbo"
+			}
+		]
+	},
+	{
+		"make": "Shelby",
+		"baseModel": "Cobra Concept",
+		"year": 2004,
+		"model": [
+			{
+				"model": "Cobra Concept 2004"
 			}
 		]
 	},
