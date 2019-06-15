@@ -35,7 +35,7 @@
         "year": 1967,
         "models": [
             {
-                "model": "Chevrolet Camaro SS 396"
+                "model": "Chevrolet Camaro SS"
             }
         ]
     },
@@ -65,7 +65,7 @@
         "year": 2005,
         "models": [
             {
-                "model": "Chevrolet Corvette Z06 C6"
+                "model": "Chevrolet Corvette C6 Z06"
             }
         ]
     },
@@ -150,7 +150,7 @@
         "year": 2005,
         "models": [
             {
-                "model": "Ford Mustang  GT"
+                "model": "Ford Mustang GT"
             },
             {
                 "model": "Shelby GT500 Concept"
@@ -306,7 +306,7 @@
         "year": 1998,
         "models": [
             {
-                "model": "Nissan Skyline GT-R V-spec"
+                "model": "Nissan Skyline GT-R V-Spec"
             }
         ]
     },

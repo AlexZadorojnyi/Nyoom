@@ -2,7 +2,12 @@
 	{
 		"make": "Chevrolet",
 		"baseModel": "Corvette",
-		"year": 1984
+		"year": 1984,
+		"models": [
+			{
+				"model": "West Corvette C4"
+			}
+		]
 	},
 	{
 		"make": "Chevrolet",
@@ -11,9 +16,6 @@
 		"models": [
 			{
 				"model": "Chevrolet Corvette"
-			},
-			{
-				"model": "West Corvette C4"
 			}
 		]
 	},
@@ -591,10 +593,10 @@
 		"year": 1984,
 		"models": [
 			{
-				"model": "Toyota Corolla Levin GT Apex"
+				"model": "Toyota Corolla Levin GT-Apex"
 			},
 			{
-				"model": "Toyota Sprinter Trueno GT Apex"
+				"model": "Toyota Sprinter Trueno GT-Apex"
 			}
 		]
 	},

@@ -41,7 +41,7 @@
         "year": 2005,
         "models": [
             {
-                "model": "Ford Mustang  GT"
+                "model": "Ford Mustang GT"
             }
         ]
     },
@@ -167,7 +167,7 @@
         "year": 1996,
         "models": [
             {
-                "model": "Peugeot 106 GTi",
+                "model": "Peugeot 106 GTI",
                 "note": "Europe and Asia exclusive"
             }
         ]
@@ -178,7 +178,7 @@
         "year": 1998,
         "models": [
             {
-                "model": "Peugeot 206 GTi"
+                "model": "Peugeot 206 GTI"
             }
         ]
     },
@@ -193,7 +193,7 @@
         "year": 2002,
         "models": [
             {
-                "model": "Subaru Impreza WRX STI"
+                "model": "Subaru Impreza WRX STi"
             }
         ]
     },
@@ -239,7 +239,7 @@
         "year": 1997,
         "models": [
             {
-                "model": "Volkswagen Golf GTi"
+                "model": "Volkswagen Golf GTI"
             }
         ]
     }

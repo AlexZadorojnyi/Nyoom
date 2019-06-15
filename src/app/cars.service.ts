@@ -489,7 +489,17 @@ export class CarsService {
         }
       }
     });
+    
+    /* Delete this later
+    let temp2 = [];
+    allCars.forEach(element => {
+      if (element.models.length > 1) {
+        temp2.push(element);
+      }
+    });
+    console.log(temp2);*/
     console.log(allCars);
+
     return allCars;
   };
 

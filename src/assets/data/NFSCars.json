@@ -85,7 +85,7 @@
     "year": 2005,
 	"models": [
 		{
-			"model": "Chevrolet Corvette Z06"
+			"model": "Chevrolet Corvette C6 Z06"
 		}
 	]
   },
@@ -283,7 +283,7 @@
     "year": 1969,
 	"models": [
 		{
-			"model": "Nissan 240ZG"
+			"model": "Nissan Fairlady 240ZG"
 		}
 	]
   },
@@ -326,7 +326,7 @@
     "year": 1989,
 	"models": [
 		{
-			"model": "Nissan Skyline GT-R V-spec"
+			"model": "Nissan Skyline GT-R V-Spec"
 		}
 	]
   },
@@ -336,7 +336,7 @@
     "year": 1998,
 	"models": [
 		{
-			"model": "Nissan Skyline GT-R V-spec"
+			"model": "Nissan Skyline GT-R V-Spec"
 		}
 	]
   },

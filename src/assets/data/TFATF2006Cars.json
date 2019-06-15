@@ -69,7 +69,7 @@
 				"model": "Chevrolet Corvette C6R"
 			},
 			{
-				"model": "Chevrolet Corvette Z06"
+				"model": "Chevrolet Corvette C6 Z06"
 			}
 		]
 	},
@@ -151,10 +151,10 @@
 		"year": 2005,
 		"models": [
 			{
-				"model": "Ford Mustang  GT"
+				"model": "Ford Mustang GT"
 			},
 			{
-				"model": "Ford Mustang  GTR Concept"
+				"model": "Ford Mustang GTR Concept"
 			},
 			{
 				"model": "Shelby GT500 Concept"
@@ -198,7 +198,7 @@
 		"year": 2003,
 		"models": [
 			{
-				"model": "Nissan Skyline Coupe 350GT"
+				"model": "Nissan Skyline 350GT Coupe"
 			}
 		]
 	},
@@ -270,10 +270,10 @@
 				"model": "Mazda RX-7 Type RS-R"
 			},
 			{
-				"model": "Mazda RX-7 Type R Bathrust"
+				"model": "Mazda RX-7 Type R Bathurst"
 			},
 			{
-				"model": "Mazda RX-7 Spirit Type A"
+				"model": "Mazda RX-7 Spirit-R Type-A"
 			},
 			{
 				"model": "Mazda RX-7 Veilside Fortune"
@@ -286,13 +286,13 @@
 		"year": 2003,
 		"models": [
 			{
-				"model": "Mazda RX-8 Type-S"
+				"model": "Mazda RX-8 Type S"
 			},
 			{
 				"model": "Mazda RX-8 Sport Prestige Limited"
 			},
 			{
-				"model": "Mazda RX-8 Mazdaspeed 2"
+				"model": "Mazda RX-8 Mazdaspeed Version II"
 			}
 		]
 	},
@@ -399,10 +399,10 @@
 		"year": 1995,
 		"models": [
 			{
-				"model": "Nissan Silvia K\"s Aero"
+				"model": "Nissan Silvia K's Aero"
 			},
 			{
-				"model": "Nissan Silvia Q\"s Aero"
+				"model": "Nissan Silvia Q's Aero"
 			},
 			{
 				"model": "Nismo 270R"
@@ -415,10 +415,10 @@
 		"year": 1997,
 		"models": [
 			{
-				"model": "Nissan Silvia Q\"s Aero"
+				"model": "Nissan Silvia Q's Aero"
 			},
 			{
-				"model": "Nissan Silvia K\"s Aero"
+				"model": "Nissan Silvia K's Aero"
 			}
 		]
 	},
@@ -463,10 +463,10 @@
 		"year": 1990,
 		"models": [
 			{
-				"model": "Nissan Silvia K\"s"
+				"model": "Nissan Silvia K's"
 			},
 			{
-				"model": "Nissan Silvia D1GP K\"s"
+				"model": "Nissan Silvia D1GP K's"
 			}
 		]
 	},
@@ -492,7 +492,7 @@
 		"year": 1998,
 		"models": [
 			{
-				"model": "Nissan Skyline 25GT-t"
+				"model": "Nissan Skyline 25GT Turbo"
 			},
 			{
 				"model": "Nissan Skyline GT-R"
@@ -542,7 +542,7 @@
 				"model": "Subaru Impreza WRX STi"
 			},
 			{
-				"model": "Subaru Impreza S204 STI"
+				"model": "Subaru Impreza S204 STi"
 			}
 		]
 	},
@@ -578,13 +578,13 @@
 		"year": 1999,
 		"models": [
 			{
-				"model": "Toyota MR-S S-Edition"
+				"model": "Toyota MR-S S Edition"
 			},
 			{
 				"model": "Toyota MR-S VM180 TRD"
 			},
 			{
-				"model": "Toyota MR-S V-Edition"
+				"model": "Toyota MR-S V Edition"
 			}
 		]
 	},

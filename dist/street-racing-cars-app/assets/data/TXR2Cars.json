@@ -243,7 +243,7 @@
                 "model": "Mitsubishi Lancer Evolution VI"
             },
             {
-                "model": "Mitsubishi Lancer Evolution VI Tommi Makkinen Edition"
+                "model": "Mitsubishi Lancer Evolution VI RS Tommi Makkinen Edition"
             }
         ]
     },
@@ -271,10 +271,10 @@
         "year": 1995,
         "models": [
             {
-                "model": "Nissan Silvia K"
+                "model": "Nissan Silvia K's"
             },
             {
-                "model": "Nissan Silvia Q"
+                "model": "Nissan Silvia Q's"
             }
         ]
     },
@@ -284,10 +284,10 @@
         "year": 1997,
         "models": [
             {
-                "model": "Nissan Silvia KM"
+                "model": "Nissan Silvia K's"
             },
             {
-                "model": "Nissan Silvia QM"
+                "model": "Nissan Silvia Q's"
             }
         ]
     },
@@ -335,16 +335,10 @@
         "year": 1990,
         "models": [
             {
-                "model": "Nissan Silvia K"
+                "model": "Nissan Silvia K's"
             },
             {
-                "model": "Nissan Silvia KM"
-            },
-            {
-                "model": "Nissan Silvia Q"
-            },
-            {
-                "model": "Nissan Silvia QM"
+                "model": "Nissan Silvia Q's"
             }
         ]
     },
@@ -403,7 +397,7 @@
         "year": 1998,
         "models": [
             {
-                "model": "Nissan Skyline 25 GT"
+                "model": "Nissan Skyline 25GT"
             },
             {
                 "model": "Nissan Skyline GT-R"

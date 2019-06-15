@@ -92,7 +92,7 @@
         "year": 1996,
         "models": [
             {
-                "model": "Honda Civic Type-R Hatchback"
+                "model": "Honda Civic Type R Hatchback"
             },
             {
                 "model": "Honda Civic Si Coupe"
@@ -515,7 +515,7 @@
         "year": 1998,
         "models": [
             {
-                "model": "Nissan Skyline 25 GT Turbo"
+                "model": "Nissan Skyline 25GT Turbo"
             },
             {
                 "model": "Nissan Skyline GT-R V-Spec"
@@ -665,7 +665,7 @@
         "year": 1984,
         "models": [
             {
-                "model": "Toyota Corolla Levin GT Apex"
+                "model": "Toyota Corolla Levin GT-Apex"
             },
             {
                 "model": "Toyota Sprinter Trueno"
@@ -681,7 +681,7 @@
                 "model": "Toyota Corolla Levin BZ-R"
             },
             {
-                "model": "Toyota Sprinter Trueno GT Apex"
+                "model": "Toyota Sprinter Trueno GT-Apex"
             }
         ]
     },
@@ -743,7 +743,7 @@
                 "model": "Toyota Supra SZ-R"
             },
             {
-                "model": "AB Flug Supra S900 Exotic Eve"
+                "model": "AB Flug Supra"
             }
         ]
     }
