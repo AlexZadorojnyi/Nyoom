@@ -122,7 +122,6 @@ export class CarsService {
     this.cars['ITC'] = ITCCars;
     this.cars['TFATF'] = TFATFCars;
     this.cars['TFTF'] = TFTFCars;
-    this.cars['All'] = [];
     this.cars['All'] = this.getAllCars();
   }
 
@@ -362,6 +361,64 @@ export class CarsService {
     }
   };
 
+  /* Returns the union of all cars */
+  getAllCars = function () {
+    let temp = [];
+    let allCars = [];
+
+    this.games.forEach(game => {
+      temp = allCars;
+      allCars = [];
+
+      let i = 0;
+      let j = 0;
+
+      while (i < temp.length || j < this.cars[game.id].length) {
+        switch (this.compareCars(temp[i], this.cars[game.id][j])) {
+          case -1:
+            allCars.push(this.formatEntrySelect(temp[i], null));
+            i++;
+            break;
+          case 1:
+            allCars.push(this.formatEntrySelect(null, this.cars[game.id][j]));
+            j++;
+            break;
+          case 0:
+            allCars.push(this.formatEntrySelect(temp[i], this.cars[game.id][j]));
+            i++;
+            j++;
+            break;
+        }
+      }
+    });
+
+    /* Debug
+    let temp2 = [];
+    allCars.forEach(element => {
+      if (element.models.length > 1) {
+        temp2.push(element);
+      }
+    });
+    console.log(temp2);
+    console.log(allCars);*/
+
+    return allCars;
+  };
+
+  /* Returns all car makes from an array of cars */
+  getAllCarMakes = function (arr: any[]) {
+    const allCarMakes = [];
+    if (typeof arr !== 'undefined' && arr.length > 0) {
+      for (let i = 0; i < arr.length; i++) {
+        if (allCarMakes.indexOf(arr[i].make) === -1) {
+          allCarMakes.push(arr[i].make);
+        }
+      }
+    }
+    return allCarMakes;
+  };
+
+  /* Combines the data of two car objects into a single car object for use in the compare section */
   formatEntryCompare = function (car1: any, car2: any) {
     const car = {
       make: null,
@@ -408,6 +465,7 @@ export class CarsService {
     return car;
   };
 
+  /* Combines the data of two car objects into a single car object for use in the select section */
   formatEntrySelect = function (car1: any, car2: any) {
     const car = {
       make: null,
@@ -459,68 +517,15 @@ export class CarsService {
     return car;
   };
 
-  /* Returns the union of all cars */
-  getAllCars = function () {
-    let temp = [];
-    let allCars = [];
-
-    this.games.forEach(game => {
-      temp = allCars;
-      allCars = [];
-
-      let i = 0;
-      let j = 0;
-
-      while (i < temp.length || j < this.cars[game.id].length) {
-        switch (this.compareCars(temp[i], this.cars[game.id][j])) {
-          case -1:
-            allCars.push(this.formatEntrySelect(temp[i], null));
-            i++;
-            break;
-          case 1:
-            allCars.push(this.formatEntrySelect(null, this.cars[game.id][j]));
-            j++;
-            break;
-          case 0:
-            allCars.push(this.formatEntrySelect(temp[i], this.cars[game.id][j]));
-            i++;
-            j++;
-            break;
-        }
-      }
-    });
-    
-    /* Delete this later
-    let temp2 = [];
-    allCars.forEach(element => {
-      if (element.models.length > 1) {
-        temp2.push(element);
-      }
-    });
-    console.log(temp2);*/
-    console.log(allCars);
-
-    return allCars;
-  };
-
-  /* Returns all car makes from an array of cars */
-  getAllCarMakes = function (arr: any[]) {
-    const allCarMakes = [];
-    if (typeof arr !== 'undefined' && arr.length > 0) {
-      for (let i = 0; i < arr.length; i++) {
-        if (allCarMakes.indexOf(arr[i].make) === -1) {
-          allCarMakes.push(arr[i].make);
-        }
-      }
-    }
-    return allCarMakes;
-  };
-
+  /*  */
   selectCar = function(make: string, baseModel: string, year: number) {
-    if (this.indexOfCar({make, baseModel, year}, this.selectedCars) !== -1) {
-      this.selectedCars.splice(this.indexOfCar({make, baseModel, year}, this.selectedCars), 1);
-    } else {
+    const index = this.indexOfCar({make, baseModel, year}, this.selectedCars);
+    // New car, add to selectedCars
+    if (index === -1) {
       this.selectedCars.push({ make, baseModel, year });
+    // Car already exists, remove from selectedCars
+    } else {
+      this.selectedCars.splice(index, 1);
     }
     if (this.selectedCars.length > 1) {
       this.selectedCars.sort(this.compareCars);
@@ -528,24 +533,8 @@ export class CarsService {
     this.updateGamePercentages();
   };
 
-  selectGame = function(gameID: string) {
-    const gameCars = this.cars[gameID];
-    const temp = [];
-    let clearSelectedCars = true;
-    for (let i = 0; i < gameCars.length; i++) {
-      temp.push({ make: gameCars[i].make, baseModel: gameCars[i].baseModel, year: gameCars[i].year });
-      if (gameCars.length !== this.selectedCars.length ||
-          gameCars[i].make !== this.selectedCars[i].make ||
-          gameCars[i].baseModel !== this.selectedCars[i].baseModel ||
-          gameCars[i].year !== this.selectedCars[i].year) {
-            clearSelectedCars = false;
-      }
-    }
-    if (clearSelectedCars) {
-      this.selectedCars = [];
-    } else {
-      this.selectedCars = temp;
-    }
+  selectGame = function(gameId: string) {
+    this.selectedCars = this.cars[gameId].slice();
     this.updateGamePercentages();
   };
 
@@ -563,6 +552,7 @@ export class CarsService {
   };
 
   updateGamePercentages = function() {
+    console.log(this.selectedCars);
     for (let i = 0; i < this.games.length; i++) {
       let temp = 0;
       for (let j = 0; j < this.selectedCars.length; j++) {

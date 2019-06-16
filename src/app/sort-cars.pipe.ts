@@ -15,7 +15,6 @@ export class SortCarsPipe implements PipeTransform {
   transform(array: Array<any>, args: any): Array<any> {
 
     if (!array || array === undefined || array.length === 0) { return null; }
-    // console.log(args);
 
     if (typeof args !== 'undefined') {
 
@@ -59,7 +58,25 @@ export class SortCarsPipe implements PipeTransform {
         });
       }
 
-      // Sort by year (reuses sort by model)
+      // Sort by year
+      if (args.yearSort) {
+        array.sort((a: any, b: any) => {
+          if (a.year < b.year) { return 1;
+          } else if (a.year > b.year) { return -1;
+          } else {
+            if (a.make.toLowerCase() < b.make.toLowerCase()) { return -1;
+            } else if (a.make.toLowerCase() > b.make.toLowerCase()) { return 1;
+            } else {
+              if (a.baseModel.toLowerCase() < b.baseModel.toLowerCase()) { return -1;
+              } else if (a.baseModel.toLowerCase() > b.baseModel.toLowerCase()) { return 1;
+              } else { return 0;
+              }
+            }
+          }
+        });
+      }
+
+      // Sort by selected
       if (args.selectedSort) {
         array.sort((a: any, b: any) => {
           if (this.carsService.isSelected(a.make, a.baseModel, a.year) &&
@@ -78,24 +95,6 @@ export class SortCarsPipe implements PipeTransform {
                 } else if (a.year > b.year) { return 1;
                 } else { return 0;
                 }
-              }
-            }
-          }
-        });
-      }
-
-      // Sort by selected
-      if (args.yearSort) {
-        array.sort((a: any, b: any) => {
-          if (a.year < b.year) { return 1;
-          } else if (a.year > b.year) { return -1;
-          } else {
-            if (a.make.toLowerCase() < b.make.toLowerCase()) { return -1;
-            } else if (a.make.toLowerCase() > b.make.toLowerCase()) { return 1;
-            } else {
-              if (a.baseModel.toLowerCase() < b.baseModel.toLowerCase()) { return -1;
-              } else if (a.baseModel.toLowerCase() > b.baseModel.toLowerCase()) { return 1;
-              } else { return 0;
               }
             }
           }

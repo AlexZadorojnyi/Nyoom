@@ -30,19 +30,12 @@ export class CompareHeaderComponent implements OnInit, AfterContentInit {
   }
 
   ngOnInit() {
-    // This whole bit is super hacky
-    // If temp1 and temp2 are removed, duplicates of the games appear in the dropdowns
-    // TO DO: fix that and unhackify this
     this.games = this.carsService.games;
-    const temp1 = this.carsService.getRandomGame();
-    let temp2 = this.carsService.getRandomGame();
-    while (temp1 === temp2) {
-      temp2 = this.carsService.getRandomGame();
-    }
-    this.gameA.id = temp1.id;
-    this.gameA.title = temp1.title;
-    this.gameB.id = temp2.id;
-    this.gameB.title = temp2.title;
+    this.gameA = Object.assign({}, this.carsService.getRandomGame());
+    do {
+      this.gameB = Object.assign({}, this.carsService.getRandomGame());
+    } while (this.gameA === this.gameB);
+
     this.carsService.resetFilterSettings();
 
     this.activatedRoute.params.subscribe(
@@ -50,10 +43,22 @@ export class CompareHeaderComponent implements OnInit, AfterContentInit {
         if (typeof params.gameA !== 'undefined' &&
             typeof params.setRelation !== 'undefined' &&
             typeof params.gameB !== 'undefined') {
-          // Titles should be set too
-          this.gameA.id = params.gameA;
-          this.setRelation.id = params.setRelation;
-          this.gameB.id = params.gameB;
+
+          this.carsService.games.forEach(game => {
+            if (game.id === params.gameA) {
+              this.gameA = Object.assign({}, game);
+            }
+            if (game.id === params.gameB) {
+              this.gameB = Object.assign({}, game);
+            }
+          });
+
+          this.setRelations.forEach(sr => {
+            if (sr.id === params.setRelation) {
+              this.setRelation = Object.assign({}, sr);
+            }
+          });
+
           this.updateCarList();
         }
       }
