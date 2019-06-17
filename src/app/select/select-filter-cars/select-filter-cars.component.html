@@ -2,21 +2,21 @@
   <!-- FILTER-->
   <div>
     <!-- Make -->
-    <select class="filter filter__select filter__select--car-make space-right">
-      <option (click)="filterSettings.cars.makeFilter = ''; carsService.updateFilterSettings(filterSettings);">All Makes</option>
-      <option *ngFor="let carMake of carMakes" (click)="filterSettings.cars.makeFilter = carMake; carsService.updateFilterSettings(filterSettings);">{{ carMake }}</option>
+    <select class="filter filter__select filter__select--car-make space-right" [(ngModel)]="filterSettings.cars.makeFilter">
+      <option [ngValue]="">All Makes</option>
+      <option [ngValue]="carMake" *ngFor="let carMake of carMakes">{{ carMake }}</option>
     </select>
     <!-- Year -->
-    <select class="filter filter__select filter__select--car-year space-right">
-      <option (click)="filterSettings.cars.decadeFilter = -1; carsService.updateFilterSettings(filterSettings);">All Years</option>
-      <option (click)="filterSettings.cars.decadeFilter = 1940; carsService.updateFilterSettings(filterSettings);">1940s</option>
-      <option (click)="filterSettings.cars.decadeFilter = 1950; carsService.updateFilterSettings(filterSettings);">1950s</option>
-      <option (click)="filterSettings.cars.decadeFilter = 1960; carsService.updateFilterSettings(filterSettings);">1960s</option>
-      <option (click)="filterSettings.cars.decadeFilter = 1970; carsService.updateFilterSettings(filterSettings);">1970s</option>
-      <option (click)="filterSettings.cars.decadeFilter = 1980; carsService.updateFilterSettings(filterSettings);">1980s</option>
-      <option (click)="filterSettings.cars.decadeFilter = 1990; carsService.updateFilterSettings(filterSettings);">1990s</option>
-      <option (click)="filterSettings.cars.decadeFilter = 2000; carsService.updateFilterSettings(filterSettings);">2000s</option>
-      <option (click)="filterSettings.cars.decadeFilter = 2010; carsService.updateFilterSettings(filterSettings);">2010s</option>
+    <select class="filter filter__select filter__select--car-year space-right" [(ngModel)]="filterSettings.cars.decadeFilter">
+      <option [ngValue]="-1">All Years</option>
+      <option [ngValue]="1940">1940s</option>
+      <option [ngValue]="1950">1950s</option>
+      <option [ngValue]="1960">1960s</option>
+      <option [ngValue]="1970">1970s</option>
+      <option [ngValue]="1980">1980s</option>
+      <option [ngValue]="1990">1990s</option>
+      <option [ngValue]="2000">2000s</option>
+      <option [ngValue]="2010">2010s</option>
     </select>
   </div>
   <!-- SORT -->

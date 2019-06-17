@@ -9,10 +9,10 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CompareHeaderComponent implements OnInit, AfterContentInit {
   carsService: CarsService;
-  games: { id: string; title: string; }[];
-  gameA = { id: 'NFSU', title: '' };
-  gameB = { id: 'NFSU2', title: '' };
-  setRelation = { id: 'Intersection', title: 'Intersection' };
+  games: { id: string; title: string }[];
+  gameA: { id: string; title: string };
+  gameB: { id: string; title: string };
+  setRelation: { id: string, title: string };
   setRelations = [
     { id: 'Union', title: 'Union' },
     { id: 'SetA', title: 'Set A' },
@@ -36,7 +36,8 @@ export class CompareHeaderComponent implements OnInit, AfterContentInit {
       this.gameB = Object.assign({}, this.carsService.getRandomGame());
     } while (this.gameA === this.gameB);
 
-    this.carsService.resetFilterSettings();
+    this.carsService.updateFilterSettings(this.carsService.defaultFilterSettings);
+    this.carsService.clearSelectedCars();
 
     this.activatedRoute.params.subscribe(
       (params) => {

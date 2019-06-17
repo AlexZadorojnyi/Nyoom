@@ -66,10 +66,6 @@
       'brand image info'
       'note  note  note';
 
-    .note {
-      grid-area: note;
-    }
-
     &.selected {
       grid-template-rows: auto auto;
     }

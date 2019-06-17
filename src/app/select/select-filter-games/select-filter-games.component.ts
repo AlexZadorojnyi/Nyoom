@@ -26,12 +26,14 @@ export class SelectFilterGamesComponent implements OnInit {
   filterGamesType = function (str: string) {
     if (str === 'games') {
       this.filterSettings.games.gamesFilter = !this.filterSettings.games.gamesFilter;
-      if (this.filterSettings.games.gamesFilter === false && this.filterSettings.games.moviesFilter === false) {
+      if (this.filterSettings.games.gamesFilter === false &&
+          this.filterSettings.games.moviesFilter === false) {
         this.filterSettings.games.moviesFilter = true;
       }
     } else if (str === 'movies') {
       this.filterSettings.games.moviesFilter = !this.filterSettings.games.moviesFilter;
-      if (this.filterSettings.games.gamesFilter === false && this.filterSettings.games.moviesFilter === false) {
+      if (this.filterSettings.games.gamesFilter === false &&
+          this.filterSettings.games.moviesFilter === false) {
         this.filterSettings.games.gamesFilter = true;
       }
     }

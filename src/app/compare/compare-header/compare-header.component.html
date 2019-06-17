@@ -1,20 +1,25 @@
 <header class="header">
   <div>
+    <!-- Mode -->
     <div class="header__button header__button--mode">
       <span class="img-center-helper"></span>
       <img src="assets/images/Hamburger.png" alt="Hamburger">
+        <!-- Mode dropdown -->
         <div class="header__dropdown header__dropdown--mode">
           <div><a routerLink="/compare">Compare</a></div>
           <div><a routerLink="/select">Select</a></div>
         </div>
     </div>
+    <!-- Title -->
     <div class="header__title">
       <span class="img-center-helper"></span>
       <img src="assets/images/Logo.png" alt="Street Racing Cars">
     </div>
+    <!-- Game A -->
     <div class="header__button header__button--game-a">
       <span class="img-center-helper"></span>
       <img src="assets/images/game-logos/{{ gameA.id }}.png" alt="{{ gameA.title }}">
+      <!-- Game A dropdown -->
       <div class="header__dropdown header__dropdown--game-a">
         <div *ngFor="let game of games" routerLink="/compare/{{ game.id }}/{{ setRelation.id }}/{{ gameB.id }}">
           <span class="img-center-helper"></span>
@@ -22,9 +27,11 @@
         </div>
       </div>
     </div>
+    <!-- Set relation -->
     <div class="header__button header__button--set-relation">
       <span class="img-center-helper"></span>
       <img src="assets/images/venn-diagrams/{{ setRelation.id }}.png" alt="{{ setRelation.title }}">
+      <!-- Set relation dropdown -->
       <div class="header__dropdown header__dropdown--set-relation">
         <div *ngFor="let sr of setRelations" routerLink="/compare/{{ gameA.id }}/{{ sr.id }}/{{ gameB.id }}">
           <span class="img-center-helper"></span>
@@ -32,9 +39,11 @@
         </div>
       </div>
     </div>
+    <!-- Game B -->
     <div class="header__button header__button--game-b">
       <span class="img-center-helper"></span>
       <img src="assets/images/game-logos/{{ gameB.id }}.png" alt="{{ gameB.title }}">
+      <!-- Game B dropdown -->
       <div class="header__dropdown header__dropdown--game-b">
         <div *ngFor="let game of games" routerLink="/compare/{{ gameA.id }}/{{ setRelation.id }}/{{ game.id }}">
           <span class="img-center-helper"></span>

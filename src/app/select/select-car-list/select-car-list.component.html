@@ -6,5 +6,8 @@
       <span>{{ car.make }}<br></span>
       <span>{{ car.year }} {{ car.baseModel }}</span>
     </div>
+    <div class="note">
+      <span *ngFor="let model of car.models">{{ model }}</span><br>
+    </div>
   </div>
 </div>

@@ -46,6 +46,6 @@
          (click)="carsService.clearSelectedCars()">Clear</div>
     <!-- Reset filterSettings -->
     <div class="filter filter__button filter__button--reset"
-         (click)="carsService.resetFilterSettings()">Reset Filters</div>
+         (click)="carsService.updateFilterSettings(carsService.defaultFilterSettings)">Reset Filters</div>
   </div>
 </div>

@@ -19,26 +19,22 @@ export class SortCarsPipe implements PipeTransform {
     if (typeof args !== 'undefined') {
 
       // Filter by make
-      array = array.filter((a: any) => {
-        if (args.makeFilter === '') {
-          return true;
-        } else {
+      if (args.makeFilter !== 'All Makes') {
+        array = array.filter((a: any) => {
           return a.make === args.makeFilter;
-        }
-      });
+        });
+      }
 
       // Filter by decade
-      array = array.filter((a: any) => {
-        if (args.decadeFilter === -1) {
-          return true;
-        } else {
+      if (args.decadeFilter !== -1) {
+        array = array.filter((a: any) => {
           if (a.year > args.decadeFilter && a.year - args.decadeFilter < 10) {
             return true;
           } else {
             return false;
           }
-        }
-      });
+        });
+      }
 
       // Sort by model
       if (args.modelSort) {

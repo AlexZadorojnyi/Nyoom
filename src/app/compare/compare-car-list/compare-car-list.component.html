@@ -1,19 +1,27 @@
 <div class="list-item" *ngFor="let car of carList">
+  <!-- Car -->
   <div class="list-item__car" (click)="carsService.selectCar(car)" [ngClass]="{selected: car.isSelected}">
+    <!-- Brand logo -->
     <div class="brand-logo"><img src="assets/images/brand-logos/{{ car.make }}.png" alt="{{ car.make }}"></div>
+    <!-- Car image -->
     <div class="model-image"><img src="assets/images/cars/{{ car.make }} {{ car.baseModel }} {{ car.year }}.jpg" alt=""></div>
+    <!-- Car info -->
     <div class="info">
       <span>{{ car.make }}<br></span>
       <span>{{ car.year }} {{ car.baseModel }}</span>
     </div>
+    <!-- Note -->
     <div class="note">
-      <span>{{ car.gameAModel }}{{ car.gameBModel }}</span>
+      <span *ngFor="let modelA of car.gameAModels">{{ modelA.model }} {{ modelA.note }}</span><br>
+      <span *ngFor="let modelB of car.gameBModels">{{ modelB.model }} {{ modelB.note }}</span><br>
     </div>
   </div>
+  <!-- Game A -->
   <div class="list-item__game-check list-item__game-check--a">
     <span class="img-center-helper"></span>
     <img src="{{ car.isInGameA ? 'assets/images/icons/tick.png' : 'assets/images/icons/x.png' }}" alt="">
   </div>
+  <!-- Game B -->
   <div class="list-item__game-check list-item__game-check--b">
     <span class="img-center-helper"></span>
     <img src="{{ car.isInGameB ? 'assets/images/icons/tick.png' : 'assets/images/icons/x.png' }}" alt="">

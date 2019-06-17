@@ -80,7 +80,7 @@ export class CarsService {
   /* Object containing settings used to filter cars and games in the select section of the website */
   filterSettings = {
     cars: {
-      makeFilter: '',
+      makeFilter: 'All Makes',
       decadeFilter: -1,
       modelSort: false,
       yearSort: false,
@@ -96,6 +96,8 @@ export class CarsService {
       reverse: false
     }
   };
+  /* Object containing a copy of the initial filter settings */
+  defaultFilterSettings = JSON.parse(JSON.stringify(this.filterSettings));
 
   constructor() {
     this.cars['TFATF2006'] = TFATF2006Cars;
@@ -146,11 +148,11 @@ export class CarsService {
   };
 
   /* Searches for a car object based on its make, model, and year and returns its index */
-  indexOfCar = function(car, arr) {
+  indexOfCar = function(carA, arr) {
     for (let i = 0; i < arr.length; i++) {
-      if (arr[i].make.toLowerCase() === car.make.toLowerCase() &&
-          arr[i].baseModel.toLowerCase() === car.baseModel.toLowerCase() &&
-          arr[i].year === car.year) {
+      if (arr[i].make.toLowerCase() === carA.make.toLowerCase() &&
+          arr[i].baseModel.toLowerCase() === carA.baseModel.toLowerCase() &&
+          arr[i].year === carA.year) {
         return i;
       }
     }
@@ -405,17 +407,17 @@ export class CarsService {
     return allCars;
   };
 
-  /* Returns all car makes from an array of cars */
-  getAllCarMakes = function (arr: any[]) {
-    const allCarMakes = [];
-    if (typeof arr !== 'undefined' && arr.length > 0) {
-      for (let i = 0; i < arr.length; i++) {
-        if (allCarMakes.indexOf(arr[i].make) === -1) {
-          allCarMakes.push(arr[i].make);
+  /* Returns car makes from an array of cars */
+  getMakes = function (cars: any[]) {
+    const makes = [];
+    if (typeof cars !== 'undefined' && cars.length > 0) {
+      cars.forEach(car => {
+        if (makes.indexOf(car.make) === -1) {
+          makes.push(car.make);
         }
-      }
+      });
     }
-    return allCarMakes;
+    return makes;
   };
 
   /* Combines the data of two car objects into a single car object for use in the compare section */
@@ -582,32 +584,9 @@ export class CarsService {
     this.gameListChanged.next();
   };
 
-  /* Resets filter settings to their default states */
-  resetFilterSettings = function() {
-    this.filterSettings = {
-      cars: {
-        makeFilter: '',
-        decadeFilter: -1,
-        modelSort: false,
-        yearSort: false,
-        selectedSort: true,
-        reverse: false
-      },
-      games: {
-        gamesFilter: true,
-        moviesFilter: true,
-        titleSort: true,
-        pctSort: false,
-        yearSort: false,
-        reverse: false
-      }
-    };
-    this.filtersChanged.next();
-  };
-
   /* Updates filter settings to those set by the user */
   updateFilterSettings = function(newFilterSettings: any) {
-    this.filterSettings = newFilterSettings;
+    this.filterSettings = JSON.parse(JSON.stringify(newFilterSettings));
     this.filtersChanged.next();
   };
 }

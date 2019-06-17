@@ -184,6 +184,12 @@ body {
         font-style: italic;
       }
     }
+
+    .note {
+      grid-area: note;
+      display: none;
+      color: white;
+    }
   }
 }
 

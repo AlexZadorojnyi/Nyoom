@@ -14,7 +14,7 @@ export class SelectFilterCarsComponent implements OnInit {
   constructor(carsService: CarsService) {
     this.carsService = carsService;
     this.filterSettings = this.carsService.filterSettings;
-    this.carMakes = this.carsService.getAllCarMakes(this.carsService.cars['All']);
+    this.carMakes = this.carsService.getMakes(this.carsService.cars['All']);
   }
 
   ngOnInit() {
