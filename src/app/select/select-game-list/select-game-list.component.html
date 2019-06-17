@@ -1,10 +1,10 @@
 <div class="list-item" *ngFor="let game of games | sortGamesPipe:filterSettings.games">
-  <div class="list-item__game" (click)="carsService.selectGame(game.id)">
-      <div class="pct" [ngStyle]="{ 'width.%': !carsService.selectedCars.length ? 0 : (game.pct / carsService.selectedCars.length * 100).toFixed(0) }"></div>
+  <div class="list-item__game" (click)="carsService.selectGame(game)">
+      <div class="pct" [ngStyle]="{ 'width.%': carsService.totalSelectedCars === 0 ? 0 : (game.selectedCars / carsService.totalSelectedCars * 100).toFixed(0) }"></div>
       <div class="game-logo">
         <span class="img-center-helper"></span>
         <img src="assets/images/game-logos/{{ game.id }}.png" alt="{{ game.title }}">
       </div>
-      {{ game.pct }}/{{ carsService.selectedCars.length }}
+      {{ game.selectedCars }}/{{ carsService.totalSelectedCars }}
   </div>
 </div>

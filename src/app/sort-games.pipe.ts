@@ -1,15 +1,20 @@
 import {Pipe, PipeTransform} from '@angular/core';
+import { CarsService } from './cars.service';
 
 @Pipe({
  name: 'sortGamesPipe',
  pure: false
 })
 export class SortGamesPipe implements PipeTransform {
+  carsService: CarsService;
+
+  constructor(carsService: CarsService) {
+    this.carsService = carsService;
+  }
 
   transform(array: Array<any>, args: any): Array<any> {
 
     if (!array || array === undefined || array.length === 0) { return null; }
-    // console.log(args);
 
     if (typeof args !== 'undefined') {
 
@@ -28,9 +33,11 @@ export class SortGamesPipe implements PipeTransform {
     // Sort by percentage
     if (args.pctSort) {
       array.sort((a: any, b: any) => {
-        if (a.pct > b.pct) {
+        const aPct = a.selectedCars / this.carsService.totalSelectedCars;
+        const bPct = b.selectedCars / this.carsService.totalSelectedCars;
+        if (aPct > bPct) {
           return -1;
-        } else if (a.pct < b.pct) {
+        } else if (aPct < bPct) {
           return 1;
         } else {
           if (a.order < b.order) {
@@ -43,7 +50,7 @@ export class SortGamesPipe implements PipeTransform {
         }
       });
 
-    // Sort by order (title)
+    // Sort by title (order)
     } else if (args.titleSort) {
       array.sort((a: any, b: any) => {
         if (a.order < b.order) {

@@ -35,8 +35,8 @@ export class CarsService {
   cars: any = {};
   /* Array of car objects to be displayed in the compare section of the website */
   carList = new Array();
-  /* Array of car objects selected by the user in either the compare or select section of the website */
-  selectedCars = new Array();
+  /* Number of cars selected */
+  totalSelectedCars = 0;
   /* Observable used to update the car list in the compare section */
   carListChanged = new Subject<void>();
   /* Observable used to update the game list in the select section with computed data */
@@ -49,42 +49,42 @@ export class CarsService {
        within the game's grouping and the other digits determine the grouping
      - type: Used to differentiate between games and movies, which are not games :^P, used for sorting
      - releaseDate: The release date of the game in YYYYMMDD format, used for sorting
-     - pct: The number of selected cars that also appear in a game
+     - selectedCars: The number of selected cars that also appear in a game
      - title: The full title of the game */
   games = [
-    { id: 'TFATF2006',  order: 11,  type: 'game',   releaseDate: 20060926,  pct: 0,  title: 'The Fast and the Furious (2006)' },
-    { id: 'J',          order: 21,  type: 'game',   releaseDate: 20050613,  pct: 0,  title: 'Juiced' },
-    { id: 'LAR',        order: 31,  type: 'game',   releaseDate: 20051010,  pct: 0,  title: 'LA Rush' },
-    { id: 'MM',         order: 41,  type: 'game',   releaseDate: 19990430,  pct: 0,  title: 'Midtown Madness' },
-    { id: 'MM2',        order: 42,  type: 'game',   releaseDate: 20000921,  pct: 0,  title: 'Midtown Madness 2' },
-    { id: 'MCSR',       order: 43,  type: 'game',   releaseDate: 20001025,  pct: 0,  title: 'Midnight Club: Street Racing' },
-    { id: 'MC2',        order: 44,  type: 'game',   releaseDate: 20030409,  pct: 0,  title: 'Midnight Club 2' },
-    { id: 'MC3',        order: 45,  type: 'game',   releaseDate: 20050411,  pct: 0,  title: 'Midnight Club 3: Dub Edition' },
-    { id: 'MC3R',       order: 46,  type: 'game',   releaseDate: 20060312,  pct: 0,  title: 'Midnight Club 3: Dub Edition Remix' },
-    { id: 'MCLA',       order: 47,  type: 'game',   releaseDate: 20081020,  pct: 0,  title: 'Midnight Club: Los Angeles' },
-    { id: 'NFSU',       order: 51,  type: 'game',   releaseDate: 20031117,  pct: 0,  title: 'Need for Speed: Underground' },
-    { id: 'NFSU2',      order: 52,  type: 'game',   releaseDate: 20041115,  pct: 0,  title: 'Need for Speed: Underground 2' },
-    { id: 'NFSMW',      order: 53,  type: 'game',   releaseDate: 20051116,  pct: 0,  title: 'Need for Speed: Most Wanted' },
-    { id: 'NFSC',       order: 54,  type: 'game',   releaseDate: 20061031,  pct: 0,  title: 'Need for Speed: Carbon' },
-    { id: 'NFS',        order: 55,  type: 'game',   releaseDate: 20151103,  pct: 0,  title: 'Need for Speed' },
-    { id: 'SRS',        order: 61,  type: 'game',   releaseDate: 20040831,  pct: 0,  title: 'Street Racing Syndicate' },
-    { id: 'TD2002',     order: 71,  type: 'game',   releaseDate: 20020528,  pct: 0,  title: 'Test Drive (2002)' },
-    { id: 'TXR',        order: 81,  type: 'game',   releaseDate: 19990909,  pct: 0,  title: 'Tokyo Xtreme Racer' },
-    { id: 'TXR2',       order: 82,  type: 'game',   releaseDate: 20000927,  pct: 0,  title: 'Tokyo Xtreme Racer 2' },
-    { id: 'TXRZ',       order: 83,  type: 'game',   releaseDate: 20010315,  pct: 0,  title: 'Tokyo Xtreme Racer Zero' },
-    { id: 'TXR3',       order: 84,  type: 'game',   releaseDate: 20030724,  pct: 0,  title: 'Tokyo Xtreme Racer 3' },
-    { id: 'ITC',        order: 85,  type: 'game',   releaseDate: 20060727,  pct: 0,  title: 'Import Tuner Challenge' },
-    { id: 'TFATF',      order: 991, type: 'movie',  releaseDate: 20010622,  pct: 0,  title: 'The Fast and the Furious' },
-    { id: 'TFTF',       order: 992, type: 'movie',  releaseDate: 20030606,  pct: 0,  title: '2 Fast 2 Furious' }
+    { id: 'TFATF2006',  order: 11,  type: 'game',   releaseDate: 20060926,  selectedCars: 0, title: 'The Fast and the Furious (2006)' },
+    { id: 'J',          order: 21,  type: 'game',   releaseDate: 20050613,  selectedCars: 0, title: 'Juiced' },
+    { id: 'LAR',        order: 31,  type: 'game',   releaseDate: 20051010,  selectedCars: 0, title: 'LA Rush' },
+    { id: 'MM',         order: 41,  type: 'game',   releaseDate: 19990430,  selectedCars: 0, title: 'Midtown Madness' },
+    { id: 'MM2',        order: 42,  type: 'game',   releaseDate: 20000921,  selectedCars: 0, title: 'Midtown Madness 2' },
+    { id: 'MCSR',       order: 43,  type: 'game',   releaseDate: 20001025,  selectedCars: 0, title: 'Midnight Club: Street Racing' },
+    { id: 'MC2',        order: 44,  type: 'game',   releaseDate: 20030409,  selectedCars: 0, title: 'Midnight Club 2' },
+    { id: 'MC3',        order: 45,  type: 'game',   releaseDate: 20050411,  selectedCars: 0, title: 'Midnight Club 3: Dub Edition' },
+    { id: 'MC3R',       order: 46,  type: 'game',   releaseDate: 20060312,  selectedCars: 0, title: 'Midnight Club 3: Dub Edition Remix' },
+    { id: 'MCLA',       order: 47,  type: 'game',   releaseDate: 20081020,  selectedCars: 0, title: 'Midnight Club: Los Angeles' },
+    { id: 'NFSU',       order: 51,  type: 'game',   releaseDate: 20031117,  selectedCars: 0, title: 'Need for Speed: Underground' },
+    { id: 'NFSU2',      order: 52,  type: 'game',   releaseDate: 20041115,  selectedCars: 0, title: 'Need for Speed: Underground 2' },
+    { id: 'NFSMW',      order: 53,  type: 'game',   releaseDate: 20051116,  selectedCars: 0, title: 'Need for Speed: Most Wanted' },
+    { id: 'NFSC',       order: 54,  type: 'game',   releaseDate: 20061031,  selectedCars: 0, title: 'Need for Speed: Carbon' },
+    { id: 'NFS',        order: 55,  type: 'game',   releaseDate: 20151103,  selectedCars: 0, title: 'Need for Speed' },
+    { id: 'SRS',        order: 61,  type: 'game',   releaseDate: 20040831,  selectedCars: 0, title: 'Street Racing Syndicate' },
+    { id: 'TD2002',     order: 71,  type: 'game',   releaseDate: 20020528,  selectedCars: 0, title: 'Test Drive (2002)' },
+    { id: 'TXR',        order: 81,  type: 'game',   releaseDate: 19990909,  selectedCars: 0, title: 'Tokyo Xtreme Racer' },
+    { id: 'TXR2',       order: 82,  type: 'game',   releaseDate: 20000927,  selectedCars: 0, title: 'Tokyo Xtreme Racer 2' },
+    { id: 'TXRZ',       order: 83,  type: 'game',   releaseDate: 20010315,  selectedCars: 0, title: 'Tokyo Xtreme Racer Zero' },
+    { id: 'TXR3',       order: 84,  type: 'game',   releaseDate: 20030724,  selectedCars: 0, title: 'Tokyo Xtreme Racer 3' },
+    { id: 'ITC',        order: 85,  type: 'game',   releaseDate: 20060727,  selectedCars: 0, title: 'Import Tuner Challenge' },
+    { id: 'TFATF',      order: 991, type: 'movie',  releaseDate: 20010622,  selectedCars: 0, title: 'The Fast and the Furious' },
+    { id: 'TFTF',       order: 992, type: 'movie',  releaseDate: 20030606,  selectedCars: 0, title: '2 Fast 2 Furious' }
   ];
   /* Object containing settings used to filter cars and games in the select section of the website */
   filterSettings = {
     cars: {
       makeFilter: '',
       decadeFilter: -1,
-      modelSort: true,
+      modelSort: false,
       yearSort: false,
-      selectedSort: false,
+      selectedSort: true,
       reverse: false
     },
     games: {
@@ -471,7 +471,8 @@ export class CarsService {
       make: null,
       baseModel: null,
       year: null,
-      models: []
+      models: [],
+      isSelected: false
     };
 
     // Old car
@@ -517,69 +518,79 @@ export class CarsService {
     return car;
   };
 
-  /*  */
-  selectCar = function(make: string, baseModel: string, year: number) {
-    const index = this.indexOfCar({make, baseModel, year}, this.selectedCars);
-    // New car, add to selectedCars
-    if (index === -1) {
-      this.selectedCars.push({ make, baseModel, year });
-    // Car already exists, remove from selectedCars
+  /* (De)selects the car and (de/in)crements variables used for computing percentage of selected cars in game */
+  selectCar = function(car: any) {
+    car.isSelected = !car.isSelected;
+
+    if (car.isSelected) {
+      this.totalSelectedCars++;
     } else {
-      this.selectedCars.splice(index, 1);
+      this.totalSelectedCars--;
     }
-    if (this.selectedCars.length > 1) {
-      this.selectedCars.sort(this.compareCars);
-    }
-    this.updateGamePercentages();
-  };
 
-  selectGame = function(gameId: string) {
-    this.selectedCars = this.cars[gameId].slice();
-    this.updateGamePercentages();
-  };
-
-  isSelected = function(make: string, baseModel: string, year: number) {
-    if (this.indexOfCar({make, baseModel, year}, this.selectedCars) !== -1) {
-      return true;
-    } else {
-      return false;
-    }
-  };
-
-  clearSelectedCars = function() {
-    this.selectedCars = [];
-    this.updateGamePercentages();
-  };
-
-  updateGamePercentages = function() {
-    console.log(this.selectedCars);
-    for (let i = 0; i < this.games.length; i++) {
-      let temp = 0;
-      for (let j = 0; j < this.selectedCars.length; j++) {
-        if (this.indexOfCar(this.selectedCars[j], this.cars[this.games[i].id]) !== -1) {
-          temp++;
+    this.games.forEach(game => {
+      if (this.indexOfCar(car, this.cars[game.id]) !== -1) {
+        if (car.isSelected) {
+          game.selectedCars++;
+        } else {
+          game.selectedCars--;
         }
       }
-      // percentage
-      /* if (temp === 0) {
-        this.games[i].pct = 0;
-      } else {
-        this.games[i].pct = temp / this.selectedCars.length;
-      } */
-      // ratio
-      this.games[i].pct = temp;
-    }
+    });
+
     this.gameListChanged.next();
   };
 
+  /* (De)selects all cars featured in the game */
+  selectGame = function(game: any) {
+    /* total number of cars in this game = number of selected cars that are in this game & total number of cars selected */
+    if (this.cars[game.id].length === game.selectedCars &&
+        this.cars[game.id].length === this.totalSelectedCars) {
+      this.clearSelectedCars();
+    } else {
+      this.totalSelectedCars = this.cars[game.id].length;
+      this.cars['All'].forEach(car => {
+        if (this.indexOfCar(car, this.cars[game.id]) === -1) {
+          car.isSelected = false;
+        } else {
+          car.isSelected = true;
+        }
+      });
+      this.updateGamePercentages();
+    }
+  };
+
+  /* Clears all selected cars */
+  clearSelectedCars = function() {
+    this.cars['All'].forEach(car => {
+      car.isSelected = false;
+    });
+    this.totalSelectedCars = 0;
+    this.updateGamePercentages();
+  };
+
+  /* Increments the number of selected cars in each game */
+  updateGamePercentages = function() {
+    this.games.forEach(game => {
+      game.selectedCars = 0;
+      this.cars['All'].forEach(car => {
+        if (car.isSelected && this.indexOfCar(car, this.cars[game.id]) !== -1) {
+          game.selectedCars++;
+        }
+      });
+    });
+    this.gameListChanged.next();
+  };
+
+  /* Resets filter settings to their default states */
   resetFilterSettings = function() {
     this.filterSettings = {
       cars: {
         makeFilter: '',
         decadeFilter: -1,
-        modelSort: true,
+        modelSort: false,
         yearSort: false,
-        selectedSort: false,
+        selectedSort: true,
         reverse: false
       },
       games: {
@@ -594,6 +605,7 @@ export class CarsService {
     this.filtersChanged.next();
   };
 
+  /* Updates filter settings to those set by the user */
   updateFilterSettings = function(newFilterSettings: any) {
     this.filterSettings = newFilterSettings;
     this.filtersChanged.next();

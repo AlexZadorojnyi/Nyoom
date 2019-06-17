@@ -79,11 +79,8 @@ export class SortCarsPipe implements PipeTransform {
       // Sort by selected
       if (args.selectedSort) {
         array.sort((a: any, b: any) => {
-          if (this.carsService.isSelected(a.make, a.baseModel, a.year) &&
-             !this.carsService.isSelected(b.make, b.baseModel, b.year)) { return -1;
-          } else if (
-            !this.carsService.isSelected(a.make, a.baseModel, a.year) &&
-             this.carsService.isSelected(b.make, b.baseModel, b.year)) { return 1;
+          if (a.isSelected && !b.isSelected) { return -1;
+          } else if (!a.isSelected && b.isSelected) { return 1;
           } else {
             if (a.make.toLowerCase() < b.make.toLowerCase()) { return -1;
             } else if (a.make.toLowerCase() > b.make.toLowerCase()) { return 1;
