@@ -1,0 +1,287 @@
+[
+	{
+		"make": "Buick",
+		"baseModel": "Regal",
+		"year": 1978,
+		"models": [
+			{
+				"model": "Buick Regal GNX"
+			}
+		]
+	},
+	{
+		"make": "Cadillac",
+		"baseModel": "Eldorado",
+		"year": 1971,
+		"models": [
+			{
+				"model": "Cadillac Eldorado Convertible"
+			}
+		]
+	},
+	{
+		"make": "Cadillac",
+		"baseModel": "Escalade",
+		"year": 2002
+	},
+	{
+		"make": "Chevrolet",
+		"baseModel": "Camaro",
+		"year": 1967,
+		"models": [
+			{
+				"model": "Chevrolet Camaro SS/RS"
+			}
+		]
+	},
+	{
+		"make": "Chevrolet",
+		"baseModel": "Chevelle",
+		"year": 1968,
+		"models": [
+			{
+				"model": "Chevrolet Chevelle SS"
+			}
+		]
+	},
+	{
+		"make": "Chevrolet",
+		"baseModel": "Corvette",
+		"year": 1968,
+		"models": [
+			{
+				"model": "Chevrolet Corvette C3"
+			}
+		]
+	},
+	{
+		"make": "Chevrolet",
+		"baseModel": "Corvette",
+		"year": 1997,
+		"models": [
+			{
+				"model": "Chevrolet Corvette C5 Z06"
+			}
+		]
+	},
+	{
+		"make": "Chevrolet",
+		"baseModel": "Impala",
+		"year": 1959
+	},
+	{
+		"make": "Chevrolet",
+		"baseModel": "Impala",
+		"year": 1961,
+		"models": [
+			{
+				"model": "Chevrolet Impala SS"
+			}
+		]
+	},
+	{
+		"make": "Chevrolet",
+		"baseModel": "Impala",
+		"year": 2000,
+		"models": [
+			{
+				"model": "Chevrolet Impala SS"
+			}
+		]
+	},
+	{
+		"make": "Chevrolet",
+		"baseModel": "Monte Carlo",
+		"year": 1973
+	},
+	{
+		"make": "Chevrolet",
+		"baseModel": "SSR",
+		"year": 2003
+	},
+	{
+		"make": "Dodge",
+		"baseModel": "Charger",
+		"year": 1968,
+		"models": [
+			{
+				"model": "Dodge Charger R/T"
+			}
+		]
+	},
+	{
+		"make": "Dodge",
+		"baseModel": "Charger",
+		"year": 2006,
+		"models": [
+			{
+				"model": "Dodge Charger R/T"
+			}
+		]
+	},
+	{
+		"make": "Dodge",
+		"baseModel": "Magnum",
+		"year": 2005
+	},
+	{
+		"make": "Dodge",
+		"baseModel": "Neon",
+		"year": 1995,
+		"models": [
+			{
+				"model": "Dodge Neon SRT-4"
+			}
+		]
+	},
+	{
+		"make": "Dodge",
+		"baseModel": "Ram",
+		"year": 2002,
+		"models": [
+			{
+				"model": "Dodge Ram Rumble Bee"
+			}
+		]
+	},
+	{
+		"make": "Dodge",
+		"baseModel": "Viper",
+		"year": 2003,
+		"models": [
+			{
+				"model": "Dodge Viper SRT-10"
+			}
+		]
+	},
+	{
+		"make": "Hummer",
+		"baseModel": "H2",
+		"year": 2003
+	},
+	{
+		"make": "Infiniti",
+		"baseModel": "FX45",
+		"year": 2003
+	},
+	{
+		"make": "Lotus",
+		"baseModel": "Elise",
+		"year": 2001
+	},
+	{
+		"make": "Lotus",
+		"baseModel": "Exige",
+		"year": 2004
+	},
+	{
+		"make": "Mitsubishi",
+		"baseModel": "Eclipse",
+		"year": 2000,
+		"models": [
+			{
+				"model": "Mitsubishi Eclipse Spyder"
+			}
+		]
+	},
+	{
+		"make": "Mitsubishi",
+		"baseModel": "Lancer",
+		"year": 2002,
+		"models": [
+			{
+				"model": "Mitsubishi Lancer Evolution VIII"
+			}
+		]
+	},
+	{
+		"make": "Nissan",
+		"baseModel": "240SX",
+		"year": 1995
+	},
+	{
+		"make": "Nissan",
+		"baseModel": "350Z",
+		"year": 2003
+	},
+	{
+		"make": "Nissan",
+		"baseModel": "Frontier",
+		"year": 2004,
+		"models": [
+			{
+				"model": "Nissan Frontier LE Crew Cab 4x4"
+			}
+		]
+	},
+	{
+		"make": "Nissan",
+		"baseModel": "Sentra",
+		"year": 2000,
+		"models": [
+			{
+				"model": "Nissan Sentra SE-R Spec V"
+			}
+		]
+	},
+	{
+		"make": "Nissan",
+		"baseModel": "Skyline",
+		"year": 1998,
+		"models": [
+			{
+				"model": "Nissan Skyline GT-R"
+			}
+		]
+	},
+	{
+		"make": "Nissan",
+		"baseModel": "Titan",
+		"year": 2003,
+		"models": [
+			{
+				"model": "Nissan Titan SE Crew Cab 4x4"
+			}
+		]
+	},
+	{
+		"make": "Oldsmobile",
+		"baseModel": "Cutlass",
+		"year": 1978,
+		"models": [
+			{
+				"model": "Oldsmobile Cutlass Supreme Classic"
+			}
+		]
+	},
+	{
+		"make": "Pontiac",
+		"baseModel": "GTO",
+		"year": 1964
+	},
+	{
+		"make": "Pontiac",
+		"baseModel": "GTO",
+		"year": 2004
+	},
+	{
+		"make": "Pontiac",
+		"baseModel": "Solstice",
+		"year": 2006
+	},
+	{
+		"make": "Saleen",
+		"baseModel": "S7",
+		"year": 2000
+	},
+	{
+		"make": "Subaru",
+		"baseModel": "Impreza",
+		"year": 2002,
+		"models": [
+			{
+				"model": "Subaru Impreza WRX STi"
+			}
+		]
+	}
+]

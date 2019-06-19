@@ -1,7 +1,7 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
-dist/street-racing-cars-app/assets/images/cars-original/
-dist/street-racing-cars-app/assets/images/brand-logos-original/
+dist/Nyoom/assets/images/cars-original/
+dist/Nyoom/assets/images/brand-logos-original/
 .psd
 
 # compiled output
