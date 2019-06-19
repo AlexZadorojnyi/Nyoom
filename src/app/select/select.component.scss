@@ -31,18 +31,18 @@ body {
 
 app-select-car-list {
   grid-area: car-list;
-  height: calc(100vh - 4rem - 6vw);
-  max-height: calc(100vh - 4rem - 3rem);
-  min-height: calc(100vh - 4rem - 4.5rem);
+  height: calc(100vh - 3.8rem - 6vw);
+  max-height: calc(100vh - 3.8rem - 3rem);
+  min-height: calc(100vh - 3.8rem - 4.5rem);
   overflow-y: auto;
   margin-top: 1rem;
 }
 
 app-select-game-list {
   grid-area: game-list;
-  height: calc(100vh - 4rem - 6vw);
-  max-height: calc(100vh - 4rem - 3rem);
-  min-height: calc(100vh - 4rem - 4.5rem);
+  height: calc(100vh - 3.8rem - 6vw);
+  max-height: calc(100vh - 3.8rem - 3rem);
+  min-height: calc(100vh - 3.8rem - 4.5rem);
   overflow-y: auto;
   margin-top: 1rem;
 }
@@ -177,6 +177,15 @@ app-select-game-list {
         vertical-align: middle;
         padding: 2px;
       }
+    }
+
+    .ratio {
+      font-family: 'Roboto Mono', monospace;
+      color: white;
+      position: relative;
+      top: calc(-72px + 0.5vw);
+      right: 10px;
+      float: right
     }
   }
 }

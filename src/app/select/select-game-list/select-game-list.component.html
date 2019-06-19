@@ -1,12 +1,16 @@
 <div class="list-item" *ngFor="let game of games | sortGamesPipe:filterSettings.games">
+  <!-- Game -->
   <div class="list-item__game" (click)="carsService.selectGame(game)">
+      <!-- Percentage bar -->
       <div class="pct"
            [ngStyle]="{ 'width.%': carsService.totalSelectedCars === 0 ? 0 : (game.selectedCars / carsService.totalSelectedCars * 100).toFixed(0),
                         'transition': carsService.filterSettings.games.pctSort ? 'width 0s' : 'width 1s' }"></div>
+      <!-- Game logo -->
       <div class="game-logo">
         <span class="img-center-helper"></span>
         <img src="assets/images/game-logos/{{ game.id }}.png" alt="{{ game.title }}">
       </div>
-      {{ game.selectedCars }}/{{ carsService.totalSelectedCars }}
+      <!-- Selected car ratio -->
+      <span class="ratio">{{ game.selectedCars }}/{{ carsService.totalSelectedCars }}</span>
   </div>
 </div>

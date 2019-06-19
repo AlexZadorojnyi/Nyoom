@@ -1,11 +1,16 @@
 <div class="list-item" *ngFor="let car of carsService.cars['All'] | sortCarsPipe: filterSettings.cars">
+  <!-- Car -->
   <div class="list-item__car" (click)="carsService.selectCar(car)" [ngClass]="{selected: car.isSelected}">
+    <!-- Brand logo -->
     <div class="brand-logo"><img src="assets/images/brand-logos/{{ car.make }}.png" alt="{{ car.make }}"></div>
+    <!-- Car image -->
     <div class="model-image"><img src="assets/images/cars/{{ car.make }} {{ car.baseModel }} {{ car.year }}.jpg" alt=""></div>
+    <!-- Car info -->
     <div class="info">
       <span>{{ car.make }}<br></span>
       <span>{{ car.year }} {{ car.baseModel }}</span>
     </div>
+    <!-- Note -->
     <div class="note">
       <span *ngFor="let model of car.models">{{ model }}</span><br>
     </div>

@@ -85,7 +85,8 @@
 		"year": 1970,
 		"models": [
 			{
-				"model": "Dodge Challenger R/T"
+				"model": "Dodge Challenger R/T",
+				"note": "EA Downloader Edition"
 			}
 		]
 	},
@@ -153,14 +154,21 @@
 				"model": "Ford Mustang GT"
 			},
 			{
-				"model": "Shelby GT500 Concept"
+				"model": "Shelby GT500 Concept",
+				"note": "EA Downloader Edition"
 			}
 		]
 	},
 	{
 		"make": "Infiniti",
 		"baseModel": "G35",
-		"year": 2003
+		"year": 2003,
+		"models": [
+			{
+				"model": "Infiniti G35",
+				"note": "EA Downloader Edition"
+			}
+		]
 	},
 	{
 		"make": "Jaguar",
@@ -175,7 +183,13 @@
 	{
 		"make": "Koenigsegg",
 		"baseModel": "CCX",
-		"year": 2006
+		"year": 2006,
+		"models": [
+			{
+				"model": "Koenigsegg CCX",
+				"note": "Collector's Edition"
+			}
+		]
 	},
 	{
 		"make": "Lamborghini",
@@ -316,7 +330,8 @@
 		"year": 1999,
 		"models": [
 			{
-				"model": "Pagani Zonda F"
+				"model": "Pagani Zonda F",
+				"note": "EA Downloader Edition"
 			}
 		]
 	},
