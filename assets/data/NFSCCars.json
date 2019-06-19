@@ -1,429 +1,444 @@
 [
-    {
-        "make": "Alfa Romeo",
-        "baseModel": "Brera",
-        "year": 2005
-    },
-    {
-        "make": "Aston Martin",
-        "baseModel": "DB9",
-        "year": 2004
-    },
-    {
-        "make": "Audi",
-        "baseModel": "R8",
-        "year": 2006,
-        "models": [
-            {
-                "model": "Audi Le Mans quattro concept (2003)"
-            }
-        ]
-    },
-    {
-        "make": "BMW",
-        "baseModel": "3 Series",
-        "year": 1998,
-        "models": [
-            {
-                "model": "BMW M3 GTR"
-            }
-        ]
-    },
-    {
-        "make": "Chevrolet",
-        "baseModel": "Camaro",
-        "year": 1967,
-        "models": [
-            {
-                "model": "Chevrolet Camaro SS 396"
-            }
-        ]
-    },
-    {
-        "make": "Chevrolet",
-        "baseModel": "Camaro",
-        "year": 2010,
-        "models": [
-            {
-                "model": "Chevrolet Camaro Concept (2006)"
-            }
-        ]
-    },
-    {
-        "make": "Chevrolet",
-        "baseModel": "Chevelle",
-        "year": 1968,
-        "models": [
-            {
-                "model": "Chevrolet Chevelle SS"
-            }
-        ]
-    },
-    {
-        "make": "Chevrolet",
-        "baseModel": "Corvette",
-        "year": 2005,
-        "models": [
-            {
-                "model": "Chevrolet Corvette Z06 C6"
-            }
-        ]
-    },
-    {
-        "make": "Chrysler",
-        "baseModel": "300C",
-        "year": 2005,
-        "models": [
-            {
-                "model": "Chrysler 300C SRT-8"
-            }
-        ]
-    },
-    {
-        "make": "Dodge",
-        "baseModel": "Challenger",
-        "year": 1970,
-        "models": [
-            {
-                "model": "Dodge Challenger R/T"
-            }
-        ]
-    },
-    {
-        "make": "Dodge",
-        "baseModel": "Challenger",
-        "year": 2008,
-        "models": [
-            {
-                "model": "Dodge Challenger Concept (2006)"
-            }
-        ]
-    },
-    {
-        "make": "Dodge",
-        "baseModel": "Charger",
-        "year": 1968,
-        "models": [
-            {
-                "model": "Dodge Charger R/T"
-            }
-        ]
-    },
-    {
-        "make": "Dodge",
-        "baseModel": "Charger",
-        "year": 2006,
-        "models": [
-            {
-                "model": "Dodge Charger SRT-8"
-            }
-        ]
-    },
-    {
-        "make": "Dodge",
-        "baseModel": "Viper",
-        "year": 2003,
-        "models": [
-            {
-                "model": "Dodge Viper SRT-10"
-            }
-        ]
-    },
-    {
-        "make": "Ford",
-        "baseModel": "GT",
-        "year": 2005
-    },
-    {
-        "make": "Ford",
-        "baseModel": "Mustang",
-        "year": 1965,
-        "models": [
-            {
-                "model": "Shelby GT500"
-            }
-        ]
-    },
-    {
-        "make": "Ford",
-        "baseModel": "Mustang",
-        "year": 2005,
-        "models": [
-            {
-                "model": "Ford Mustang  GT"
-            },
-            {
-                "model": "Shelby GT500 Concept"
-            }
-        ]
-    },
-    {
-        "make": "Infiniti",
-        "baseModel": "G35",
-        "year": 2003
-    },
-    {
-        "make": "Jaguar",
-        "baseModel": "XK",
-        "year": 2007,
-        "models": [
-            {
-                "model": "Jaguar XK"
-            }
-        ]
-    },
-    {
-        "make": "Koenigsegg",
-        "baseModel": "CCX",
-        "year": 2006
-    },
-    {
-        "make": "Lamborghini",
-        "baseModel": "Gallardo",
-        "year": 2004
-    },
-    {
-        "make": "Lamborghini",
-        "baseModel": "Murciélago",
-        "year": 2001,
-        "models": [
-            {
-                "model": "Lamborghini Murciélago"
-            },
-            {
-                "model": "Lamborghini Murciélago LP 640"
-            }
-        ]
-    },
-    {
-        "make": "Lexus",
-        "baseModel": "IS",
-        "year": 1999,
-        "models": [
-            {
-                "model": "Lexus IS 300"
-            }
-        ]
-    },
-    {
-        "make": "Lotus",
-        "baseModel": "Elise",
-        "year": 2001
-    },
-    {
-        "make": "Lotus",
-        "baseModel": "Europa",
-        "year": 2006,
-        "models": [
-            {
-                "model": "Lotus Europa S"
-            }
-        ]
-    },
-    {
-        "make": "Mazda",
-        "baseModel": "3",
-        "year": 2003
-    },
-    {
-        "make": "Mazda",
-        "baseModel": "RX-7",
-        "year": 1992
-    },
-    {
-        "make": "Mazda",
-        "baseModel": "RX-8",
-        "year": 2003
-    },
-    {
-        "make": "Mercedes-Benz",
-        "baseModel": "CLK-Class",
-        "year": 2002,
-        "models": [
-            {
-                "model": "Mercedes-Benz CLK 500"
-            }
-        ]
-    },
-    {
-        "make": "Mercedes-Benz",
-        "baseModel": "SL-Class",
-        "year": 2001,
-        "models": [
-            {
-                "model": "Mercedes-Benz SL 65 AMG"
-            }
-        ]
-    },
-    {
-        "make": "Mercedes-Benz",
-        "baseModel": "SLR McLaren",
-        "year": 2003
-    },
-    {
-        "make": "Mitsubishi",
-        "baseModel": "Eclipse",
-        "year": 1995,
-        "models": [
-            {
-                "model": "Mitsubishi Eclipse GS-T"
-            }
-        ]
-    },
-    {
-        "make": "Mitsubishi",
-        "baseModel": "Eclipse",
-        "year": 2006,
-        "models": [
-            {
-                "model": "Mitsubishi Eclipse GT"
-            }
-        ]
-    },
-    {
-        "make": "Mitsubishi",
-        "baseModel": "Lancer",
-        "year": 2002,
-        "models": [
-            {
-                "model": "Mitsubishi Lancer Evolution IX MR"
-            }
-        ]
-    },
-    {
-        "make": "Nissan",
-        "baseModel": "240SX",
-        "year": 1989
-    },
-    {
-        "make": "Nissan",
-        "baseModel": "350Z",
-        "year": 2003
-    },
-    {
-        "make": "Nissan",
-        "baseModel": "Skyline",
-        "year": 1998,
-        "models": [
-            {
-                "model": "Nissan Skyline GT-R V-spec"
-            }
-        ]
-    },
-    {
-        "make": "Pagani",
-        "baseModel": "Zonda",
-        "year": 1999,
-        "models": [
-            {
-                "model": "Pagani Zonda F"
-            }
-        ]
-    },
-    {
-        "make": "Plymouth",
-        "baseModel": "Barracuda",
-        "year": 1970,
-        "models": [
-            {
-                "model": "Plymouth \"Cuda"
-            }
-        ]
-    },
-    {
-        "make": "Plymouth",
-        "baseModel": "Road Runner",
-        "year": 1968
-    },
-    {
-        "make": "Pontiac",
-        "baseModel": "GTO",
-        "year": 2004,
-        "models": [
-            {
-                "model": "Pontiac GTO"
-            },
-            {
-                "model": "Holden Monaro VXR"
-            }
-        ]
-    },
-    {
-        "make": "Porsche",
-        "baseModel": "911",
-        "year": 2005,
-        "models": [
-            {
-                "model": "Porsche 911 GT3 RS"
-            },
-            {
-                "model": "Porsche 911 Turbo"
-            }
-        ]
-    },
-    {
-        "make": "Porsche",
-        "baseModel": "Carrera GT",
-        "year": 2004
-    },
-    {
-        "make": "Porsche",
-        "baseModel": "Cayman",
-        "year": 2005,
-        "models": [
-            {
-                "model": "Porsche Cayman S"
-            }
-        ]
-    },
-    {
-        "make": "Renault",
-        "baseModel": "Clio",
-        "year": 2001,
-        "models": [
-            {
-                "model": "Renault Clio V6"
-            }
-        ]
-    },
-    {
-        "make": "Subaru",
-        "baseModel": "Impreza",
-        "year": 2005,
-        "models": [
-            {
-                "model": "Subaru Impreza WRX STi"
-            }
-        ]
-    },
-    {
-        "make": "Toyota",
-        "baseModel": "Corolla",
-        "year": 1984,
-        "models": [
-            {
-                "model": "Toyota Corolla GT-S"
-            }
-        ]
-    },
-    {
-        "make": "Toyota",
-        "baseModel": "MR2",
-        "year": 1989
-    },
-    {
-        "make": "Toyota",
-        "baseModel": "Supra",
-        "year": 1993
-    },
-    {
-        "make": "Volkswagen",
-        "baseModel": "Golf",
-        "year": 2003,
-        "models": [
-            {
-                "model": "Volkswagen Golf R32"
-            }
-        ]
-    }
+	{
+		"make": "Alfa Romeo",
+		"baseModel": "Brera",
+		"year": 2005
+	},
+	{
+		"make": "Aston Martin",
+		"baseModel": "DB9",
+		"year": 2004
+	},
+	{
+		"make": "Audi",
+		"baseModel": "R8",
+		"year": 2006,
+		"models": [
+			{
+				"model": "Audi Le Mans quattro concept (2003)"
+			}
+		]
+	},
+	{
+		"make": "BMW",
+		"baseModel": "3 Series",
+		"year": 1998,
+		"models": [
+			{
+				"model": "BMW M3 GTR"
+			}
+		]
+	},
+	{
+		"make": "Chevrolet",
+		"baseModel": "Camaro",
+		"year": 1967,
+		"models": [
+			{
+				"model": "Chevrolet Camaro SS"
+			}
+		]
+	},
+	{
+		"make": "Chevrolet",
+		"baseModel": "Camaro",
+		"year": 2010,
+		"models": [
+			{
+				"model": "Chevrolet Camaro Concept (2006)"
+			}
+		]
+	},
+	{
+		"make": "Chevrolet",
+		"baseModel": "Chevelle",
+		"year": 1968,
+		"models": [
+			{
+				"model": "Chevrolet Chevelle SS"
+			}
+		]
+	},
+	{
+		"make": "Chevrolet",
+		"baseModel": "Corvette",
+		"year": 2005,
+		"models": [
+			{
+				"model": "Chevrolet Corvette C6 Z06"
+			}
+		]
+	},
+	{
+		"make": "Chrysler",
+		"baseModel": "300C",
+		"year": 2005,
+		"models": [
+			{
+				"model": "Chrysler 300C SRT-8"
+			}
+		]
+	},
+	{
+		"make": "Dodge",
+		"baseModel": "Challenger",
+		"year": 1970,
+		"models": [
+			{
+				"model": "Dodge Challenger R/T",
+				"note": "EA Downloader Edition"
+			}
+		]
+	},
+	{
+		"make": "Dodge",
+		"baseModel": "Challenger",
+		"year": 2008,
+		"models": [
+			{
+				"model": "Dodge Challenger Concept (2006)"
+			}
+		]
+	},
+	{
+		"make": "Dodge",
+		"baseModel": "Charger",
+		"year": 1968,
+		"models": [
+			{
+				"model": "Dodge Charger R/T"
+			}
+		]
+	},
+	{
+		"make": "Dodge",
+		"baseModel": "Charger",
+		"year": 2006,
+		"models": [
+			{
+				"model": "Dodge Charger SRT-8"
+			}
+		]
+	},
+	{
+		"make": "Dodge",
+		"baseModel": "Viper",
+		"year": 2003,
+		"models": [
+			{
+				"model": "Dodge Viper SRT-10"
+			}
+		]
+	},
+	{
+		"make": "Ford",
+		"baseModel": "GT",
+		"year": 2005
+	},
+	{
+		"make": "Ford",
+		"baseModel": "Mustang",
+		"year": 1965,
+		"models": [
+			{
+				"model": "Shelby GT500"
+			}
+		]
+	},
+	{
+		"make": "Ford",
+		"baseModel": "Mustang",
+		"year": 2005,
+		"models": [
+			{
+				"model": "Ford Mustang GT"
+			},
+			{
+				"model": "Shelby GT500 Concept",
+				"note": "EA Downloader Edition"
+			}
+		]
+	},
+	{
+		"make": "Infiniti",
+		"baseModel": "G35",
+		"year": 2003,
+		"models": [
+			{
+				"model": "Infiniti G35",
+				"note": "EA Downloader Edition"
+			}
+		]
+	},
+	{
+		"make": "Jaguar",
+		"baseModel": "XK",
+		"year": 2007,
+		"models": [
+			{
+				"model": "Jaguar XK"
+			}
+		]
+	},
+	{
+		"make": "Koenigsegg",
+		"baseModel": "CCX",
+		"year": 2006,
+		"models": [
+			{
+				"model": "Koenigsegg CCX",
+				"note": "Collector's Edition"
+			}
+		]
+	},
+	{
+		"make": "Lamborghini",
+		"baseModel": "Gallardo",
+		"year": 2004
+	},
+	{
+		"make": "Lamborghini",
+		"baseModel": "Murciélago",
+		"year": 2001,
+		"models": [
+			{
+				"model": "Lamborghini Murciélago"
+			},
+			{
+				"model": "Lamborghini Murciélago LP 640"
+			}
+		]
+	},
+	{
+		"make": "Lexus",
+		"baseModel": "IS",
+		"year": 1999,
+		"models": [
+			{
+				"model": "Lexus IS 300"
+			}
+		]
+	},
+	{
+		"make": "Lotus",
+		"baseModel": "Elise",
+		"year": 2001
+	},
+	{
+		"make": "Lotus",
+		"baseModel": "Europa",
+		"year": 2006,
+		"models": [
+			{
+				"model": "Lotus Europa S"
+			}
+		]
+	},
+	{
+		"make": "Mazda",
+		"baseModel": "3",
+		"year": 2003
+	},
+	{
+		"make": "Mazda",
+		"baseModel": "RX-7",
+		"year": 1992
+	},
+	{
+		"make": "Mazda",
+		"baseModel": "RX-8",
+		"year": 2003
+	},
+	{
+		"make": "Mercedes-Benz",
+		"baseModel": "CLK-Class",
+		"year": 2002,
+		"models": [
+			{
+				"model": "Mercedes-Benz CLK 500"
+			}
+		]
+	},
+	{
+		"make": "Mercedes-Benz",
+		"baseModel": "SL-Class",
+		"year": 2001,
+		"models": [
+			{
+				"model": "Mercedes-Benz SL 65 AMG"
+			}
+		]
+	},
+	{
+		"make": "Mercedes-Benz",
+		"baseModel": "SLR McLaren",
+		"year": 2003
+	},
+	{
+		"make": "Mitsubishi",
+		"baseModel": "Eclipse",
+		"year": 1995,
+		"models": [
+			{
+				"model": "Mitsubishi Eclipse GS-T"
+			}
+		]
+	},
+	{
+		"make": "Mitsubishi",
+		"baseModel": "Eclipse",
+		"year": 2006,
+		"models": [
+			{
+				"model": "Mitsubishi Eclipse GT"
+			}
+		]
+	},
+	{
+		"make": "Mitsubishi",
+		"baseModel": "Lancer",
+		"year": 2002,
+		"models": [
+			{
+				"model": "Mitsubishi Lancer Evolution IX MR"
+			}
+		]
+	},
+	{
+		"make": "Nissan",
+		"baseModel": "240SX",
+		"year": 1989
+	},
+	{
+		"make": "Nissan",
+		"baseModel": "350Z",
+		"year": 2003
+	},
+	{
+		"make": "Nissan",
+		"baseModel": "Skyline",
+		"year": 1998,
+		"models": [
+			{
+				"model": "Nissan Skyline GT-R V-Spec"
+			}
+		]
+	},
+	{
+		"make": "Pagani",
+		"baseModel": "Zonda",
+		"year": 1999,
+		"models": [
+			{
+				"model": "Pagani Zonda F",
+				"note": "EA Downloader Edition"
+			}
+		]
+	},
+	{
+		"make": "Plymouth",
+		"baseModel": "Barracuda",
+		"year": 1970,
+		"models": [
+			{
+				"model": "Plymouth \"Cuda"
+			}
+		]
+	},
+	{
+		"make": "Plymouth",
+		"baseModel": "Road Runner",
+		"year": 1968
+	},
+	{
+		"make": "Pontiac",
+		"baseModel": "GTO",
+		"year": 2004,
+		"models": [
+			{
+				"model": "Pontiac GTO"
+			},
+			{
+				"model": "Holden Monaro VXR"
+			}
+		]
+	},
+	{
+		"make": "Porsche",
+		"baseModel": "911",
+		"year": 2005,
+		"models": [
+			{
+				"model": "Porsche 911 GT3 RS"
+			},
+			{
+				"model": "Porsche 911 Turbo"
+			}
+		]
+	},
+	{
+		"make": "Porsche",
+		"baseModel": "Carrera GT",
+		"year": 2004
+	},
+	{
+		"make": "Porsche",
+		"baseModel": "Cayman",
+		"year": 2005,
+		"models": [
+			{
+				"model": "Porsche Cayman S"
+			}
+		]
+	},
+	{
+		"make": "Renault",
+		"baseModel": "Clio",
+		"year": 2001,
+		"models": [
+			{
+				"model": "Renault Clio V6"
+			}
+		]
+	},
+	{
+		"make": "Subaru",
+		"baseModel": "Impreza",
+		"year": 2005,
+		"models": [
+			{
+				"model": "Subaru Impreza WRX STi"
+			}
+		]
+	},
+	{
+		"make": "Toyota",
+		"baseModel": "Corolla",
+		"year": 1984,
+		"models": [
+			{
+				"model": "Toyota Corolla GT-S"
+			}
+		]
+	},
+	{
+		"make": "Toyota",
+		"baseModel": "MR2",
+		"year": 1989
+	},
+	{
+		"make": "Toyota",
+		"baseModel": "Supra",
+		"year": 1993
+	},
+	{
+		"make": "Volkswagen",
+		"baseModel": "Golf",
+		"year": 2003,
+		"models": [
+			{
+				"model": "Volkswagen Golf R32"
+			}
+		]
+	}
 ]
