@@ -1,0 +1,319 @@
+[
+  {
+    "make": "Aston Martin",
+    "baseModel": "DB9",
+    "year": 2004,
+    "note": "South Central Vehicle Pack #2"
+  },
+  {
+    "make": "Aston Martin",
+    "baseModel": "Vantage",
+    "year": 2005,
+    "model": "V8 Vantage Roadster"
+  },
+  {
+    "make": "Audi",
+    "baseModel": "A4",
+    "year": 2004,
+    "model": "RS4"
+  },
+  {
+    "make": "Audi",
+    "baseModel": "A5",
+    "year": 2007,
+    "model": "S5",
+    "note": "South Central Vehicle Pack #1"
+  },
+  {
+    "make": "Audi",
+    "baseModel": "R8",
+    "year": 2006,
+    "model": "R8 4.2 FSI quattro"
+  },
+  {
+    "make": "Buick",
+    "baseModel": "Regal",
+    "year": 1978,
+    "model": "Regal GNX"
+  },
+  {
+    "make": "Buick",
+    "baseModel": "Riviera",
+    "year": 1963,
+    "note": "South Central Premium Upgrade"
+  },
+  {
+    "make": "Cadillac",
+    "baseModel": "XLR",
+    "year": 2004,
+    "model": "XLR-V",
+    "note": "South Central Vehicle Pack #2"
+  },
+  {
+    "make": "Chevrolet",
+    "baseModel": "Bel Air",
+    "year": 1955,
+    "note": "South Central Premium Upgrade"
+  },
+  {
+    "make": "Chevrolet",
+    "baseModel": "Camaro",
+    "year": 1967,
+    "model": "Camaro SS/RS"
+  },
+  {
+    "make": "Chevrolet",
+    "baseModel": "Camaro",
+    "year": 2010,
+    "model": "Camaro Concept (2006)"
+  },
+  {
+    "make": "Chevrolet",
+    "baseModel": "Chevelle",
+    "year": 1968,
+    "model": "Chevelle SS 454",
+    "note": "South Central Premium Upgrade"
+  },
+  {
+    "make": "Chevrolet",
+    "baseModel": "Cobalt",
+    "year": 2005,
+    "model": "Cobalt SS Supercharged"
+  },
+  {
+    "make": "Chevrolet",
+    "baseModel": "Impala",
+    "year": 1961,
+    "model": "Impala SS"
+  },
+  {
+    "make": "Chevrolet",
+    "baseModel": "Impala",
+    "year": 1994,
+    "model": "Impala SS",
+    "note": "South Central Premium Upgrade"
+  },
+  {
+    "make": "Chevrolet",
+    "baseModel": "Malibu",
+    "year": 1964,
+    "note": "South Central Premium Upgrade"
+  },
+  {
+    "make": "Chevrolet",
+    "baseModel": "Malibu",
+    "year": 1968,
+    "model": "Malibu SS 283"
+  },
+  {
+    "make": "Chrysler",
+    "baseModel": "300C",
+    "year": 2005,
+    "model": "300C SRT-8"
+  },
+  {
+    "make": "Dodge",
+    "baseModel": "Challenger",
+    "year": 1970,
+    "model": "Challenger R/T"
+  },
+  {
+    "make": "Dodge",
+    "baseModel": "Challenger",
+    "year": 2008,
+    "model": "Challenger Concept"
+  },
+  {
+    "make": "Dodge",
+    "baseModel": "Charger",
+    "year": 2006,
+    "model": "Charger SRT-8"
+  },
+  {
+    "make": "Ford",
+    "baseModel": "Cobra",
+    "year": 2004,
+    "model": "Shelby Cobra Concept",
+    "note": "This should be something else"
+  },
+  {
+    "make": "Ford",
+    "baseModel": "Focus",
+    "year": 1998,
+    "model": "Focus SVT"
+  },
+  {
+    "make": "Ford",
+    "baseModel": "GT",
+    "year": 2005
+  },
+  {
+    "make": "Ford",
+    "baseModel": "Mustang",
+    "year": 1965,
+    "model": "Mustang Boss 302"
+  },
+  {
+    "make": "Ford",
+    "baseModel": "Mustang",
+    "year": 2005,
+    "model": "Mustang GT Convertible"
+  },
+  {
+    "make": "Lamborghini",
+    "baseModel": "Gallardo",
+    "year": 2004,
+    "model": "Gallardo Spyder"
+  },
+  {
+    "make": "Lamborghini",
+    "baseModel": "Murciélago",
+    "year": 2001,
+    "model": "Murciélago Roadster"
+  },
+  {
+    "make": "Land-Rover",
+    "baseModel": "Range Rover",
+    "year": 2002,
+    "note": "Range Rover Supercharged (South Central Premium Upgrade Vehicles pack)\nRange Rover Sport Supercharged (South Central Premium Upgrade Vehicles pack)"
+  },
+  {
+    "make": "Mazda",
+    "baseModel": "RX-7",
+    "year": 1992
+  },
+  {
+    "make": "Mazda",
+    "baseModel": "RX-8",
+    "year": 2003,
+    "model": "RX-8 Shinka"
+  },
+  {
+    "make": "Mercedes-Benz",
+    "baseModel": "CL-Class",
+    "year": 2007,
+    "model": "CL 65 AMG",
+    "note": "South Central Vehicle Pack #1"
+  },
+  {
+    "make": "Mercedes-Benz",
+    "baseModel": "CLK-Class",
+    "year": 2002,
+    "model": "CLK 63 AMG Black Series",
+    "note": "South Central Premium Upgrade"
+  },
+  {
+    "make": "Mercedes-Benz",
+    "baseModel": "S-Class",
+    "year": 2006,
+    "model": "S 600"
+  },
+  {
+    "make": "Mercedes-Benz",
+    "baseModel": "SL-Class",
+    "year": 2002,
+    "model": "SL 65 AMG"
+  },
+  {
+    "make": "Mitsubishi",
+    "baseModel": "3000GT",
+    "year": 1990,
+    "model": "3000GT VR-4"
+  },
+  {
+    "make": "Mitsubishi",
+    "baseModel": "Eclipse",
+    "year": 1995,
+    "model": "Eclipse GSX"
+  },
+  {
+    "make": "Mitsubishi",
+    "baseModel": "Eclipse",
+    "year": 2006,
+    "model": "Eclipse Spyder GT",
+    "note": "South Central Vehicle Pack #1"
+  },
+  {
+    "make": "Mitsubishi",
+    "baseModel": "Lancer",
+    "year": 2002,
+    "model": "Lancer MR Evolution IX"
+  },
+  {
+    "make": "Mitsubishi",
+    "baseModel": "Lancer",
+    "year": 2008,
+    "model": "Lancer MR Evolution X",
+    "note": "South Central Vehicle Pack #2"
+  },
+  {
+    "make": "Nissan",
+    "baseModel": "240SX",
+    "year": 1997
+  },
+  {
+    "make": "Nissan",
+    "baseModel": "240Z",
+    "year": 1969,
+    "model": "280Z",
+    "note": "Datsun 280Z"
+  },
+  {
+    "make": "Nissan",
+    "baseModel": "350Z",
+    "year": 2003,
+    "model": "350Z Roadster"
+  },
+  {
+    "make": "Nissan",
+    "baseModel": "Skyline",
+    "year": 1998,
+    "model": "Skyline GT-R"
+  },
+  {
+    "make": "Pontiac",
+    "baseModel": "Firebird",
+    "year": 1970
+  },
+  {
+    "make": "Pontiac",
+    "baseModel": "GTO",
+    "year": 1964,
+    "note": "South Central Premium Upgrade"
+  },
+  {
+    "make": "Pontiac",
+    "baseModel": "Solstice",
+    "year": 2006
+  },
+  {
+    "make": "Saleen",
+    "baseModel": "S302",
+    "year": 2007,
+    "model": "S302 Extreme",
+    "note": "Should be a Ford model"
+  },
+  {
+    "make": "Saleen",
+    "baseModel": "S7",
+    "year": 2000,
+    "model": "S7 Twin Turbo"
+  },
+  {
+    "make": "Volkswagen",
+    "baseModel": "Golf",
+    "year": 1974,
+    "model": "Golf GTI"
+  },
+  {
+    "make": "Volkswagen",
+    "baseModel": "Golf",
+    "year": 2003,
+    "model": "Golf GTI"
+  },
+  {
+    "make": "Volkswagen",
+    "baseModel": "Scirocco",
+    "year": 1981
+  }
+]

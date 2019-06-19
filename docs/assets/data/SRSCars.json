@@ -1,0 +1,242 @@
+[
+	{
+		"make": "Lexus",
+		"baseModel": "IS",
+		"year": 1999,
+		"models": [
+			{
+				"model": "Lexus IS 300 5-Speed"
+			},
+			{
+				"model": "Lexus IS 300 5-Speed SE"
+			}
+		]
+	},
+	{
+		"make": "Mazda",
+		"baseModel": "RX-7",
+		"year": 1992,
+		"models": [
+			{
+				"model": "Mazda RX-7 R1"
+			},
+			{
+				"model": "Mazda RX-7 Type R Bathurst"
+			},
+			{
+				"model": "Mazda RX-7 Spirit-R Type-A"
+			},
+			{
+				"model": "Mazda RX-7 Spirit-R Type-B"
+			}
+		]
+	},
+	{
+		"make": "Mazda",
+		"baseModel": "RX-8",
+		"year": 2003,
+		"models": [
+			{
+				"model": "Mazda RX-8"
+			},
+			{
+				"model": "Mazda RX-8 Mazdaspeed"
+			}
+		]
+	},
+	{
+		"make": "Mitsubishi",
+		"baseModel": "Eclipse",
+		"year": 1995,
+		"models": [
+			{
+				"model": "Mitsubishi Eclipse GS-T"
+			}
+		]
+	},
+	{
+		"make": "Mitsubishi",
+		"baseModel": "Eclipse",
+		"year": 2000,
+		"models": [
+			{
+				"model": "Mitsubishi Eclipse GT"
+			},
+			{
+				"model": "Mitsubishi Eclipse GT-S"
+			},
+			{
+				"model": "Mitsubishi Eclipse GS"
+			},
+			{
+				"model": "Mitsubishi Eclipse RS"
+			}
+		]
+	},
+	{
+		"make": "Mitsubishi",
+		"baseModel": "Lancer",
+		"year": 2002,
+		"models": [
+			{
+				"model": "Mitsubishi Lancer Evolution VII GSR"
+			},
+			{
+				"model": "Mitsubishi Lancer Evolution VIII"
+			}
+		]
+	},
+	{
+		"make": "Nissan",
+		"baseModel": "350Z",
+		"year": 2003,
+		"models": [
+			{
+				"model": "Nissan 350Z"
+			},
+			{
+				"model": "Nissan 350Z Enthusiast"
+			},
+			{
+				"model": "Nissan 350Z Performance"
+			},
+			{
+				"model": "Nissan 350Z Touring"
+			},
+			{
+				"model": "Nissan 350Z Track"
+			}
+		]
+	},
+	{
+		"make": "Nissan",
+		"baseModel": "Skyline",
+		"year": 1998,
+		"models": [
+			{
+				"model": "Nissan Skyline GT-R"
+			},
+			{
+				"model": "Nissan Skyline GT-R V-Spec"
+			},
+			{
+				"model": "Nissan Skyline GT-R V-Spec II"
+			},
+			{
+				"model": "Nissan Skyline GT-R V-Spec II Nür"
+			},
+			{
+				"model": "Nissan Skyline GT-R M-Spec"
+			},
+			{
+				"model": "Nissan Skyline GT-R M-Spec Nür"
+			}
+		]
+	},
+	{
+		"make": "Subaru",
+		"baseModel": "Impreza",
+		"year": 2000,
+		"models": [
+			{
+				"model": "Subaru Impreza 2.5 RS"
+			},
+			{
+				"model": "Subaru Impreza S202 STi"
+			},
+			{
+				"model": "Subaru Impreza STi"
+			},
+			{
+				"model": "Subaru Impreza WRX"
+			}
+		]
+	},
+	{
+		"make": "Toyota",
+		"baseModel": "Celica",
+		"year": 1999,
+		"models": [
+			{
+				"model": "Toyota Celica GT"
+			},
+			{
+				"model": "Toyota Celica GT-S"
+			},
+			{
+				"model": "Toyota Celica GT Action Package"
+			}
+		]
+	},
+	{
+		"make": "Toyota",
+		"baseModel": "Corolla",
+		"year": 1984,
+		"models": [
+			{
+				"model": "Toyota Sprinter Trueno"
+			},
+			{
+				"model": "Toyota Corolla GT-Apex Twin Cam"
+			}
+		]
+	},
+	{
+		"make": "Toyota",
+		"baseModel": "MR2",
+		"year": 1999,
+		"models": [
+			{
+				"model": "Toyota MR2 Spyder"
+			}
+		]
+	},
+	{
+		"make": "Toyota",
+		"baseModel": "Supra",
+		"year": 1993,
+		"models": [
+			{
+				"model": "Toyota Supra AE"
+			},
+			{
+				"model": "Toyota Supra SR Targa AE"
+			},
+			{
+				"model": "Toyota Supra Twin Turbo AE"
+			},
+			{
+				"model": "Toyota Supra SZ-R"
+			},
+			{
+				"model": "Toyota Supra RZ"
+			}
+		]
+	},
+	{
+		"make": "Volkswagen",
+		"baseModel": "Golf",
+		"year": 1997,
+		"models": [
+			{
+				"model": "Volkswagen Golf GTI"
+			},
+			{
+				"model": "Volkswagen Golf GTI VR6"
+			}
+		]
+	},
+	{
+		"make": "Volkswagen",
+		"baseModel": "Jetta",
+		"year": 1999,
+		"models": [
+			{
+				"model": "Volkswagen Jetta GLI"
+			},
+			{
+				"model": "Volkswagen Jetta GLS"
+			}
+		]
+	}
+]

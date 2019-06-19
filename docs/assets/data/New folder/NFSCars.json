@@ -1,0 +1,290 @@
+[
+  {
+    "make": "Acura",
+    "baseModel": "NSX",
+    "year": 1990,
+    "model": "NSX-R"
+  },
+  {
+    "make": "Acura",
+    "baseModel": "RSX",
+    "year": 2002,
+    "model": "RSX Type S"
+  },
+  {
+    "make": "BMW",
+    "baseModel": "2 Series",
+    "year": 2014,
+    "model": "M2"
+  },
+  {
+    "make": "BMW",
+    "baseModel": "3 Series",
+    "year": 1982,
+    "model": "M3 Evolution II"
+  },
+  {
+    "make": "BMW",
+    "baseModel": "3 Series",
+    "year": 1998,
+    "model": "M3"
+  },
+  {
+    "make": "BMW",
+    "baseModel": "3 Series",
+    "year": 2011,
+    "model": "M3"
+  },
+  {
+    "make": "BMW",
+    "baseModel": "4 Series",
+    "year": 2013,
+    "model": "M4"
+  },
+  {
+    "make": "Chevrolet",
+    "baseModel": "Camaro",
+    "year": 2010,
+    "model": "Camaro Z/28"
+  },
+  {
+    "make": "Chevrolet",
+    "baseModel": "Corvette",
+    "year": 2005,
+    "model": "Corvette Z06"
+  },
+  {
+    "make": "Dodge",
+    "baseModel": "Challenger",
+    "year": 2008,
+    "model": "Challenger Concept (2006)"
+  },
+  {
+    "make": "Dodge",
+    "baseModel": "Viper",
+    "year": 2013,
+    "model": "Viper GTS"
+  },
+  {
+    "make": "Ferrari",
+    "baseModel": "458",
+    "year": 2010,
+    "model": "458 Italia"
+  },
+  {
+    "make": "Ferrari",
+    "baseModel": "F40",
+    "year": 1987
+  },
+  {
+    "make": "Ford",
+    "baseModel": "Focus",
+    "year": 2011,
+    "model": "Focus RS"
+  },
+  {
+    "make": "Ford",
+    "baseModel": "Mustang",
+    "year": 1965,
+    "note": "Mustang\nMustang Boss"
+  },
+  {
+    "make": "Ford",
+    "baseModel": "Mustang",
+    "year": 1987,
+    "model": "Mustang GT"
+  },
+  {
+    "make": "Ford",
+    "baseModel": "Mustang",
+    "year": 2015,
+    "model": "Mustang GT"
+  },
+  {
+    "make": "Honda",
+    "baseModel": "Civic",
+    "year": 1996,
+    "model": "Civic Type R",
+    "note": "Hatchback"
+  },
+  {
+    "make": "Honda",
+    "baseModel": "S2000",
+    "year": 1999
+  },
+  {
+    "make": "Lamborghini",
+    "baseModel": "Aventador",
+    "year": 2011,
+    "model": "Aventador LP 700-4"
+  },
+  {
+    "make": "Lamborghini",
+    "baseModel": "Diablo",
+    "year": 1990,
+    "model": "Diablo SV"
+  },
+  {
+    "make": "Lamborghini",
+    "baseModel": "Huracán",
+    "year": 2014,
+    "model": "Huracán LP 610-4"
+  },
+  {
+    "make": "Lamborghini",
+    "baseModel": "Murciélago",
+    "year": 2001,
+    "model": "Murciélago LP 670-4 SV"
+  },
+  {
+    "make": "Lotus",
+    "baseModel": "Exige",
+    "year": 2004,
+    "model": "Exige S"
+  },
+  {
+    "make": "Mazda",
+    "baseModel": "MX-5",
+    "year": 1989
+  },
+  {
+    "make": "Mazda",
+    "baseModel": "MX-5",
+    "year": 2016
+  },
+  {
+    "make": "Mazda",
+    "baseModel": "RX-7",
+    "year": 1992
+  },
+  {
+    "make": "McLaren",
+    "baseModel": "570S",
+    "year": 2015
+  },
+  {
+    "make": "Mercedes-Benz",
+    "baseModel": "GT",
+    "year": 2015
+  },
+  {
+    "make": "Mitsubishi",
+    "baseModel": "Lancer",
+    "year": 2002,
+    "model": "Lancer Evolution IX MR"
+  },
+  {
+    "make": "Nissan",
+    "baseModel": "240SX",
+    "year": 1989,
+    "model": "240SX Type X",
+    "note": "180SX"
+  },
+  {
+    "make": "Nissan",
+    "baseModel": "240Z",
+    "year": 1969,
+    "model": "240ZG"
+  },
+  {
+    "make": "Nissan",
+    "baseModel": "GT-R",
+    "year": 2007,
+    "note": "GT-R (2015)\nGT-R (2017)"
+  },
+  {
+    "make": "Nissan",
+    "baseModel": "Silvia",
+    "year": 1999,
+    "model": "Spec-R Aero"
+  },
+  {
+    "make": "Nissan",
+    "baseModel": "Skyline",
+    "year": 1969,
+    "model": "Skyline 2000 GT-R"
+  },
+  {
+    "make": "Nissan",
+    "baseModel": "Skyline",
+    "year": 1989,
+    "model": "Skyline GT-R V-spec"
+  },
+  {
+    "make": "Nissan",
+    "baseModel": "Skyline",
+    "year": 1998,
+    "model": "Skyline GT-R V-spec"
+  },
+  {
+    "make": "Porsche",
+    "baseModel": "911",
+    "year": 1964,
+    "model": "911 Carrera RSR"
+  },
+  {
+    "make": "Porsche",
+    "baseModel": "911",
+    "year": 2011,
+    "note": "911 Carrera S\n911 GT3 RS"
+  },
+  {
+    "make": "Porsche",
+    "baseModel": "911",
+    "year": 1994,
+    "model": "911 Carrera S"
+  },
+  {
+    "make": "Porsche",
+    "baseModel": "Cayman",
+    "year": 2012,
+    "model": "Cayman GT4"
+  },
+  {
+    "make": "Scion",
+    "baseModel": "FR-S",
+    "year": 2012
+  },
+  {
+    "make": "Subaru",
+    "baseModel": "BRZ",
+    "year": 2012,
+    "model": "BRZ Premium"
+  },
+  {
+    "make": "Subaru",
+    "baseModel": "Impreza",
+    "year": 2007,
+    "model": "Impreza WRX STi",
+    "note": "Hatchback"
+  },
+  {
+    "make": "Toyota",
+    "baseModel": "GT86",
+    "year": 2012
+  },
+  {
+    "make": "Toyota",
+    "baseModel": "Corolla",
+    "year": 1984,
+    "model": "Sprinter Trueno GT-Apex"
+  },
+  {
+    "make": "Toyota",
+    "baseModel": "Supra",
+    "year": 1993,
+    "model": "Supra SZ-R"
+  },
+  {
+    "make": "Volkswagen",
+    "baseModel": "Golf",
+    "year": 1974,
+    "model": "Golf GTI"
+  },
+  {
+    "make": "Volvo",
+    "baseModel": "200 Series",
+    "year": 1974,
+    "model": "242 DL"
+  }
+]

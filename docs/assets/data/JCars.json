@@ -1,0 +1,420 @@
+[
+	{
+		"make": "Acura",
+		"baseModel": "Integra",
+		"year": 1994,
+		"models": [
+			{
+				"model": "Acura Integra Type R"
+			},
+			{
+				"model": "Honda Integra Type R"
+			}
+		]
+	},
+	{
+		"make": "Acura",
+		"baseModel": "NSX",
+		"year": 1990,
+		"models": [
+			{
+				"model": "Acura NSX"
+			},
+			{
+				"model": "Honda NSX"
+			}
+		]
+	},
+	{
+		"make": "Acura",
+		"baseModel": "RSX",
+		"year": 2002,
+		"models": [
+			{
+				"model": "Acura RSX Type S"
+			},
+			{
+				"model": "Honda Integra Type R"
+			}
+		]
+	},
+	{
+		"make": "Chevrolet",
+		"baseModel": "Camaro",
+		"year": 1967,
+		"models": [
+			{
+				"model": "Chevrolet Camaro Z/28"
+			}
+		]
+	},
+	{
+		"make": "Chevrolet",
+		"baseModel": "Camaro",
+		"year": 1993,
+		"models": [
+			{
+				"model": "Chevrolet Comaro"
+			}
+		]
+	},
+	{
+		"make": "Chevrolet",
+		"baseModel": "Corvette",
+		"year": 1968,
+		"models": [
+			{
+				"model": "Chevrolet Corvette C3"
+			}
+		]
+	},
+	{
+		"make": "Chevrolet",
+		"baseModel": "Corvette",
+		"year": 1997,
+		"models": [
+			{
+				"model": "Chevrolet Corvette C5 Z06"
+			}
+		]
+	},
+	{
+		"make": "Dodge",
+		"baseModel": "Charger",
+		"year": 1968,
+		"models": [
+			{
+				"model": "Dodge Charger R/T"
+			}
+		]
+	},
+	{
+		"make": "Dodge",
+		"baseModel": "Neon",
+		"year": 1995,
+		"models": [
+			{
+				"model": "Dodge Neon R/T"
+			},
+			{
+				"model": "Dodge Neon SRT-4"
+			}
+		]
+	},
+	{
+		"make": "Dodge",
+		"baseModel": "Viper",
+		"year": 1996,
+		"models": [
+			{
+				"model": "Dodge Viper GTS"
+			}
+		]
+	},
+	{
+		"make": "Fiat",
+		"baseModel": "Punto",
+		"year": 1999,
+		"models": [
+			{
+				"model": "Fiat Punto 1.8 HGT"
+			}
+		]
+	},
+	{
+		"make": "Ford",
+		"baseModel": "Falcon",
+		"year": 2002,
+		"models": [
+			{
+				"model": "Ford Falcon XR6"
+			}
+		]
+	},
+	{
+		"make": "Ford",
+		"baseModel": "Focus",
+		"year": 1998,
+		"models": [
+			{
+				"model": "Ford Focus ZTS"
+			},
+			{
+				"model": "Ford Focus SVT"
+			}
+		]
+	},
+	{
+		"make": "Ford",
+		"baseModel": "Mustang",
+		"year": 1965,
+		"models": [
+			{
+				"model": "Ford Mustang Mach 1"
+			}
+		]
+	},
+	{
+		"make": "Ford",
+		"baseModel": "Mustang",
+		"year": 1999
+	},
+	{
+		"make": "Honda",
+		"baseModel": "Civic",
+		"year": 1996,
+		"models": [
+			{
+				"model": "Honda Civic DX"
+			}
+		]
+	},
+	{
+		"make": "Honda",
+		"baseModel": "Civic",
+		"year": 2001,
+		"models": [
+			{
+				"model": "Honda Civic Type R"
+			}
+		]
+	},
+	{
+		"make": "Honda",
+		"baseModel": "CR-X",
+		"year": 1988,
+		"models": [
+			{
+				"model": "Honda CR-X SiR"
+			}
+		]
+	},
+	{
+		"make": "Honda",
+		"baseModel": "Prelude",
+		"year": 1991,
+		"models": [
+			{
+				"model": "Honda Prelude VTEC"
+			}
+		]
+	},
+	{
+		"make": "Honda",
+		"baseModel": "S2000",
+		"year": 1999
+	},
+	{
+		"make": "Mazda",
+		"baseModel": "MX-5",
+		"year": 1989
+	},
+	{
+		"make": "Mazda",
+		"baseModel": "RX-7",
+		"year": 1992
+	},
+	{
+		"make": "Mazda",
+		"baseModel": "RX-8",
+		"year": 2003
+	},
+	{
+		"make": "Mitsubishi",
+		"baseModel": "3000GT",
+		"year": 1990
+	},
+	{
+		"make": "Mitsubishi",
+		"baseModel": "Eclipse",
+		"year": 1995,
+		"models": [
+			{
+				"model": "Mitsubishi Eclipse GSX"
+			}
+		]
+	},
+	{
+		"make": "Mitsubishi",
+		"baseModel": "FTO",
+		"year": 1994,
+		"models": [
+			{
+				"model": "Mitsubishi FTO GS"
+			}
+		]
+	},
+	{
+		"make": "Mitsubishi",
+		"baseModel": "Lancer",
+		"year": 1995,
+		"models": [
+			{
+				"model": "Mitsubishi Lancer Evolution VI"
+			}
+		]
+	},
+	{
+		"make": "Mitsubishi",
+		"baseModel": "Lancer",
+		"year": 2002,
+		"models": [
+			{
+				"model": "Mitsubishi Lancer Evolution VIII"
+			}
+		]
+	},
+	{
+		"make": "Nissan",
+		"baseModel": "300ZX",
+		"year": 1989,
+		"models": [
+			{
+				"model": "Nissan 300ZX Z32"
+			}
+		]
+	},
+	{
+		"make": "Nissan",
+		"baseModel": "350Z",
+		"year": 2003
+	},
+	{
+		"make": "Nissan",
+		"baseModel": "Skyline",
+		"year": 1998,
+		"models": [
+			{
+				"model": "Nissan Skyline GT-R"
+			}
+		]
+	},
+	{
+		"make": "Peugeot",
+		"baseModel": "206",
+		"year": 1998,
+		"models": [
+			{
+				"model": "Peugeot 206 RC"
+			}
+		]
+	},
+	{
+		"make": "Pontiac",
+		"baseModel": "Firebird",
+		"year": 1993
+	},
+	{
+		"make": "Pontiac",
+		"baseModel": "GTO",
+		"year": 2004,
+		"models": [
+			{
+				"model": "Pontiac GTO"
+			},
+			{
+				"model": "Holden Monaro CV8"
+			}
+		]
+	},
+	{
+		"make": "Renault",
+		"baseModel": "Clio",
+		"year": 2001,
+		"models": [
+			{
+				"model": "Renault Clio RS"
+			}
+		]
+	},
+	{
+		"make": "Subaru",
+		"baseModel": "Impreza",
+		"year": 1992,
+		"models": [
+			{
+				"model": "Subaru Impreza 22B-STi"
+			}
+		]
+	},
+	{
+		"make": "Subaru",
+		"baseModel": "Impreza",
+		"year": 2000,
+		"models": [
+			{
+				"model": "Subaru Impreza WRX STi"
+			}
+		]
+	},
+	{
+		"make": "Toyota",
+		"baseModel": "Celica",
+		"year": 1994,
+		"models": [
+			{
+				"model": "Toyota Celica GT"
+			}
+		]
+	},
+	{
+		"make": "Toyota",
+		"baseModel": "Celica",
+		"year": 1999,
+		"models": [
+			{
+				"model": "Toyota Celica VVT-i"
+			}
+		]
+	},
+	{
+		"make": "Toyota",
+		"baseModel": "Corolla (EU)",
+		"year": 1995
+	},
+	{
+		"make": "Toyota",
+		"baseModel": "MR2",
+		"year": 1989
+	},
+	{
+		"make": "Toyota",
+		"baseModel": "MR2",
+		"year": 1999,
+		"models": [
+			{
+				"model": "Toyota MR-S"
+			}
+		]
+	},
+	{
+		"make": "Toyota",
+		"baseModel": "Supra",
+		"year": 1993
+	},
+	{
+		"make": "Vauxhall",
+		"baseModel": "Corsa",
+		"year": 2000
+	},
+	{
+		"make": "Volkswagen",
+		"baseModel": "Corrado",
+		"year": 1988,
+		"models": [
+			{
+				"model": "Volkswagen Corrado VR6"
+			}
+		]
+	},
+	{
+		"make": "Volkswagen",
+		"baseModel": "Golf",
+		"year": 1997
+	},
+	{
+		"make": "Volkswagen",
+		"baseModel": "New Beetle",
+		"year": 1998
+	}
+]

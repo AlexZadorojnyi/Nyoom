@@ -1,0 +1,128 @@
+[
+  {
+    "make": "Acura",
+    "baseModel": "Integra",
+    "year": 1995
+  },
+  {
+    "make": "Aston Martin",
+    "baseModel": "Vanquish",
+    "year": 2001
+  },
+  {
+    "make": "BMW",
+    "baseModel": "5 Series",
+    "year": 1987,
+    "model": "M5"
+  },
+  {
+    "make": "Dodge",
+    "baseModel": "Viper",
+    "year": 2003,
+    "model": "Viper GTS-R Concept (2000)"
+  },
+  {
+    "make": "Ford",
+    "baseModel": "Escort",
+    "year": 1986,
+    "model": "Escort RS Turbo"
+  },
+  {
+    "make": "Ford",
+    "baseModel": "Escort",
+    "year": 1990,
+    "model": "Escort RS Cosworth"
+  },
+  {
+    "make": "Ford",
+    "baseModel": "Puma",
+    "year": 1997
+  },
+  {
+    "make": "Honda",
+    "baseModel": "Civic",
+    "year": 1996,
+    "note": "Civic Coupe\nCivic Si"
+  },
+  {
+    "make": "Honda",
+    "baseModel": "S2000",
+    "year": 1999
+  },
+  {
+    "make": "Lexus",
+    "baseModel": "GS",
+    "year": 1998,
+    "model": "GS 300"
+  },
+  {
+    "make": "Lotus",
+    "baseModel": "Elise",
+    "year": 2001
+  },
+  {
+    "make": "Mazda",
+    "baseModel": "RX-7",
+    "year": 1992
+  },
+  {
+    "make": "Mitsubishi",
+    "baseModel": "Lancer",
+    "year": 2002,
+    "model": "Lancer Evolution VII"
+  },
+  {
+    "make": "Nissan",
+    "baseModel": "350Z",
+    "year": 2003
+  },
+  {
+    "make": "Nissan",
+    "baseModel": "Skyline",
+    "year": 1998,
+    "model": "Skyline GT-R"
+  },
+  {
+    "make": "Pontiac",
+    "baseModel": "GTO",
+    "year": 1964
+  },
+  {
+    "make": "Porsche",
+    "baseModel": "911",
+    "year": 1998,
+    "model": "911 GT3"
+  },
+  {
+    "make": "Renault",
+    "baseModel": "Clio",
+    "year": 1998,
+    "model": "Clio V6"
+  },
+  {
+    "make": "Saleen",
+    "baseModel": "S7",
+    "year": 2000
+  },
+  {
+    "make": "Toyota",
+    "baseModel": "MR2",
+    "year": 1989
+  },
+  {
+    "make": "Toyota",
+    "baseModel": "Supra",
+    "year": 1993,
+    "note": "Supra\nAB Flug bodykit"
+  },
+  {
+    "make": "Volkswagen",
+    "baseModel": "Golf",
+    "year": 1997
+  },
+  {
+    "make": "Volkswagen",
+    "baseModel": "Passat",
+    "year": 1997
+  }
+]
